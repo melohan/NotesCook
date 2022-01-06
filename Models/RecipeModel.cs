@@ -6,9 +6,11 @@ namespace NotesCook.Models
 {
     class RecipeModel
     {
+
         [BsonId]    // id
-        public Guid Mid { get; set; }   // MongoDB private id
+        public Guid Id { get; set; }   // MongoDB private id
         public string Name {get; set;}
         public int NumberOfPeople { get; set; }
+
     }
 }
