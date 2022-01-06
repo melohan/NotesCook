@@ -4,7 +4,8 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace NotesCook.Models
 {
-    class StepModel
+
+    class Ingredient
     {
 
         /************************************************
@@ -14,31 +15,31 @@ namespace NotesCook.Models
         /**
          * Default constructor
          **/
-        public StepModel() { }
+        public Ingredient(){}
 
         /**
          * Constructor with params
-         * @param int    position
          * @param string name
-         * @param string description
+         * @param int quantity
+         * @param string unit
          **/
-        public StepModel(int position, string name,  string description)
+        public Ingredient(string name, int quantity, string unit)
         {
-            this.Position    = position;
-            this.Name        = name;
-            this.Description = description;
+            this.Name     = name;
+            this.Quantity = quantity;
+            this.Unit     = unit;
         }
 
         /**
          * Copy constructor
-         * @param StepModel
+         * @param IngredientModel
          **/
-        public StepModel(StepModel Other)
+        public Ingredient(Ingredient Other)
         {
-            this.Id          = Other.Id;
-            this.Position    = Other.Position;
-            this.Name        = Other.Name;
-            this.Description = Other.Description;
+            this.Id       = Other.Id;
+            this.Name     = Other.Name;
+            this.Quantity = Other.Quantity;
+            this.Unit     = Other.Unit;
         }
 
         /************************************************
@@ -47,9 +48,9 @@ namespace NotesCook.Models
 
         [BsonId]    // id
         public Guid Id { get; set; }   
-        public int Position { get; set; }
         public string Name { get; set; }
-        public string Description { get; set; }
+        public int Quantity { get; set; }
+        public string Unit { get; set; }
 
     }
 }

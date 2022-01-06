@@ -6,7 +6,7 @@ using NotesCook.Database;
 
 namespace NotesCook.Models
 {
-    class RecipeModel
+    class Recipe
     {
         /************************************************
          *            Constructors
@@ -16,11 +16,11 @@ namespace NotesCook.Models
         /**
          * Default constructor
          **/
-        public RecipeModel()
+        public Recipe()
         {
-            this.Tags        = new List<TagModel>();
-            this.Ingredients = new List<IngredientModel>();
-            this.Steps       = new List<StepModel>();
+            this.Tags        = new List<Tag>();
+            this.Ingredients = new List<Ingredient>();
+            this.Steps       = new List<Step>();
         }
 
 
@@ -32,9 +32,9 @@ namespace NotesCook.Models
         public Guid Id { get; set; }
         public string Name { get; set; }
         public int NumberOfPeople { get; set; }
-        public List<TagModel> Tags { get; set;  }
-        public List<IngredientModel> Ingredients { get; set; }
-        public List<StepModel> Steps { get; set; }
+        public List<Tag> Tags { get; set;  }
+        public List<Ingredient> Ingredients { get; set; }
+        public List<Step> Steps { get; set; }
 
 
         /************************************************
@@ -45,7 +45,7 @@ namespace NotesCook.Models
          * Add tag
          * @param TagModel
          **/
-        public void Add(TagModel tag)
+        public void Add(Tag tag)
         {
             this.Tags.Add(tag);
         }
@@ -54,7 +54,7 @@ namespace NotesCook.Models
          * Add ingredient
          * @param IngredientModel
          **/
-        public void Add(IngredientModel ingredient)
+        public void Add(Ingredient ingredient)
         {
             this.Ingredients.Add(ingredient);
         }
@@ -63,7 +63,7 @@ namespace NotesCook.Models
          * Add step
          * @param StepModel
          **/
-        public void Add(StepModel step)
+        public void Add(Step step)
         {
             this.Steps.Add(step);
         }
@@ -76,7 +76,7 @@ namespace NotesCook.Models
          * Remove tag
          * @param TagModel
          **/
-        public void Remove(TagModel tag)
+        public void Remove(Tag tag)
         {
             if (tag != null)
                 this.Tags.Remove(tag);
@@ -86,7 +86,7 @@ namespace NotesCook.Models
          * Add ingredient
          * @param IngredientModel
          **/
-        public void Remove(IngredientModel ingredient)
+        public void Remove(Ingredient ingredient)
         {
             if (ingredient != null)
                 this.Ingredients.Remove(ingredient);
@@ -96,7 +96,7 @@ namespace NotesCook.Models
          * Add step
          * @param StepModel
          **/
-        public void Remove(StepModel step)
+        public void Remove(Step step)
         {
             if (step != null)
                 this.Steps.Remove(step);

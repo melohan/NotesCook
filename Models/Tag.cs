@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace NotesCook.Models
 {
-    class TagModel
+    class Tag
     {
 
         /************************************************
@@ -13,13 +13,13 @@ namespace NotesCook.Models
         /**
          * Default constructor
          **/
-        public TagModel() { }
+        public Tag() { }
 
         /**
          * Constructor with params
          * @param string name
          **/
-        public TagModel(string name)
+        public Tag(string name)
         {
             this.name = name;
         }
@@ -28,7 +28,7 @@ namespace NotesCook.Models
          * Copy constructor
          * @param TagModel
          **/
-        public TagModel(TagModel Other)
+        public Tag(Tag Other)
         {
             this.id   = Other.id;
             this.name = Other.name;
