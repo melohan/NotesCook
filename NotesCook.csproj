@@ -140,17 +140,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DB.cs" />
-    <Compile Include="Database\MongoCRUD.cs" />
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="home.Designer.cs">
       <DependentUpon>home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\IngredientModel.cs" />
-    <Compile Include="Models\RecipeModel.cs" />
-    <Compile Include="Models\StepModel.cs" />
-    <Compile Include="Models\TagModel.cs" />
+    <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\Recipe.cs" />
+    <Compile Include="Models\Step.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="home.resx">
