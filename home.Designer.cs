@@ -69,6 +69,7 @@ namespace NotesCook
             this.btn_new_recipe.TabIndex = 2;
             this.btn_new_recipe.Text = "Nouvelle recette";
             this.btn_new_recipe.UseVisualStyleBackColor = true;
+            this.btn_new_recipe.Click += new System.EventHandler(this.btn_new_recipe_Click);
             // 
             // btn_recently_consulted
             // 

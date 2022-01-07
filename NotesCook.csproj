@@ -140,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DB.cs" />
+    <Compile Include="Forms\CreateRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateRecipe.Designer.cs">
+      <DependentUpon>CreateRecipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CreateRecipe.resx">
+      <DependentUpon>CreateRecipe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
