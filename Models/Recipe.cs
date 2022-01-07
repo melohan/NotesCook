@@ -11,8 +11,7 @@ namespace NotesCook.Models
         /************************************************
          *            Constructors
          ***********************************************/
-        private const string COLLECTION = "Recipe";
-        private const string DATABASE = "Database";
+
         /**
          * Default constructor
          **/
