@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace NotesCook.Models
@@ -21,7 +22,7 @@ namespace NotesCook.Models
          **/
         public Tag(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
 
         /**
@@ -30,8 +31,8 @@ namespace NotesCook.Models
          **/
         public Tag(Tag Other)
         {
-            this.id   = Other.id;
-            this.name = Other.name;
+            this.Id   = Other.Id;
+            this.Name = Other.Name;
         }
 
         /************************************************
@@ -39,8 +40,26 @@ namespace NotesCook.Models
          ***********************************************/
 
         [BsonId]    // id
-        public Guid id { get; set; }   // MongoDB private id
-        public string name { get; set; }
+        public Guid Id { get; set; }   // MongoDB private id
+        public string Name { get; set; }
 
+        /************************************************
+        *                  Methods 
+        ***********************************************/
+
+        /**
+         * Get Step by a name in a list.
+         * @param List<Step> list
+         * @string name
+         **/
+        public static Tag FindByName(List<Tag> list, string name)
+        {
+            foreach (Tag step in list)
+            {
+                if (step.Name == name)
+                    return step;
+            }
+            return new Tag();
+        }
     }
 }

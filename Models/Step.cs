@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 
 
@@ -51,5 +52,23 @@ namespace NotesCook.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
+        /************************************************
+         *                  Methods 
+         ***********************************************/
+
+        /**
+         * Get Step by a name in a list.
+         * @param List<Step> list
+         * @string name
+         **/
+        public static Step FindByName(List<Step> list, string name)
+        {
+            foreach (Step step in list)
+            {
+                if (step.Name == name)
+                    return step;
+            }
+            return new Step();
+        }
     }
 }

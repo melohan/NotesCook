@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 
 
@@ -51,6 +52,25 @@ namespace NotesCook.Models
         public string Name { get; set; }
         public int Quantity { get; set; }
         public string Unit { get; set; }
+
+        /************************************************
+         *                  Methods 
+         ***********************************************/
+
+        /**
+         * Get ingredient by a name in a list.
+         * @param List<Ingredient> list
+         * @string name
+         **/ 
+        public static Ingredient FindByName(List<Ingredient> list, string name)
+        {
+            foreach(Ingredient ingredient in list)
+            {
+                if (ingredient.Name == name)
+                    return ingredient;
+            }
+            return new Ingredient();
+        }
 
     }
 }
