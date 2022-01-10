@@ -34,7 +34,11 @@ namespace NotesCook.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-                        
+            CreateIngredient cr = new CreateIngredient();
+            cr.
+            this.Hide();
+            cr.ShowDialog();
+            this.Close();
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
