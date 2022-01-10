@@ -30,7 +30,7 @@ namespace NotesCook.Models
         [BsonId]    // id
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public int NumberOfPeople { get; set; }
+        public int NumberOfPersons { get; set; }
         public List<Tag> Tags { get; set;  }
         public List<Ingredient> Ingredients { get; set; }
         public List<Step> Steps { get; set; }

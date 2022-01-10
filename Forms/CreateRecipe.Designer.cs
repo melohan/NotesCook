@@ -36,7 +36,6 @@ namespace NotesCook.Forms
             this.lblIngredients = new System.Windows.Forms.Label();
             this.lblRecipe = new System.Windows.Forms.Label();
             this.grpRecipe = new System.Windows.Forms.GroupBox();
-            this.txtNbPeople = new System.Windows.Forms.TextBox();
             this.lblNbPeople = new System.Windows.Forms.Label();
             this.btnPlus = new System.Windows.Forms.Button();
             this.txtTag = new System.Windows.Forms.TextBox();
@@ -44,9 +43,11 @@ namespace NotesCook.Forms
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
+            this.nupNbPersons = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.grpRecipe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupNbPersons)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_logo1
@@ -112,7 +113,7 @@ namespace NotesCook.Forms
             // 
             // grpRecipe
             // 
-            this.grpRecipe.Controls.Add(this.txtNbPeople);
+            this.grpRecipe.Controls.Add(this.nupNbPersons);
             this.grpRecipe.Controls.Add(this.lblNbPeople);
             this.grpRecipe.Controls.Add(this.btnPlus);
             this.grpRecipe.Controls.Add(this.txtTag);
@@ -126,13 +127,6 @@ namespace NotesCook.Forms
             this.grpRecipe.TabIndex = 5;
             this.grpRecipe.TabStop = false;
             this.grpRecipe.Text = "Recette";
-            // 
-            // txtNbPeople
-            // 
-            this.txtNbPeople.Location = new System.Drawing.Point(228, 161);
-            this.txtNbPeople.Name = "txtNbPeople";
-            this.txtNbPeople.Size = new System.Drawing.Size(59, 27);
-            this.txtNbPeople.TabIndex = 6;
             // 
             // lblNbPeople
             // 
@@ -155,7 +149,7 @@ namespace NotesCook.Forms
             this.btnPlus.TabIndex = 4;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = false;
-            this.btnPlus.Click += new System.EventHandler(this.btn_plus_Click);
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // txtTag
             // 
@@ -179,6 +173,7 @@ namespace NotesCook.Forms
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(177, 27);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // lblName
             // 
@@ -200,6 +195,15 @@ namespace NotesCook.Forms
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = "Suivant";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // nupNbPersons
+            // 
+            this.nupNbPersons.Location = new System.Drawing.Point(233, 160);
+            this.nupNbPersons.Name = "nupNbPersons";
+            this.nupNbPersons.Size = new System.Drawing.Size(53, 27);
+            this.nupNbPersons.TabIndex = 6;
+            this.nupNbPersons.ValueChanged += new System.EventHandler(this.nupNbPersons_ValueChanged);
             // 
             // CreateRecipe
             // 
@@ -218,6 +222,7 @@ namespace NotesCook.Forms
             this.groupBox1.PerformLayout();
             this.grpRecipe.ResumeLayout(false);
             this.grpRecipe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupNbPersons)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,10 +240,10 @@ namespace NotesCook.Forms
         private System.Windows.Forms.TextBox txtTag;
         private System.Windows.Forms.Label lblNbPeople;
         private System.Windows.Forms.Button btnPlus;
-        private System.Windows.Forms.TextBox txtNbPeople;
         private System.Windows.Forms.Label lblSteps;
         private System.Windows.Forms.Label lblIngredients;
         private System.Windows.Forms.Label lblRecipe;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.NumericUpDown nupNbPersons;
     }
 }
