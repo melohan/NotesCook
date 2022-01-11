@@ -35,7 +35,7 @@ namespace NotesCook.Forms
         private void btnNext_Click(object sender, EventArgs e)
         {
             CreateIngredient cr = new CreateIngredient();
-            cr.
+            cr.setRecipe(this.recipe);
             this.Hide();
             cr.ShowDialog();
             this.Close();

@@ -15,7 +15,7 @@ namespace NotesCook.Forms
     {
         private Recipe recipe;
 
-        private void setRecipe(ref Recipe recipe)
+        public void setRecipe(Recipe recipe)
         {
             this.recipe = recipe;
         }
@@ -25,9 +25,24 @@ namespace NotesCook.Forms
             InitializeComponent();
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
+        private void btnPlus_Click(object sender, EventArgs e)
         {
+            if (txtName.Text != null && txtUnit.Text != null)
+            {
+                this.recipe.Add(new Ingredient(txtName.Text, (int)nupQuantity.Value,txtUnit.Text));
+                txtName.Text = "";
+                nupQuantity.Value = 0;
+                txtUnit.Text = "";
+            }
+        }
 
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            CreateStep cs = new CreateStep();
+            cs.setRecipe(this.recipe);
+            this.Hide();
+            cs.ShowDialog();
+            this.Close();
         }
     }
 }
