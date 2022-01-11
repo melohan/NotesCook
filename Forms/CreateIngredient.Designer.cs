@@ -52,7 +52,7 @@ namespace NotesCook.Forms
             // 
             // pic_logo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(32, 14);
+            this.pic_logo1.Location = new System.Drawing.Point(28, 19);
             this.pic_logo1.Name = "pic_logo1";
             this.pic_logo1.Size = new System.Drawing.Size(45, 48);
             this.pic_logo1.TabIndex = 7;
@@ -62,7 +62,7 @@ namespace NotesCook.Forms
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(127, 15);
+            this.lbl_title.Location = new System.Drawing.Point(123, 20);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(126, 46);
             this.lbl_title.TabIndex = 6;
@@ -111,7 +111,7 @@ namespace NotesCook.Forms
             this.grpRecipe.Controls.Add(this.btnPlus);
             this.grpRecipe.Controls.Add(this.lblName);
             this.grpRecipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRecipe.Location = new System.Drawing.Point(16, 162);
+            this.grpRecipe.Location = new System.Drawing.Point(16, 171);
             this.grpRecipe.Margin = new System.Windows.Forms.Padding(2);
             this.grpRecipe.Name = "grpRecipe";
             this.grpRecipe.Padding = new System.Windows.Forms.Padding(2);
@@ -189,7 +189,7 @@ namespace NotesCook.Forms
             this.groupBox1.Controls.Add(this.lblSteps);
             this.groupBox1.Controls.Add(this.lblIngredients);
             this.groupBox1.Controls.Add(this.lblRecipe);
-            this.groupBox1.Location = new System.Drawing.Point(9, 93);
+            this.groupBox1.Location = new System.Drawing.Point(9, 102);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);

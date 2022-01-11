@@ -137,9 +137,19 @@ namespace NotesCook.Forms
             // 
             this.nupNoStep.Location = new System.Drawing.Point(82, 73);
             this.nupNoStep.Margin = new System.Windows.Forms.Padding(2);
+            this.nupNoStep.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nupNoStep.Name = "nupNoStep";
             this.nupNoStep.Size = new System.Drawing.Size(134, 23);
             this.nupNoStep.TabIndex = 6;
+            this.nupNoStep.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblNoStep
             // 

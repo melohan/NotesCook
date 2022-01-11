@@ -52,7 +52,7 @@ namespace NotesCook.Forms
             // 
             // pic_logo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(32, 23);
+            this.pic_logo1.Location = new System.Drawing.Point(28, 19);
             this.pic_logo1.Name = "pic_logo1";
             this.pic_logo1.Size = new System.Drawing.Size(45, 48);
             this.pic_logo1.TabIndex = 3;
@@ -62,7 +62,7 @@ namespace NotesCook.Forms
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(127, 24);
+            this.lbl_title.Location = new System.Drawing.Point(123, 20);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(126, 46);
             this.lbl_title.TabIndex = 2;
