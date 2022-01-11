@@ -7,7 +7,6 @@ namespace NotesCook
 {
     public partial class frm_home : Form
     {
-        Thread th;
 
         public frm_home()
         {
@@ -22,10 +21,10 @@ namespace NotesCook
         // Clos this process and open new thread for recipe 
         private void btn_new_recipe_Click(object sender, EventArgs e)
         {
+            CreateRecipe cs = new CreateRecipe();
+            this.Hide();
+            cs.ShowDialog();
             this.Close();
-            th = new Thread(openCreationRecipe);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
         }
     }
 }

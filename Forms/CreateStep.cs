@@ -40,6 +40,10 @@ namespace NotesCook.Forms
         {
             DB db = new DB("NotesCook", "recipes");
             db.Insert(this.recipe);
+            this.Hide();
+            frm_home h = new frm_home();
+            h.ShowDialog();
+            this.Close();
         }
     }
 }
