@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace NotesCook.Models
 {
-    class Tag
+    public class Tag
     {
 
         /************************************************

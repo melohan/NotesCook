@@ -6,7 +6,7 @@ using MongoDB.Bson.Serialization.Attributes;
 namespace NotesCook.Models
 {
 
-    class Ingredient
+    public class Ingredient
     {
 
         /************************************************

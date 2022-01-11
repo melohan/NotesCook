@@ -6,7 +6,7 @@ using NotesCook.Database;
 
 namespace NotesCook.Models
 {
-    class Recipe
+    public class Recipe
     {
         /************************************************
          *            Constructors
@@ -21,7 +21,9 @@ namespace NotesCook.Models
             this.Ingredients = new List<Ingredient>();
             this.Steps       = new List<Step>();
         }
-
+          ~Recipe(){
+            Console.WriteLine("dead");
+        }
 
         /************************************************
          *             Setters & Getters

@@ -5,7 +5,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace NotesCook.Models
 {
-    class Step
+    public class Step
     {
 
         /************************************************
