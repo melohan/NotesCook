@@ -31,7 +31,7 @@ namespace NotesCook
         {
             this.lbl_title = new System.Windows.Forms.Label();
             this.pic_logo1 = new System.Windows.Forms.PictureBox();
-            this.btn_new_recepe = new System.Windows.Forms.Button();
+            this.btn_new_recipe = new System.Windows.Forms.Button();
             this.btn_recently_consulted = new System.Windows.Forms.Button();
             this.btn_search = new System.Windows.Forms.Button();
             this.pic_logo2 = new System.Windows.Forms.PictureBox();
@@ -57,15 +57,16 @@ namespace NotesCook
             this.pic_logo1.TabIndex = 1;
             this.pic_logo1.TabStop = false;
             // 
-            // btn_new_recepe
+            // btn_new_recipe
             // 
-            this.btn_new_recepe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_new_recepe.Location = new System.Drawing.Point(22, 109);
-            this.btn_new_recepe.Name = "btn_new_recepe";
-            this.btn_new_recepe.Size = new System.Drawing.Size(228, 61);
-            this.btn_new_recepe.TabIndex = 2;
-            this.btn_new_recepe.Text = "Nouvelles recettes";
-            this.btn_new_recepe.UseVisualStyleBackColor = true;
+            this.btn_new_recipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_new_recipe.Location = new System.Drawing.Point(22, 109);
+            this.btn_new_recipe.Name = "btn_new_recipe";
+            this.btn_new_recipe.Size = new System.Drawing.Size(228, 61);
+            this.btn_new_recipe.TabIndex = 2;
+            this.btn_new_recipe.Text = "Nouvelle recette";
+            this.btn_new_recipe.UseVisualStyleBackColor = true;
+            this.btn_new_recipe.Click += new System.EventHandler(this.btn_new_recipe_Click);
             // 
             // btn_recently_consulted
             // 
@@ -103,10 +104,11 @@ namespace NotesCook
             this.Controls.Add(this.pic_logo2);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_recently_consulted);
-            this.Controls.Add(this.btn_new_recepe);
+            this.Controls.Add(this.btn_new_recipe);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
             this.Name = "frm_home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NotesCook";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo2)).EndInit();
@@ -119,7 +121,7 @@ namespace NotesCook
 
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.PictureBox pic_logo1;
-        private System.Windows.Forms.Button btn_new_recepe;
+        private System.Windows.Forms.Button btn_new_recipe;
         private System.Windows.Forms.Button btn_recently_consulted;
         private System.Windows.Forms.Button btn_search;
         private System.Windows.Forms.PictureBox pic_logo2;
