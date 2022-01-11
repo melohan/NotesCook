@@ -226,6 +226,7 @@ namespace NotesCook.Forms
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
             this.Name = "CreateStep";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             this.grpStep.ResumeLayout(false);

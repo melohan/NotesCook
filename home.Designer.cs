@@ -43,29 +43,26 @@ namespace NotesCook
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(171, 28);
-            this.lbl_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_title.Location = new System.Drawing.Point(128, 23);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(156, 58);
+            this.lbl_title.Size = new System.Drawing.Size(126, 46);
             this.lbl_title.TabIndex = 0;
             this.lbl_title.Text = "!Cook";
             // 
             // pic_logo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(16, 15);
-            this.pic_logo1.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_logo1.Location = new System.Drawing.Point(12, 12);
             this.pic_logo1.Name = "pic_logo1";
-            this.pic_logo1.Size = new System.Drawing.Size(133, 90);
+            this.pic_logo1.Size = new System.Drawing.Size(100, 73);
             this.pic_logo1.TabIndex = 1;
             this.pic_logo1.TabStop = false;
             // 
             // btn_new_recipe
             // 
             this.btn_new_recipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_new_recipe.Location = new System.Drawing.Point(29, 134);
-            this.btn_new_recipe.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_new_recipe.Location = new System.Drawing.Point(22, 109);
             this.btn_new_recipe.Name = "btn_new_recipe";
-            this.btn_new_recipe.Size = new System.Drawing.Size(304, 75);
+            this.btn_new_recipe.Size = new System.Drawing.Size(228, 61);
             this.btn_new_recipe.TabIndex = 2;
             this.btn_new_recipe.Text = "Nouvelle recette";
             this.btn_new_recipe.UseVisualStyleBackColor = true;
@@ -74,10 +71,9 @@ namespace NotesCook
             // btn_recently_consulted
             // 
             this.btn_recently_consulted.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_recently_consulted.Location = new System.Drawing.Point(29, 251);
-            this.btn_recently_consulted.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_recently_consulted.Location = new System.Drawing.Point(22, 204);
             this.btn_recently_consulted.Name = "btn_recently_consulted";
-            this.btn_recently_consulted.Size = new System.Drawing.Size(304, 75);
+            this.btn_recently_consulted.Size = new System.Drawing.Size(228, 61);
             this.btn_recently_consulted.TabIndex = 3;
             this.btn_recently_consulted.Text = "Recement consultées";
             this.btn_recently_consulted.UseVisualStyleBackColor = true;
@@ -85,36 +81,34 @@ namespace NotesCook
             // btn_search
             // 
             this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(29, 372);
-            this.btn_search.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_search.Location = new System.Drawing.Point(22, 302);
             this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(304, 75);
+            this.btn_search.Size = new System.Drawing.Size(228, 61);
             this.btn_search.TabIndex = 4;
             this.btn_search.Text = "Rechercher";
             this.btn_search.UseVisualStyleBackColor = true;
             // 
             // pic_logo2
             // 
-            this.pic_logo2.Location = new System.Drawing.Point(83, 489);
-            this.pic_logo2.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_logo2.Location = new System.Drawing.Point(62, 397);
             this.pic_logo2.Name = "pic_logo2";
-            this.pic_logo2.Size = new System.Drawing.Size(195, 149);
+            this.pic_logo2.Size = new System.Drawing.Size(146, 121);
             this.pic_logo2.TabIndex = 5;
             this.pic_logo2.TabStop = false;
             // 
             // frm_home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 679);
+            this.ClientSize = new System.Drawing.Size(277, 552);
             this.Controls.Add(this.pic_logo2);
             this.Controls.Add(this.btn_search);
             this.Controls.Add(this.btn_recently_consulted);
             this.Controls.Add(this.btn_new_recipe);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NotesCook";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo2)).EndInit();

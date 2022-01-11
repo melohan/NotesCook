@@ -35,6 +35,7 @@ namespace NotesCook.Forms
             this.lblIngredients = new System.Windows.Forms.Label();
             this.lblRecipe = new System.Windows.Forms.Label();
             this.grpRecipe = new System.Windows.Forms.GroupBox();
+            this.nupQuantity = new System.Windows.Forms.NumericUpDown();
             this.txtUnit = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblUnity = new System.Windows.Forms.Label();
@@ -43,11 +44,10 @@ namespace NotesCook.Forms
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNext = new System.Windows.Forms.Button();
-            this.nupQuantity = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grpRecipe.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pic_logo1
@@ -119,6 +119,13 @@ namespace NotesCook.Forms
             this.grpRecipe.TabIndex = 9;
             this.grpRecipe.TabStop = false;
             this.grpRecipe.Text = "Ingrédients";
+            // 
+            // nupQuantity
+            // 
+            this.nupQuantity.Location = new System.Drawing.Point(137, 68);
+            this.nupQuantity.Name = "nupQuantity";
+            this.nupQuantity.Size = new System.Drawing.Size(100, 23);
+            this.nupQuantity.TabIndex = 10;
             // 
             // txtUnit
             // 
@@ -204,13 +211,6 @@ namespace NotesCook.Forms
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // nupQuantity
-            // 
-            this.nupQuantity.Location = new System.Drawing.Point(137, 68);
-            this.nupQuantity.Name = "nupQuantity";
-            this.nupQuantity.Size = new System.Drawing.Size(100, 23);
-            this.nupQuantity.TabIndex = 10;
-            // 
             // CreateIngredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,13 +223,14 @@ namespace NotesCook.Forms
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateIngredient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CreateIngredient";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             this.grpRecipe.ResumeLayout(false);
             this.grpRecipe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
