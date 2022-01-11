@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NotesCook.Forms;
 
 namespace NotesCook
 {
@@ -16,7 +17,8 @@ namespace NotesCook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_home());
+            Application.Run(new frm_RecipeIngredients());
+            //Application.Run(new frm_home());
         }
     }
 }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace NotesCook.Forms
 {
-    public partial class Form1 : Form
+    public partial class frm_RecipeInfos : Form
     {
-        public Form1()
+        public frm_RecipeInfos()
         {
             InitializeComponent();
+        }
+
+        private void frm_recipe_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

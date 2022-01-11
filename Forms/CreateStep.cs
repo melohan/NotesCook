@@ -45,5 +45,35 @@ namespace NotesCook.Forms
             h.ShowDialog();
             this.Close();
         }
+
+        private void lblRecipe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_logo1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_title_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblIngredients_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSteps_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
