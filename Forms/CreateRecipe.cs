@@ -25,7 +25,7 @@ namespace NotesCook.Forms
          **/
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if (txtTag.Text != null)
+            if (txtTag.Text != "")
             {
                 lstTag.Items.Add(txtTag.Text);
                 txtTag.Text = "";
@@ -48,7 +48,7 @@ namespace NotesCook.Forms
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if (txtName.Text != null)
+            if (txtName.Text != "")
             {
                 this.recipe.Name = txtName.Text;
             }
