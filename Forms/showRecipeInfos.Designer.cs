@@ -37,6 +37,7 @@ namespace NotesCook.Forms
             this.grp_menu = new System.Windows.Forms.GroupBox();
             this.grp_recipeInfos = new System.Windows.Forms.GroupBox();
             this.lbl_NbPeople = new System.Windows.Forms.Label();
+            this.lblTags = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
             this.grp_recipeInfos.SuspendLayout();
@@ -81,6 +82,7 @@ namespace NotesCook.Forms
             this.lblIngredients.Size = new System.Drawing.Size(89, 17);
             this.lblIngredients.TabIndex = 7;
             this.lblIngredients.Text = "Ingrédients";
+            this.lblIngredients.Click += new System.EventHandler(this.lblIngredients_Click);
             // 
             // lblRecipe
             // 
@@ -108,10 +110,12 @@ namespace NotesCook.Forms
             // 
             // grp_recipeInfos
             // 
+            this.grp_recipeInfos.Controls.Add(this.lblTags);
             this.grp_recipeInfos.Controls.Add(this.lbl_NbPeople);
-            this.grp_recipeInfos.Location = new System.Drawing.Point(12, 144);
+            this.grp_recipeInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grp_recipeInfos.Location = new System.Drawing.Point(12, 171);
             this.grp_recipeInfos.Name = "grp_recipeInfos";
-            this.grp_recipeInfos.Size = new System.Drawing.Size(256, 396);
+            this.grp_recipeInfos.Size = new System.Drawing.Size(256, 279);
             this.grp_recipeInfos.TabIndex = 11;
             this.grp_recipeInfos.TabStop = false;
             this.grp_recipeInfos.Text = "recipeName";
@@ -119,13 +123,22 @@ namespace NotesCook.Forms
             // lbl_NbPeople
             // 
             this.lbl_NbPeople.AutoSize = true;
-            this.lbl_NbPeople.Location = new System.Drawing.Point(16, 20);
+            this.lbl_NbPeople.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_NbPeople.Location = new System.Drawing.Point(7, 30);
             this.lbl_NbPeople.Name = "lbl_NbPeople";
-            this.lbl_NbPeople.Size = new System.Drawing.Size(89, 13);
+            this.lbl_NbPeople.Size = new System.Drawing.Size(112, 16);
             this.lbl_NbPeople.TabIndex = 0;
             this.lbl_NbPeople.Text = "Pour x personnes";
             // 
-            // frm_recipeInfos
+            // lblTags
+            // 
+            this.lblTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTags.Location = new System.Drawing.Point(6, 50);
+            this.lblTags.Name = "lblTags";
+            this.lblTags.Size = new System.Drawing.Size(244, 169);
+            this.lblTags.TabIndex = 1;
+            // 
+            // frm_RecipeInfos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +147,7 @@ namespace NotesCook.Forms
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.grp_menu);
-            this.Name = "frm_recipeInfos";
+            this.Name = "frm_RecipeInfos";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frm_recipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
@@ -157,5 +170,6 @@ namespace NotesCook.Forms
         private System.Windows.Forms.GroupBox grp_menu;
         private System.Windows.Forms.GroupBox grp_recipeInfos;
         private System.Windows.Forms.Label lbl_NbPeople;
+        private System.Windows.Forms.Label lblTags;
     }
 }
