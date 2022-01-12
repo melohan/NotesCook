@@ -38,6 +38,7 @@ namespace NotesCook.Forms
             this.grp_recipeInfos = new System.Windows.Forms.GroupBox();
             this.lblTags = new System.Windows.Forms.Label();
             this.lbl_NbPeople = new System.Windows.Forms.Label();
+            this.btn_Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
             this.grp_recipeInfos.SuspendLayout();
@@ -139,11 +140,26 @@ namespace NotesCook.Forms
             this.lbl_NbPeople.TabIndex = 0;
             this.lbl_NbPeople.Text = "Pour x personnes";
             // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackColor = System.Drawing.SystemColors.Window;
+            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.Location = new System.Drawing.Point(12, 517);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(81, 23);
+            this.btn_Delete.TabIndex = 12;
+            this.btn_Delete.Text = "Supprimer";
+            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
             // frm_RecipeInfos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.grp_recipeInfos);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
@@ -172,5 +188,6 @@ namespace NotesCook.Forms
         private System.Windows.Forms.GroupBox grp_recipeInfos;
         private System.Windows.Forms.Label lbl_NbPeople;
         private System.Windows.Forms.Label lblTags;
+        private System.Windows.Forms.Button btn_Delete;
     }
 }

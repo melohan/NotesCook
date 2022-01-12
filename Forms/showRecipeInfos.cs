@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NotesCook.Models;
+using NotesCook.Database;
 
 namespace NotesCook.Forms
 {
@@ -47,6 +48,21 @@ namespace NotesCook.Forms
             frm_ShowRecipeSteps form = new frm_ShowRecipeSteps(this.recipe);
             form.ShowDialog();
             this.Close();
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Etes vous sûr de vouloir supprimer cette recette ?", "Veuillez confirmer", MessageBoxButtons.YesNo);
+
+            if(dialogResult == DialogResult.Yes)
+            {
+                DB dB = new DB("NotesCook", "Recipe");
+                dB.Delete<Recipe>(this.recipe.Id);
+                this.Hide();
+                frm_home form = new frm_home();
+                form.ShowDialog();
+                this.Close();
+            }
         }
     }
 }
