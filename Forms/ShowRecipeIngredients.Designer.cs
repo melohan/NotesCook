@@ -108,18 +108,22 @@ namespace NotesCook.Forms
             // 
             // lst_Ingredients
             // 
+            this.lst_Ingredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_Ingredients.FormattingEnabled = true;
-            this.lst_Ingredients.Location = new System.Drawing.Point(11, 161);
+            this.lst_Ingredients.ItemHeight = 16;
+            this.lst_Ingredients.Location = new System.Drawing.Point(11, 184);
             this.lst_Ingredients.Name = "lst_Ingredients";
-            this.lst_Ingredients.Size = new System.Drawing.Size(254, 381);
+            this.lst_Ingredients.Size = new System.Drawing.Size(254, 244);
             this.lst_Ingredients.TabIndex = 14;
+            this.lst_Ingredients.SelectedIndexChanged += new System.EventHandler(this.lst_Ingredients_SelectedIndexChanged);
             // 
             // lblTableIngredients
             // 
             this.lblTableIngredients.AutoSize = true;
-            this.lblTableIngredients.Location = new System.Drawing.Point(12, 145);
+            this.lblTableIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableIngredients.Location = new System.Drawing.Point(12, 156);
             this.lblTableIngredients.Name = "lblTableIngredients";
-            this.lblTableIngredients.Size = new System.Drawing.Size(59, 13);
+            this.lblTableIngredients.Size = new System.Drawing.Size(74, 16);
             this.lblTableIngredients.TabIndex = 16;
             this.lblTableIngredients.Text = "Ingrédients";
             // 
