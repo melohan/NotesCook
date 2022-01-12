@@ -156,9 +156,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CreateStep.Designer.cs">
-      <DependentUpon>CreateStep.cs</DependentUpon>
-    </Compile>
-
+      <DependentUpon>CreateStep.cs</DependentUpon>    </Compile>
     <Compile Include="Forms\ShowRecipeSteps.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,7 +204,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ShowRecipeSteps.resx">
       <DependentUpon>ShowRecipeSteps.cs</DependentUpon>
-    </EmbeddedResource>>>>>>> feature/showRecipes
+    </EmbeddedResource>
     <EmbeddedResource Include="home.resx">
       <DependentUpon>home.cs</DependentUpon>
     </EmbeddedResource>
