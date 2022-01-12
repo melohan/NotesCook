@@ -19,6 +19,7 @@ namespace NotesCook.Forms
         {
             this.recipe = recipe;
             InitializeComponent();
+            loadPage();
         }
 
         private void lblIngredients_Click(object sender, EventArgs e)
@@ -39,11 +40,14 @@ namespace NotesCook.Forms
 
         private void btn_Next_Click(object sender, EventArgs e)
         {
-            if(recipe.Steps[(page + 1) * 2 - 1] != null)
-            {
                 this.page++;
                 loadPage();
-            }
+        }
+
+        private void btn_Previous_Click(object sender, EventArgs e)
+        {
+            this.page--;
+            loadPage();
         }
 
         private void loadPage()
@@ -53,21 +57,41 @@ namespace NotesCook.Forms
             lbl_Step1.Visible = false;
             lbl_Step2.Visible = false;
 
-            if(recipe.Steps[page * 2 - 1] != null)
+            if(recipe.Steps.Count >= (page * 2 - 1))
             {
-                grp_Step1.Text = ("Etape " + (page * 2 - 1) + " : " + recipe.Steps[page * 2 - 1].Name);
-                lbl_Step1.Text = recipe.Steps[page * 2 - 1].Description;
+                grp_Step1.Text = ("Etape " + (page * 2 - 1) + " : " + recipe.Steps[page * 2 - 2].Name);
+                lbl_Step1.Text = recipe.Steps[page * 2 - 2].Description;
                 grp_Step1.Visible = true;
-                lbl_Step1.Visible = false;
+                lbl_Step1.Visible = true;
             }
 
-            if (recipe.Steps[page * 2] != null)
+            if (recipe.Steps.Count >= (page * 2))
             {
-                grp_Step2.Text = ("Etape " + (page * 2) + " : " + recipe.Steps[page * 2].Name);
-                lbl_Step2.Text = recipe.Steps[page * 2].Description;
-                grp_Step2.Visible = false;
-                lbl_Step2.Visible = false;
+                grp_Step2.Text = ("Etape " + (page * 2) + " : " + recipe.Steps[page * 2 -1].Name);
+                lbl_Step2.Text = recipe.Steps[page * 2 - 1].Description;
+                grp_Step2.Visible = true;
+                lbl_Step2.Visible = true;
+            }
+
+            if (recipe.Steps.Count < ((page+1) * 2 - 1))
+            {
+                btn_Next.Enabled = false;
+            }
+            else
+            {
+                btn_Next.Enabled = true;
+            }
+
+            if (page == 1)
+            {
+                btn_Previous.Enabled = false;
+            }
+            else
+            {
+                btn_Previous.Enabled = true;
             }
         }
+
+        
     }
 }

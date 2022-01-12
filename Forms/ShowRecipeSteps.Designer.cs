@@ -36,11 +36,11 @@ namespace NotesCook.Forms
             this.lblRecipe = new System.Windows.Forms.Label();
             this.grp_menu = new System.Windows.Forms.GroupBox();
             this.grp_Step1 = new System.Windows.Forms.GroupBox();
+            this.lbl_Step1 = new System.Windows.Forms.Label();
             this.grp_Step2 = new System.Windows.Forms.GroupBox();
+            this.lbl_Step2 = new System.Windows.Forms.Label();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
-            this.lbl_Step1 = new System.Windows.Forms.Label();
-            this.lbl_Step2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
             this.grp_Step1.SuspendLayout();
@@ -124,6 +124,15 @@ namespace NotesCook.Forms
             this.grp_Step1.Text = "grp_step1";
             this.grp_Step1.Visible = false;
             // 
+            // lbl_Step1
+            // 
+            this.lbl_Step1.Location = new System.Drawing.Point(6, 16);
+            this.lbl_Step1.Name = "lbl_Step1";
+            this.lbl_Step1.Size = new System.Drawing.Size(244, 143);
+            this.lbl_Step1.TabIndex = 0;
+            this.lbl_Step1.Text = "label1";
+            this.lbl_Step1.Visible = false;
+            // 
             // grp_Step2
             // 
             this.grp_Step2.Controls.Add(this.lbl_Step2);
@@ -135,8 +144,18 @@ namespace NotesCook.Forms
             this.grp_Step2.Text = "grp_step2";
             this.grp_Step2.Visible = false;
             // 
+            // lbl_Step2
+            // 
+            this.lbl_Step2.Location = new System.Drawing.Point(7, 16);
+            this.lbl_Step2.Name = "lbl_Step2";
+            this.lbl_Step2.Size = new System.Drawing.Size(244, 143);
+            this.lbl_Step2.TabIndex = 1;
+            this.lbl_Step2.Text = "label2";
+            this.lbl_Step2.Visible = false;
+            // 
             // btn_Next
             // 
+            this.btn_Next.Enabled = false;
             this.btn_Next.Location = new System.Drawing.Point(186, 511);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(75, 23);
@@ -147,30 +166,14 @@ namespace NotesCook.Forms
             // 
             // btn_Previous
             // 
+            this.btn_Previous.Enabled = false;
             this.btn_Previous.Location = new System.Drawing.Point(7, 511);
             this.btn_Previous.Name = "btn_Previous";
             this.btn_Previous.Size = new System.Drawing.Size(75, 23);
             this.btn_Previous.TabIndex = 20;
             this.btn_Previous.Text = "Précédant";
             this.btn_Previous.UseVisualStyleBackColor = true;
-            // 
-            // lbl_Step1
-            // 
-            this.lbl_Step1.Location = new System.Drawing.Point(6, 16);
-            this.lbl_Step1.Name = "lbl_Step1";
-            this.lbl_Step1.Size = new System.Drawing.Size(244, 143);
-            this.lbl_Step1.TabIndex = 0;
-            this.lbl_Step1.Text = "label1";
-            this.lbl_Step1.Visible = false;
-            // 
-            // lbl_Step2
-            // 
-            this.lbl_Step2.Location = new System.Drawing.Point(7, 16);
-            this.lbl_Step2.Name = "lbl_Step2";
-            this.lbl_Step2.Size = new System.Drawing.Size(244, 143);
-            this.lbl_Step2.TabIndex = 1;
-            this.lbl_Step2.Text = "label2";
-            this.lbl_Step2.Visible = false;
+            this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
             // 
             // frm_ShowRecipeSteps
             // 
