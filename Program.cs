@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NotesCook.Forms;
+using NotesCook.Database;
+using NotesCook.Models;
 
 namespace NotesCook
 {
@@ -16,7 +19,15 @@ namespace NotesCook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_home());
+            DB dB = new DB("NotesCook","Recipe");
+            List<Recipe> myrecipe = dB.All<Recipe>();
+
+            Recipe recipe =  myrecipe[0];
+
+            
+
+            Application.Run(new frm_RecipeIngredients(recipe));
+            //Application.Run(new frm_home());
         }
     }
 }

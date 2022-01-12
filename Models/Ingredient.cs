@@ -72,5 +72,10 @@ namespace NotesCook.Models
             return new Ingredient();
         }
 
+        public override string ToString()
+        {
+            return this.Name;
+        }
+
     }
 }
