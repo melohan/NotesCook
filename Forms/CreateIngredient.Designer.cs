@@ -44,6 +44,8 @@ namespace NotesCook.Forms
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNext = new System.Windows.Forms.Button();
+            this.btmMinus = new System.Windows.Forms.Button();
+            this.lstIngredient = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grpRecipe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).BeginInit();
@@ -211,11 +213,36 @@ namespace NotesCook.Forms
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // btmMinus
+            // 
+            this.btmMinus.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btmMinus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btmMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmMinus.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btmMinus.Location = new System.Drawing.Point(234, 411);
+            this.btmMinus.Margin = new System.Windows.Forms.Padding(2);
+            this.btmMinus.Name = "btmMinus";
+            this.btmMinus.Size = new System.Drawing.Size(26, 28);
+            this.btmMinus.TabIndex = 11;
+            this.btmMinus.Text = "-";
+            this.btmMinus.UseVisualStyleBackColor = false;
+            this.btmMinus.Click += new System.EventHandler(this.btmMinus_Click);
+            // 
+            // lstIngredient
+            // 
+            this.lstIngredient.FormattingEnabled = true;
+            this.lstIngredient.Location = new System.Drawing.Point(18, 357);
+            this.lstIngredient.Name = "lstIngredient";
+            this.lstIngredient.Size = new System.Drawing.Size(212, 134);
+            this.lstIngredient.TabIndex = 12;
+            // 
             // CreateIngredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.btmMinus);
+            this.Controls.Add(this.lstIngredient);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
@@ -253,5 +280,7 @@ namespace NotesCook.Forms
         private System.Windows.Forms.Label lblUnity;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.NumericUpDown nupQuantity;
+        private System.Windows.Forms.Button btmMinus;
+        private System.Windows.Forms.ListBox lstIngredient;
     }
 }
