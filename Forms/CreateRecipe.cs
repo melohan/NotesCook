@@ -27,13 +27,18 @@ namespace NotesCook.Forms
         {
             if (txtTag.Text != null)
             {
-                this.recipe.Add(new Tag(txtTag.Text));
+                lstTag.Items.Add(txtTag.Text);
                 txtTag.Text = "";
             }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
+            
+            for(int i = 0; i < lstTag.Items.Count; i++)
+            {
+                this.recipe.Add(new Tag(lstTag.Items[i].ToString()));
+            }
             CreateIngredient cr = new CreateIngredient();
             cr.setRecipe(this.recipe);
             this.Hide();
@@ -53,6 +58,15 @@ namespace NotesCook.Forms
         {
             if (nupNbPersons.Value != recipe.NumberOfPersons && nupNbPersons.Value > 0)
                 this.recipe.NumberOfPersons = (int)nupNbPersons.Value;
+        }
+
+        private void btmMinus_Click(object sender, EventArgs e)
+        {
+            if(lstTag.SelectedIndex != -1)
+            {
+                for (int i = lstTag.SelectedItems.Count - 1; i >= 0; i--)
+                    lstTag.Items.Remove(lstTag.SelectedItems[i]);
+            }
         }
     }
 
