@@ -188,6 +188,7 @@ namespace NotesCook.Forms
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.grp_menu);
             this.Name = "frm_ShowRecipeSteps";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_ShowRecipeSteps";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             this.grp_menu.ResumeLayout(false);
