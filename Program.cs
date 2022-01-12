@@ -19,7 +19,7 @@ namespace NotesCook
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            DB dB = new DB("NotesCook","recepe");
+            DB dB = new DB("NotesCook","Recipe");
             List<Recipe> myrecipe = dB.All<Recipe>();
 
             Recipe recipe =  myrecipe[0];
