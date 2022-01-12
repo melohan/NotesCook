@@ -36,8 +36,8 @@ namespace NotesCook.Forms
             this.lblRecipe = new System.Windows.Forms.Label();
             this.grp_menu = new System.Windows.Forms.GroupBox();
             this.grp_recipeInfos = new System.Windows.Forms.GroupBox();
-            this.lbl_NbPeople = new System.Windows.Forms.Label();
             this.lblTags = new System.Windows.Forms.Label();
+            this.lbl_NbPeople = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
             this.grp_recipeInfos.SuspendLayout();
@@ -71,6 +71,7 @@ namespace NotesCook.Forms
             this.lblSteps.Size = new System.Drawing.Size(58, 17);
             this.lblSteps.TabIndex = 8;
             this.lblSteps.Text = "Etapes";
+            this.lblSteps.Click += new System.EventHandler(this.lblSteps_Click);
             // 
             // lblIngredients
             // 
@@ -120,6 +121,14 @@ namespace NotesCook.Forms
             this.grp_recipeInfos.TabStop = false;
             this.grp_recipeInfos.Text = "recipeName";
             // 
+            // lblTags
+            // 
+            this.lblTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTags.Location = new System.Drawing.Point(6, 50);
+            this.lblTags.Name = "lblTags";
+            this.lblTags.Size = new System.Drawing.Size(244, 169);
+            this.lblTags.TabIndex = 1;
+            // 
             // lbl_NbPeople
             // 
             this.lbl_NbPeople.AutoSize = true;
@@ -129,14 +138,6 @@ namespace NotesCook.Forms
             this.lbl_NbPeople.Size = new System.Drawing.Size(112, 16);
             this.lbl_NbPeople.TabIndex = 0;
             this.lbl_NbPeople.Text = "Pour x personnes";
-            // 
-            // lblTags
-            // 
-            this.lblTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTags.Location = new System.Drawing.Point(6, 50);
-            this.lblTags.Name = "lblTags";
-            this.lblTags.Size = new System.Drawing.Size(244, 169);
-            this.lblTags.TabIndex = 1;
             // 
             // frm_RecipeInfos
             // 

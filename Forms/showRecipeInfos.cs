@@ -40,5 +40,13 @@ namespace NotesCook.Forms
             frm_recipeIngredients.ShowDialog();
             this.Close();
         }
+
+        private void lblSteps_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_ShowRecipeSteps form = new frm_ShowRecipeSteps(this.recipe);
+            form.ShowDialog();
+            this.Close();
+        }
     }
 }

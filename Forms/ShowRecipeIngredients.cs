@@ -23,8 +23,16 @@ namespace NotesCook.Forms
         private void lblRecipe_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_RecipeInfos frm_recipeInfos = new frm_RecipeInfos(recipe);
+            frm_RecipeInfos frm_recipeInfos = new frm_RecipeInfos(this.recipe);
             frm_recipeInfos.ShowDialog();
+            this.Close();
+        }
+
+        private void lblSteps_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_ShowRecipeSteps form = new frm_ShowRecipeSteps(this.recipe);
+            form.ShowDialog();
             this.Close();
         }
 
@@ -35,11 +43,6 @@ namespace NotesCook.Forms
                 String element = ingredient.Name + "\t\t" + ingredient.Quantity.ToString() +" "+ ingredient.Unit;
                 lst_Ingredients.Items.Add(element);
             }
-        }
-
-        private void lst_Ingredients_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

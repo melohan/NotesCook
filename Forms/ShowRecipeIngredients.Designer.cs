@@ -69,6 +69,7 @@ namespace NotesCook.Forms
             this.lblSteps.Size = new System.Drawing.Size(58, 17);
             this.lblSteps.TabIndex = 8;
             this.lblSteps.Text = "Etapes";
+            this.lblSteps.Click += new System.EventHandler(this.lblSteps_Click);
             // 
             // lblIngredients
             // 
@@ -99,9 +100,9 @@ namespace NotesCook.Forms
             this.grp_menu.Controls.Add(this.lblIngredients);
             this.grp_menu.Controls.Add(this.lblRecipe);
             this.grp_menu.Location = new System.Drawing.Point(7, 97);
-            this.grp_menu.Margin = new System.Windows.Forms.Padding(2);
+            this.grp_menu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grp_menu.Name = "grp_menu";
-            this.grp_menu.Padding = new System.Windows.Forms.Padding(2);
+            this.grp_menu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grp_menu.Size = new System.Drawing.Size(259, 40);
             this.grp_menu.TabIndex = 13;
             this.grp_menu.TabStop = false;
@@ -115,7 +116,6 @@ namespace NotesCook.Forms
             this.lst_Ingredients.Name = "lst_Ingredients";
             this.lst_Ingredients.Size = new System.Drawing.Size(254, 244);
             this.lst_Ingredients.TabIndex = 14;
-            this.lst_Ingredients.SelectedIndexChanged += new System.EventHandler(this.lst_Ingredients_SelectedIndexChanged);
             // 
             // lblTableIngredients
             // 
