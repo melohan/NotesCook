@@ -101,5 +101,17 @@ namespace NotesCook.Models
                 this.Steps.Remove(step);
         }
 
+        public void RemoveStepByPosition(int position)
+        {
+            foreach(Step step in this.Steps)
+            {
+                if(step.Position == position)
+                {
+                    this.Steps.Remove(step);
+                    return;
+                }
+            }
+        }
+
     }
 }

@@ -30,8 +30,9 @@ namespace NotesCook.Forms
             if (txtName.Text != null && txtDescription.Text != null)
             {
                 this.recipe.Add(new Step((int)nupNoStep.Value,txtName.Text,txtDescription.Text));
+                lstStep.Items.Add(nupNoStep.Value.ToString() + " " + txtName.Text);
                 txtName.Text = "";
-                nupNoStep.Value = 0;
+                nupNoStep.Value += 1;
                 txtDescription.Text = "";
             }
         }
@@ -44,6 +45,15 @@ namespace NotesCook.Forms
             frm_home h = new frm_home();
             h.ShowDialog();
             this.Close();
+        }
+
+        private void btmMinus_Click(object sender, EventArgs e)
+        {
+            if (lstStep.SelectedIndex != -1)
+            {
+                this.recipe.RemoveStepByPosition(Convert.ToInt32(lstStep.SelectedItem.ToString().Split(' ', '1')[0]));
+                lstStep.Items.Remove(lstStep.SelectedItem);
+            }
         }
     }
 }
