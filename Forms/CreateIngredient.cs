@@ -57,8 +57,7 @@ namespace NotesCook.Forms
         {
             if (lstIngredient.SelectedIndex != -1)
             {
-                for (int i = lstIngredient.SelectedItems.Count - 1; i >= 0; i--)
-                    lstIngredient.Items.Remove(lstIngredient.SelectedItems[i]);
+                lstIngredient.Items.Remove(lstIngredient.SelectedItem);
             }
         }
     }
