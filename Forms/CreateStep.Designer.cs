@@ -44,6 +44,8 @@ namespace NotesCook.Forms
             this.lblSteps = new System.Windows.Forms.Label();
             this.lblIngredients = new System.Windows.Forms.Label();
             this.lblRecipe = new System.Windows.Forms.Label();
+            this.lstStep = new System.Windows.Forms.ListBox();
+            this.btmMinus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grpStep.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupNoStep)).BeginInit();
@@ -72,16 +74,16 @@ namespace NotesCook.Forms
             // 
             // btnEnd
             // 
-            this.btnEnd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEnd.BackColor = System.Drawing.SystemColors.Control;
             this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnd.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEnd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEnd.Location = new System.Drawing.Point(99, 497);
             this.btnEnd.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Size = new System.Drawing.Size(75, 35);
             this.btnEnd.TabIndex = 9;
             this.btnEnd.Text = "Terminer";
-            this.btnEnd.UseVisualStyleBackColor = false;
+            this.btnEnd.UseVisualStyleBackColor = true;
             this.btnEnd.Click += new System.EventHandler(this.btnEnd_Click);
             // 
             // grpStep
@@ -98,24 +100,25 @@ namespace NotesCook.Forms
             this.grpStep.Margin = new System.Windows.Forms.Padding(2);
             this.grpStep.Name = "grpStep";
             this.grpStep.Padding = new System.Windows.Forms.Padding(2);
-            this.grpStep.Size = new System.Drawing.Size(246, 236);
+            this.grpStep.Size = new System.Drawing.Size(246, 221);
             this.grpStep.TabIndex = 8;
             this.grpStep.TabStop = false;
             this.grpStep.Text = "Etape";
             // 
             // btnPlus
             // 
-            this.btnPlus.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPlus.BackColor = System.Drawing.SystemColors.Control;
             this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlus.Enabled = false;
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPlus.Location = new System.Drawing.Point(207, 187);
             this.btnPlus.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(26, 28);
             this.btnPlus.TabIndex = 9;
             this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = false;
+            this.btnPlus.UseVisualStyleBackColor = true;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // lblDescription
@@ -152,6 +155,7 @@ namespace NotesCook.Forms
             0,
             0,
             0});
+            this.nupNoStep.ValueChanged += new System.EventHandler(this.nupNoStep_ValueChanged);
             // 
             // lblNoStep
             // 
@@ -170,6 +174,7 @@ namespace NotesCook.Forms
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(134, 23);
             this.txtName.TabIndex = 1;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // lblName
             // 
@@ -231,11 +236,36 @@ namespace NotesCook.Forms
             this.lblRecipe.Text = "Recettes";
             this.lblRecipe.Click += new System.EventHandler(this.lblRecipe_Click);
             // 
+            // lstStep
+            // 
+            this.lstStep.FormattingEnabled = true;
+            this.lstStep.Location = new System.Drawing.Point(16, 397);
+            this.lstStep.Name = "lstStep";
+            this.lstStep.Size = new System.Drawing.Size(212, 95);
+            this.lstStep.TabIndex = 14;
+            // 
+            // btmMinus
+            // 
+            this.btmMinus.BackColor = System.Drawing.SystemColors.Control;
+            this.btmMinus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btmMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmMinus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btmMinus.Location = new System.Drawing.Point(242, 432);
+            this.btmMinus.Margin = new System.Windows.Forms.Padding(2);
+            this.btmMinus.Name = "btmMinus";
+            this.btmMinus.Size = new System.Drawing.Size(26, 28);
+            this.btmMinus.TabIndex = 15;
+            this.btmMinus.Text = "-";
+            this.btmMinus.UseVisualStyleBackColor = true;
+            this.btmMinus.Click += new System.EventHandler(this.btmMinus_Click);
+            // 
             // CreateStep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.btmMinus);
+            this.Controls.Add(this.lstStep);
             this.Controls.Add(this.btnEnd);
             this.Controls.Add(this.grpStep);
             this.Controls.Add(this.groupBox1);
@@ -272,5 +302,7 @@ namespace NotesCook.Forms
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Button btnPlus;
+        private System.Windows.Forms.ListBox lstStep;
+        private System.Windows.Forms.Button btmMinus;
     }
 }

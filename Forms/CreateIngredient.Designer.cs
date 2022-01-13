@@ -44,6 +44,8 @@ namespace NotesCook.Forms
             this.lblName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnNext = new System.Windows.Forms.Button();
+            this.btmMinus = new System.Windows.Forms.Button();
+            this.lstIngredient = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grpRecipe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).BeginInit();
@@ -123,6 +125,11 @@ namespace NotesCook.Forms
             // nupQuantity
             // 
             this.nupQuantity.Location = new System.Drawing.Point(137, 68);
+            this.nupQuantity.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nupQuantity.Name = "nupQuantity";
             this.nupQuantity.Size = new System.Drawing.Size(100, 23);
             this.nupQuantity.TabIndex = 10;
@@ -133,6 +140,7 @@ namespace NotesCook.Forms
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(100, 23);
             this.txtUnit.TabIndex = 9;
+            this.txtUnit.TextChanged += new System.EventHandler(this.txtUnit_TextChanged);
             // 
             // txtName
             // 
@@ -140,6 +148,7 @@ namespace NotesCook.Forms
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 23);
             this.txtName.TabIndex = 7;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // lblUnity
             // 
@@ -161,17 +170,18 @@ namespace NotesCook.Forms
             // 
             // btnPlus
             // 
-            this.btnPlus.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPlus.BackColor = System.Drawing.SystemColors.Control;
             this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlus.Enabled = false;
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPlus.Location = new System.Drawing.Point(211, 135);
             this.btnPlus.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(26, 28);
             this.btnPlus.TabIndex = 4;
             this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = false;
+            this.btnPlus.UseVisualStyleBackColor = true;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
             // 
             // lblName
@@ -199,23 +209,48 @@ namespace NotesCook.Forms
             // 
             // btnNext
             // 
-            this.btnNext.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnNext.BackColor = System.Drawing.SystemColors.Control;
             this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNext.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNext.Location = new System.Drawing.Point(99, 497);
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 35);
             this.btnNext.TabIndex = 10;
             this.btnNext.Text = "Suivant";
-            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btmMinus
+            // 
+            this.btmMinus.BackColor = System.Drawing.SystemColors.Control;
+            this.btmMinus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btmMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmMinus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btmMinus.Location = new System.Drawing.Point(234, 411);
+            this.btmMinus.Margin = new System.Windows.Forms.Padding(2);
+            this.btmMinus.Name = "btmMinus";
+            this.btmMinus.Size = new System.Drawing.Size(26, 28);
+            this.btmMinus.TabIndex = 11;
+            this.btmMinus.Text = "-";
+            this.btmMinus.UseVisualStyleBackColor = true;
+            this.btmMinus.Click += new System.EventHandler(this.btmMinus_Click);
+            // 
+            // lstIngredient
+            // 
+            this.lstIngredient.FormattingEnabled = true;
+            this.lstIngredient.Location = new System.Drawing.Point(18, 357);
+            this.lstIngredient.Name = "lstIngredient";
+            this.lstIngredient.Size = new System.Drawing.Size(212, 134);
+            this.lstIngredient.TabIndex = 12;
             // 
             // CreateIngredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.btmMinus);
+            this.Controls.Add(this.lstIngredient);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
@@ -253,5 +288,7 @@ namespace NotesCook.Forms
         private System.Windows.Forms.Label lblUnity;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.NumericUpDown nupQuantity;
+        private System.Windows.Forms.Button btmMinus;
+        private System.Windows.Forms.ListBox lstIngredient;
     }
 }

@@ -27,13 +27,11 @@ namespace NotesCook.Forms
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if (txtName.Text != null && txtDescription.Text != null)
-            {
-                this.recipe.Add(new Step((int)nupNoStep.Value,txtName.Text,txtDescription.Text));
-                txtName.Text = "";
-                nupNoStep.Value = 0;
-                txtDescription.Text = "";
-            }
+            this.recipe.Add(new Step((int)nupNoStep.Value,txtName.Text,txtDescription.Text));
+            lstStep.Items.Add(nupNoStep.Value.ToString() + " " + txtName.Text);
+            txtName.Text = "";
+            nupNoStep.Value += 1;
+            txtDescription.Text = "";
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
@@ -46,34 +44,41 @@ namespace NotesCook.Forms
             this.Close();
         }
 
-        private void lblRecipe_Click(object sender, EventArgs e)
+        private bool btnEnabler()
         {
-
+            string name = txtName.Text.ToString();
+            if (name != "")
+            {
+                foreach (Step step in recipe.Steps)
+                {
+                    if (nupNoStep.Value == step.Position)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+                return false;
         }
 
-        private void pic_logo1_Click(object sender, EventArgs e)
+        private void btmMinus_Click(object sender, EventArgs e)
         {
-
+            if (lstStep.SelectedIndex != -1)
+            {
+                this.recipe.RemoveStepByPosition(Convert.ToInt32(lstStep.SelectedItem.ToString().Split(' ', '1')[0]));
+                lstStep.Items.Remove(lstStep.SelectedItem);
+            }
         }
 
-        private void lbl_title_Click(object sender, EventArgs e)
+        private void txtName_TextChanged(object sender, EventArgs e)
         {
-
+            btnPlus.Enabled = btnEnabler();
         }
 
-        private void lblIngredients_Click(object sender, EventArgs e)
+        private void nupNoStep_ValueChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblSteps_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
+            btnPlus.Enabled = btnEnabler();
         }
     }
 }
