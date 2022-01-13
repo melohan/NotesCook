@@ -21,10 +21,10 @@ namespace NotesCook.Models
         /**
          * Constructor with params
          * @param string name
-         * @param int quantity
+         * @param double quantity
          * @param string unit
          **/
-        public Ingredient(string name, int quantity, string unit)
+        public Ingredient(string name, double quantity, string unit)
         {
             this.Name     = name;
             this.Quantity = quantity;
@@ -50,7 +50,7 @@ namespace NotesCook.Models
         [BsonId]    // id
         public Guid Id { get; set; }   
         public string Name { get; set; }
-        public int Quantity { get; set; }
+        public double Quantity { get; set; }
         public string Unit { get; set; }
 
         /************************************************

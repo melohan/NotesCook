@@ -27,25 +27,16 @@ namespace NotesCook.Forms
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-
-            if (txtName.Text != "" && txtUnit.Text != "")
-            {
-                lstIngredient.Items.Add(txtName.Text + " " + nupQuantity.Value.ToString() + " " + txtUnit.Text);
-                txtName.Text = "";
-                nupQuantity.Value = 0;
-                txtUnit.Text = "";
-            }
+            String name = txtName.Text.Trim(',');
+            String unit = txtUnit.Text.Trim(',');
+            lstIngredient.Items.Add(name + "," + nupQuantity.Value.ToString() + "," + unit);
+            recipe.Add(new Ingredient(name,((double)nupQuantity.Value),unit));
+            txtName.Text = "";
+            nupQuantity.Value = 0;  
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-
-            for (int i = 0; i < lstIngredient.Items.Count; i++)
-            {
-                string[] ingredient = lstIngredient.Items[i].ToString().Split(' ', '3', (char)StringSplitOptions.RemoveEmptyEntries);
-                this.recipe.Ingredients.Add(new Ingredient(ingredient[0], Convert.ToInt32(ingredient[1]), ingredient[2]));
-            
-            }
             CreateStep cs = new CreateStep();
             cs.setRecipe(this.recipe);
             this.Hide();
@@ -57,8 +48,37 @@ namespace NotesCook.Forms
         {
             if (lstIngredient.SelectedIndex != -1)
             {
+                this.recipe.RemoveIngredientByName(lstIngredient.SelectedItem.ToString().Split(',', '1', (char)StringSplitOptions.RemoveEmptyEntries)[0]);
                 lstIngredient.Items.Remove(lstIngredient.SelectedItem);
             }
+        }
+
+        private bool btnEnabler()
+        {
+            String name = txtName.Text.Trim(',');
+            if (name != "" && txtUnit.Text.Trim(',') != "")
+            {
+                foreach (Ingredient ingredient in recipe.Ingredients)
+                {
+                    if (name == ingredient.Name)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+                return false;
+        }
+
+        private void txtUnit_TextChanged(object sender, EventArgs e)
+        {
+            btnPlus.Enabled = btnEnabler();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            btnPlus.Enabled = btnEnabler();
         }
     }
 }

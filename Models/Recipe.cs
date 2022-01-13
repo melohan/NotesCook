@@ -82,7 +82,7 @@ namespace NotesCook.Models
         }
 
         /**
-         * Add ingredient
+         * Remove ingredient
          * @param IngredientModel
          **/
         public void Remove(Ingredient ingredient)
@@ -92,7 +92,7 @@ namespace NotesCook.Models
         }
 
         /**
-         * Add step
+         * Remove step
          * @param StepModel
          **/
         public void Remove(Step step)
@@ -101,6 +101,10 @@ namespace NotesCook.Models
                 this.Steps.Remove(step);
         }
 
+        /**
+         * Remove step
+         * @param position
+         **/
         public void RemoveStepByPosition(int position)
         {
             foreach(Step step in this.Steps)
@@ -113,5 +117,36 @@ namespace NotesCook.Models
             }
         }
 
+        /**
+         * Remove ingredient
+         * @param name
+         **/
+        public void RemoveIngredientByName(string name)
+        {
+            foreach (Ingredient ingredient in this.Ingredients)
+            {
+                if (ingredient.Name == name)
+                {
+                    this.Ingredients.Remove(ingredient);
+                    return;
+                }
+            }
+        }
+
+        /**
+         * Remove tag
+         * @param name
+         **/
+        public void RemoveTagByName(string name)
+        {
+            foreach (Tag tag in this.Tags)
+            {
+                if (tag.Name == name)
+                {
+                    this.Tags.Remove(tag);
+                    return;
+                }
+            }
+        }
     }
 }
