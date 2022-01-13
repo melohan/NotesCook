@@ -28,7 +28,7 @@ namespace NotesCook.Forms
         private void btnPlus_Click(object sender, EventArgs e)
         {
             this.recipe.Add(new Step((int)nupNoStep.Value,txtName.Text,txtDescription.Text));
-            lstStep.Items.Add(nupNoStep.Value.ToString() + " " + txtName.Text);
+            lstStep.Items.Add(nupNoStep.Value.ToString() + ". " + txtName.Text);
             txtName.Text = "";
             nupNoStep.Value += 1;
             txtDescription.Text = "";
@@ -66,7 +66,8 @@ namespace NotesCook.Forms
         {
             if (lstStep.SelectedIndex != -1)
             {
-                this.recipe.RemoveStepByPosition(Convert.ToInt32(lstStep.SelectedItem.ToString().Split(' ', '1')[0]));
+                int position = Convert.ToInt32(lstStep.SelectedItem.ToString().Split('.')[0]);
+                this.recipe.RemoveStepByPosition(position);
                 lstStep.Items.Remove(lstStep.SelectedItem);
             }
         }

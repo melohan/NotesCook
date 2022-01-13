@@ -59,7 +59,6 @@ namespace NotesCook.Forms
             this.pic_logo1.Size = new System.Drawing.Size(45, 48);
             this.pic_logo1.TabIndex = 5;
             this.pic_logo1.TabStop = false;
-            this.pic_logo1.Click += new System.EventHandler(this.pic_logo1_Click);
             // 
             // lbl_title
             // 
@@ -70,7 +69,6 @@ namespace NotesCook.Forms
             this.lbl_title.Size = new System.Drawing.Size(126, 46);
             this.lbl_title.TabIndex = 4;
             this.lbl_title.Text = "!Cook";
-            this.lbl_title.Click += new System.EventHandler(this.lbl_title_Click);
             // 
             // btnEnd
             // 
@@ -198,7 +196,6 @@ namespace NotesCook.Forms
             this.groupBox1.Size = new System.Drawing.Size(259, 40);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lblSteps
             // 
@@ -210,7 +207,6 @@ namespace NotesCook.Forms
             this.lblSteps.Size = new System.Drawing.Size(58, 17);
             this.lblSteps.TabIndex = 8;
             this.lblSteps.Text = "Etapes";
-            this.lblSteps.Click += new System.EventHandler(this.lblSteps_Click);
             // 
             // lblIngredients
             // 
@@ -222,7 +218,6 @@ namespace NotesCook.Forms
             this.lblIngredients.Size = new System.Drawing.Size(89, 17);
             this.lblIngredients.TabIndex = 7;
             this.lblIngredients.Text = "Ingrédients";
-            this.lblIngredients.Click += new System.EventHandler(this.lblIngredients_Click);
             // 
             // lblRecipe
             // 
@@ -234,7 +229,6 @@ namespace NotesCook.Forms
             this.lblRecipe.Size = new System.Drawing.Size(72, 17);
             this.lblRecipe.TabIndex = 6;
             this.lblRecipe.Text = "Recettes";
-            this.lblRecipe.Click += new System.EventHandler(this.lblRecipe_Click);
             // 
             // lstStep
             // 

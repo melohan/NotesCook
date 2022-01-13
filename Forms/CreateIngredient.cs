@@ -48,7 +48,7 @@ namespace NotesCook.Forms
         {
             if (lstIngredient.SelectedIndex != -1)
             {
-                this.recipe.RemoveIngredientByName(lstIngredient.SelectedItem.ToString().Split(',', '1', (char)StringSplitOptions.RemoveEmptyEntries)[0]);
+                this.recipe.RemoveIngredientByName(lstIngredient.SelectedItem.ToString().Split(',')[0]);
                 lstIngredient.Items.Remove(lstIngredient.SelectedItem);
             }
         }
