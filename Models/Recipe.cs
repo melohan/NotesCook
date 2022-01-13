@@ -101,5 +101,10 @@ namespace NotesCook.Models
                 this.Steps.Remove(step);
         }
 
+        public void Destroy()
+        {
+            DB dB = new DB("NotesCook", "Recipe");
+            dB.Delete<Recipe>(this.Id);
+        }
     }
 }

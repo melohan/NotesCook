@@ -56,8 +56,7 @@ namespace NotesCook.Forms
 
             if(dialogResult == DialogResult.Yes)
             {
-                DB dB = new DB("NotesCook", "Recipe");
-                dB.Delete<Recipe>(this.recipe.Id);
+                this.recipe.Destroy();
                 this.Hide();
                 frm_home form = new frm_home();
                 form.ShowDialog();
