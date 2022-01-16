@@ -6,7 +6,7 @@ using NotesCook.Database;
 
 namespace NotesCook.Models
 {
-    public class Recipe
+    public class Recipe : Model
     {
         /************************************************
          *            Constructors
@@ -68,38 +68,8 @@ namespace NotesCook.Models
         }
 
         /************************************************
-         *            Remove element to recipe
+         *            Remove element to recipe object
          ***********************************************/
-
-        /**
-         * Remove tag
-         * @param TagModel
-         **/
-        public void Remove(Tag tag)
-        {
-            if (tag != null)
-                this.Tags.Remove(tag);
-        }
-
-        /**
-         * Remove ingredient
-         * @param IngredientModel
-         **/
-        public void Remove(Ingredient ingredient)
-        {
-            if (ingredient != null)
-                this.Ingredients.Remove(ingredient);
-        }
-
-        /**
-         * Remove step
-         * @param StepModel
-         **/
-        public void Remove(Step step)
-        {
-            if (step != null)
-                this.Steps.Remove(step);
-        }
 
         /**
          * Destroy Recipe
@@ -157,5 +127,26 @@ namespace NotesCook.Models
                 }
             }
         }
+
+    /************************************************
+     *             Operations on records
+     ***********************************************/
+
+
+        public override void Create()
+        {
+            Insert<Recipe>(this);
+        }
+
+        public override void Edit()
+        {
+            Update<Recipe>(this.Id, this);
+        }
+
+        public override void Remove()
+        {
+            Delete<Recipe>(this.Id);
+        }
+
     }
 }

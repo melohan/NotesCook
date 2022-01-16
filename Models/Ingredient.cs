@@ -1,12 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
-
+/**
+ * This object is an embedded document in recipe. 
+ * Because the MongoDB driver does not auto-generate id for this kind of elements, 
+ * the constructor does so before insertion into the database.
+ **/
 namespace NotesCook.Models
 {
 
-    public class Ingredient
+    public class Ingredient:Model
     {
 
         /************************************************
@@ -16,7 +22,9 @@ namespace NotesCook.Models
         /**
          * Default constructor
          **/
-        public Ingredient(){}
+        public Ingredient(){
+            this.Id = Guid.NewGuid();
+        }
 
         /**
          * Constructor with params
@@ -24,7 +32,7 @@ namespace NotesCook.Models
          * @param double quantity
          * @param string unit
          **/
-        public Ingredient(string name, double quantity, string unit)
+        public Ingredient(string name, double quantity, string unit):this()
         {
             this.Name     = name;
             this.Quantity = quantity;
@@ -54,7 +62,7 @@ namespace NotesCook.Models
         public string Unit { get; set; }
 
         /************************************************
-         *                  Methods 
+         *             Methods on lists 
          ***********************************************/
 
         /**
@@ -72,9 +80,24 @@ namespace NotesCook.Models
             return new Ingredient();
         }
 
-        public override string ToString()
+
+      /************************************************
+       *             Operations on records
+       ***********************************************/
+
+        public override void Edit()
         {
-            return this.Name;
+            Update<Ingredient>(this.Id, this);
+        }
+        
+        public override void Create()
+        {
+            Insert<Ingredient>(this);
+        }
+              
+        public override void Remove()
+        {
+            Delete<Ingredient>(this.Id);
         }
 
     }

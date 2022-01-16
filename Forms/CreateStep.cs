@@ -36,8 +36,7 @@ namespace NotesCook.Forms
 
         private void btnEnd_Click(object sender, EventArgs e)
         {
-            DB db = new DB("NotesCook", "recipes");
-            db.Insert(this.recipe);
+            this.recipe.Create();
             this.Hide();
             frm_home h = new frm_home();
             h.ShowDialog();

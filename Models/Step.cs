@@ -5,7 +5,12 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace NotesCook.Models
 {
-    public class Step
+    /**
+     * This object is an embedded document in recipe. 
+     * Because the MongoDB driver does not auto-generate id for this kind of elements, 
+     * the constructor does so before insertion into the database.
+     **/
+    public class Step : Model
     {
 
         /************************************************
@@ -15,7 +20,10 @@ namespace NotesCook.Models
         /**
          * Default constructor
          **/
-        public Step() { }
+        public Step() 
+        {
+            this.Id = Guid.NewGuid();
+        }
 
         /**
          * Constructor with params
@@ -23,7 +31,7 @@ namespace NotesCook.Models
          * @param string name
          * @param string description
          **/
-        public Step(int position, string name,  string description)
+        public Step(int position, string name,  string description) : this()
         {
             this.Position    = position;
             this.Name        = name;
@@ -70,5 +78,25 @@ namespace NotesCook.Models
             }
             return new Step();
         }
+
+      /************************************************
+       *             Operations on records
+       ***********************************************/
+
+        public override void Create()
+        {
+            Insert<Step>(this);
+        }
+
+        public override void Edit()
+        {
+            Update<Step>(this.Id, this);
+        }
+
+        public override void Remove()
+        {
+            Delete<Step>(this.Id);
+        }
+
     }
 }

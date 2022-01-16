@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 
+/**
+ * This object is an embedded document in recipe. 
+ * Because the MongoDB driver does not auto-generate id for this kind of elements, 
+ * the constructor does so before insertion into the database.
+ **/
 namespace NotesCook.Models
 {
-    public class Tag
+    public class Tag : Model
     {
 
         /************************************************
@@ -14,13 +19,16 @@ namespace NotesCook.Models
         /**
          * Default constructor
          **/
-        public Tag() { }
+        public Tag() 
+        {
+           this.Id = Guid.NewGuid();
+        }
 
         /**
          * Constructor with params
          * @param string name
          **/
-        public Tag(string name)
+        public Tag(string name) : this()
         {
             this.Name = name;
         }
@@ -60,6 +68,26 @@ namespace NotesCook.Models
                     return step;
             }
             return new Tag();
+        }
+
+
+        /************************************************
+       *             Operations on records
+         ***********************************************/
+
+        public override void Create()
+        {
+            Insert<Tag>(this);
+        }
+
+        public override void Edit()
+        {
+            Update<Tag>(this.Id, this);
+        }
+
+        public override void Remove()
+        {
+            Delete<Tag>(this.Id);
         }
     }
 }
