@@ -36,11 +36,17 @@ namespace NotesCook.Forms
             this.lblRecipe = new System.Windows.Forms.Label();
             this.grp_menu = new System.Windows.Forms.GroupBox();
             this.grp_Step1 = new System.Windows.Forms.GroupBox();
+            this.txtNameStep1 = new System.Windows.Forms.TextBox();
+            this.txt_step1 = new System.Windows.Forms.TextBox();
             this.lbl_Step1 = new System.Windows.Forms.Label();
             this.grp_Step2 = new System.Windows.Forms.GroupBox();
+            this.txtNameStep2 = new System.Windows.Forms.TextBox();
+            this.txt_step2 = new System.Windows.Forms.TextBox();
             this.lbl_Step2 = new System.Windows.Forms.Label();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
             this.grp_Step1.SuspendLayout();
@@ -115,6 +121,8 @@ namespace NotesCook.Forms
             // 
             // grp_Step1
             // 
+            this.grp_Step1.Controls.Add(this.txtNameStep1);
+            this.grp_Step1.Controls.Add(this.txt_step1);
             this.grp_Step1.Controls.Add(this.lbl_Step1);
             this.grp_Step1.Location = new System.Drawing.Point(7, 151);
             this.grp_Step1.Name = "grp_Step1";
@@ -123,6 +131,23 @@ namespace NotesCook.Forms
             this.grp_Step1.TabStop = false;
             this.grp_Step1.Text = "grp_step1";
             this.grp_Step1.Visible = false;
+            // 
+            // txtNameStep1
+            // 
+            this.txtNameStep1.Location = new System.Drawing.Point(0, 0);
+            this.txtNameStep1.Name = "txtNameStep1";
+            this.txtNameStep1.Size = new System.Drawing.Size(100, 20);
+            this.txtNameStep1.TabIndex = 22;
+            this.txtNameStep1.Visible = false;
+            // 
+            // txt_step1
+            // 
+            this.txt_step1.Location = new System.Drawing.Point(0, 21);
+            this.txt_step1.Multiline = true;
+            this.txt_step1.Name = "txt_step1";
+            this.txt_step1.Size = new System.Drawing.Size(256, 143);
+            this.txt_step1.TabIndex = 1;
+            this.txt_step1.Visible = false;
             // 
             // lbl_Step1
             // 
@@ -135,6 +160,8 @@ namespace NotesCook.Forms
             // 
             // grp_Step2
             // 
+            this.grp_Step2.Controls.Add(this.txtNameStep2);
+            this.grp_Step2.Controls.Add(this.txt_step2);
             this.grp_Step2.Controls.Add(this.lbl_Step2);
             this.grp_Step2.Location = new System.Drawing.Point(6, 326);
             this.grp_Step2.Name = "grp_Step2";
@@ -143,6 +170,23 @@ namespace NotesCook.Forms
             this.grp_Step2.TabStop = false;
             this.grp_Step2.Text = "grp_step2";
             this.grp_Step2.Visible = false;
+            // 
+            // txtNameStep2
+            // 
+            this.txtNameStep2.Location = new System.Drawing.Point(1, 0);
+            this.txtNameStep2.Name = "txtNameStep2";
+            this.txtNameStep2.Size = new System.Drawing.Size(100, 20);
+            this.txtNameStep2.TabIndex = 23;
+            this.txtNameStep2.Visible = false;
+            // 
+            // txt_step2
+            // 
+            this.txt_step2.Location = new System.Drawing.Point(1, 21);
+            this.txt_step2.Multiline = true;
+            this.txt_step2.Name = "txt_step2";
+            this.txt_step2.Size = new System.Drawing.Size(256, 141);
+            this.txt_step2.TabIndex = 2;
+            this.txt_step2.Visible = false;
             // 
             // lbl_Step2
             // 
@@ -156,7 +200,7 @@ namespace NotesCook.Forms
             // btn_Next
             // 
             this.btn_Next.Enabled = false;
-            this.btn_Next.Location = new System.Drawing.Point(186, 511);
+            this.btn_Next.Location = new System.Drawing.Point(186, 525);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(75, 23);
             this.btn_Next.TabIndex = 19;
@@ -167,7 +211,7 @@ namespace NotesCook.Forms
             // btn_Previous
             // 
             this.btn_Previous.Enabled = false;
-            this.btn_Previous.Location = new System.Drawing.Point(7, 511);
+            this.btn_Previous.Location = new System.Drawing.Point(7, 525);
             this.btn_Previous.Name = "btn_Previous";
             this.btn_Previous.Size = new System.Drawing.Size(75, 23);
             this.btn_Previous.TabIndex = 20;
@@ -175,11 +219,34 @@ namespace NotesCook.Forms
             this.btn_Previous.UseVisualStyleBackColor = true;
             this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
             // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(96, 525);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(75, 23);
+            this.btn_edit.TabIndex = 21;
+            this.btn_edit.Text = "Modifier";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(96, 497);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 22;
+            this.btnSave.Text = "Sauvegarder";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // frm_ShowRecipeSteps
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.btn_Previous);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.grp_Step2);
@@ -194,7 +261,9 @@ namespace NotesCook.Forms
             this.grp_menu.ResumeLayout(false);
             this.grp_menu.PerformLayout();
             this.grp_Step1.ResumeLayout(false);
+            this.grp_Step1.PerformLayout();
             this.grp_Step2.ResumeLayout(false);
+            this.grp_Step2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +283,11 @@ namespace NotesCook.Forms
         private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Label lbl_Step1;
         private System.Windows.Forms.Label lbl_Step2;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.TextBox txtNameStep1;
+        private System.Windows.Forms.TextBox txt_step1;
+        private System.Windows.Forms.TextBox txtNameStep2;
+        private System.Windows.Forms.TextBox txt_step2;
+        private System.Windows.Forms.Button btnSave;
     }
 }
