@@ -37,8 +37,16 @@ namespace NotesCook.Forms
             this.grp_menu = new System.Windows.Forms.GroupBox();
             this.lst_Ingredients = new System.Windows.Forms.ListBox();
             this.lblTableIngredients = new System.Windows.Forms.Label();
+            this.btn_Edit = new System.Windows.Forms.Button();
+            this.nupQuantity = new System.Windows.Forms.NumericUpDown();
+            this.txtUnit = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblUnity = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_logo1
@@ -114,9 +122,9 @@ namespace NotesCook.Forms
             this.lst_Ingredients.ItemHeight = 16;
             this.lst_Ingredients.Location = new System.Drawing.Point(11, 184);
             this.lst_Ingredients.Name = "lst_Ingredients";
-            this.lst_Ingredients.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lst_Ingredients.Size = new System.Drawing.Size(254, 244);
+            this.lst_Ingredients.Size = new System.Drawing.Size(254, 212);
             this.lst_Ingredients.TabIndex = 14;
+            this.lst_Ingredients.SelectedIndexChanged += new System.EventHandler(this.lst_Ingredients_SelectedIndexChanged);
             // 
             // lblTableIngredients
             // 
@@ -128,11 +136,85 @@ namespace NotesCook.Forms
             this.lblTableIngredients.TabIndex = 16;
             this.lblTableIngredients.Text = "Ingrédients";
             // 
+            // btn_Edit
+            // 
+            this.btn_Edit.Location = new System.Drawing.Point(191, 517);
+            this.btn_Edit.Name = "btn_Edit";
+            this.btn_Edit.Size = new System.Drawing.Size(75, 23);
+            this.btn_Edit.TabIndex = 17;
+            this.btn_Edit.Text = "Editer";
+            this.btn_Edit.UseVisualStyleBackColor = true;
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            // 
+            // nupQuantity
+            // 
+            this.nupQuantity.Location = new System.Drawing.Point(147, 447);
+            this.nupQuantity.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nupQuantity.Name = "nupQuantity";
+            this.nupQuantity.Size = new System.Drawing.Size(100, 20);
+            this.nupQuantity.TabIndex = 24;
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.Location = new System.Drawing.Point(147, 477);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.Size = new System.Drawing.Size(100, 20);
+            this.txtUnit.TabIndex = 23;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(147, 410);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 22;
+            // 
+            // lblUnity
+            // 
+            this.lblUnity.AutoSize = true;
+            this.lblUnity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnity.Location = new System.Drawing.Point(22, 480);
+            this.lblUnity.Name = "lblUnity";
+            this.lblUnity.Size = new System.Drawing.Size(39, 16);
+            this.lblUnity.TabIndex = 21;
+            this.lblUnity.Text = "Unité";
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(22, 449);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(57, 16);
+            this.lblQuantity.TabIndex = 20;
+            this.lblQuantity.Text = "Quantité";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(22, 416);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(37, 16);
+            this.lblName.TabIndex = 18;
+            this.lblName.Text = "Nom";
+            // 
             // frm_RecipeIngredients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.nupQuantity);
+            this.Controls.Add(this.txtUnit);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblUnity);
+            this.Controls.Add(this.lblQuantity);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.lblTableIngredients);
             this.Controls.Add(this.lst_Ingredients);
             this.Controls.Add(this.pic_logo1);
@@ -145,6 +227,7 @@ namespace NotesCook.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             this.grp_menu.ResumeLayout(false);
             this.grp_menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +243,12 @@ namespace NotesCook.Forms
         private System.Windows.Forms.GroupBox grp_menu;
         private System.Windows.Forms.ListBox lst_Ingredients;
         private System.Windows.Forms.Label lblTableIngredients;
+        private System.Windows.Forms.Button btn_Edit;
+        private System.Windows.Forms.NumericUpDown nupQuantity;
+        private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblUnity;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblName;
     }
 }

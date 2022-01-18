@@ -44,5 +44,29 @@ namespace NotesCook.Forms
                 lst_Ingredients.Items.Add(element);
             }
         }
+
+        private void lst_Ingredients_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lst_Ingredients.SelectedIndex != -1)
+            {
+                Ingredient selected = recipe.Ingredients.Find(x => x.Name == lst_Ingredients.SelectedItem.ToString().Split('\t')[0]);
+                txtName.Text = selected.Name;
+                txtUnit.Text = selected.Unit;
+                nupQuantity.Value = (decimal)selected.Quantity;
+            }
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            if (lst_Ingredients.SelectedIndex != -1)
+            {
+                Ingredient selected = recipe.Ingredients.Find(x => x.Name == lst_Ingredients.SelectedItem.ToString().Split('\t')[0]);
+                selected.Name = txtName.Text;
+                selected.Unit = txtUnit.Text;
+                selected.Quantity = (double)nupQuantity.Value;
+                lst_Ingredients.Items[lst_Ingredients.SelectedIndex] = selected.Name + "\t\t" + selected.Quantity.ToString() + " " + selected.Unit;
+                recipe.Edit();
+            }
+        }
     }
 }
