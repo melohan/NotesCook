@@ -26,6 +26,7 @@ namespace NotesCook.Forms
             foreach(Tag tag in recipe.Tags)
             {
                 lblTags.Text += ("#" + tag.Name + " ");
+                lstTag.Items.Add(tag.Name);
             }
         }
 
@@ -61,6 +62,78 @@ namespace NotesCook.Forms
                 frm_home form = new frm_home();
                 form.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void btn_edit_Click(object sender, EventArgs e)
+        {
+            if(txtName.Visible == false)
+            {
+                txtName.Visible = true;
+                txtName.Text = recipe.Name;
+                txtTag.Visible = true;
+                nupNbPersons.Visible = true;
+                nupNbPersons.Value = recipe.NumberOfPersons;
+                lblNewNbPerson.Visible = true;
+                lstTag.Visible = true;
+
+                btnSave.Visible = true;
+
+                lbl_NbPeople.Visible = false;
+                lblTags.Visible = false;
+                btn_edit.Text = "Verrouiller";
+            }
+            else
+            {
+                txtName.Visible = false;
+                txtTag.Visible = false;
+                nupNbPersons.Visible = false;
+                lblNewNbPerson.Visible = false;
+                lstTag.Visible = false;
+
+                btnSave.Visible = false;
+
+                lbl_NbPeople.Visible = true;
+                lblTags.Visible = true;
+                btn_edit.Text = "Modifier";
+            }
+        }
+
+        private void lstTag_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstTag.SelectedIndex != -1)
+            {
+                txtTag.Text = recipe.Tags.Find(x => x.Name == lstTag.SelectedItem.ToString()).Name;
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            recipe.Name = txtName.Text;
+            recipe.NumberOfPersons = (int)nupNbPersons.Value;
+            grp_recipeInfos.Text = recipe.Name;
+
+            
+            if (lstTag.SelectedIndex != -1)
+            {
+                Tag selected = recipe.Tags.Find(x => x.Name == lstTag.SelectedItem.ToString());
+                selected.Name = txtTag.Text;
+                
+                lstTag.Items[lstTag.SelectedIndex] = selected.Name;
+            }
+
+            recipe.Edit();
+
+            lblTags.Text = "";
+            foreach (Tag tag in recipe.Tags)
+            {
+                lblTags.Text += ("#" + tag.Name + " ");;
+            }
+            lbl_NbPeople.Text = "Pour " + recipe.NumberOfPersons + " personne";
+
+            if (recipe.NumberOfPersons > 1)
+            {
+                lbl_NbPeople.Text += "s";
             }
         }
     }

@@ -39,9 +39,17 @@ namespace NotesCook.Forms
             this.lblTags = new System.Windows.Forms.Label();
             this.lbl_NbPeople = new System.Windows.Forms.Label();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btn_edit = new System.Windows.Forms.Button();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.nupNbPersons = new System.Windows.Forms.NumericUpDown();
+            this.lblNewNbPerson = new System.Windows.Forms.Label();
+            this.lstTag = new System.Windows.Forms.ListBox();
+            this.txtTag = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
             this.grp_recipeInfos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupNbPersons)).BeginInit();
             this.SuspendLayout();
             // 
             // pic_logo1
@@ -112,7 +120,11 @@ namespace NotesCook.Forms
             // 
             // grp_recipeInfos
             // 
+            this.grp_recipeInfos.Controls.Add(this.txtTag);
+            this.grp_recipeInfos.Controls.Add(this.lstTag);
+            this.grp_recipeInfos.Controls.Add(this.nupNbPersons);
             this.grp_recipeInfos.Controls.Add(this.lblTags);
+            this.grp_recipeInfos.Controls.Add(this.lblNewNbPerson);
             this.grp_recipeInfos.Controls.Add(this.lbl_NbPeople);
             this.grp_recipeInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grp_recipeInfos.Location = new System.Drawing.Point(12, 171);
@@ -142,16 +154,94 @@ namespace NotesCook.Forms
             // 
             // btn_Delete
             // 
-            this.btn_Delete.BackColor = System.Drawing.SystemColors.Window;
-            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Delete.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btn_Delete.Location = new System.Drawing.Point(12, 517);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(0);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(81, 23);
             this.btn_Delete.TabIndex = 12;
             this.btn_Delete.Text = "Supprimer";
-            this.btn_Delete.UseVisualStyleBackColor = false;
+            this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(96, 489);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "Sauvegarder";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btn_edit
+            // 
+            this.btn_edit.Location = new System.Drawing.Point(96, 517);
+            this.btn_edit.Name = "btn_edit";
+            this.btn_edit.Size = new System.Drawing.Size(75, 23);
+            this.btn_edit.TabIndex = 23;
+            this.btn_edit.Text = "Modifier";
+            this.btn_edit.UseVisualStyleBackColor = true;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(12, 171);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 2;
+            this.txtName.Visible = false;
+            // 
+            // nupNbPersons
+            // 
+            this.nupNbPersons.Location = new System.Drawing.Point(164, 30);
+            this.nupNbPersons.Margin = new System.Windows.Forms.Padding(2);
+            this.nupNbPersons.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nupNbPersons.Name = "nupNbPersons";
+            this.nupNbPersons.Size = new System.Drawing.Size(40, 22);
+            this.nupNbPersons.TabIndex = 26;
+            this.nupNbPersons.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nupNbPersons.Visible = false;
+            // 
+            // lblNewNbPerson
+            // 
+            this.lblNewNbPerson.AutoSize = true;
+            this.lblNewNbPerson.Location = new System.Drawing.Point(6, 32);
+            this.lblNewNbPerson.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNewNbPerson.Name = "lblNewNbPerson";
+            this.lblNewNbPerson.Size = new System.Drawing.Size(143, 16);
+            this.lblNewNbPerson.TabIndex = 25;
+            this.lblNewNbPerson.Text = "Nombre de personnes";
+            this.lblNewNbPerson.Visible = false;
+            // 
+            // lstTag
+            // 
+            this.lstTag.FormattingEnabled = true;
+            this.lstTag.ItemHeight = 16;
+            this.lstTag.Location = new System.Drawing.Point(3, 59);
+            this.lstTag.Name = "lstTag";
+            this.lstTag.Size = new System.Drawing.Size(243, 180);
+            this.lstTag.TabIndex = 27;
+            this.lstTag.Visible = false;
+            this.lstTag.SelectedIndexChanged += new System.EventHandler(this.lstTag_SelectedIndexChanged);
+            // 
+            // txtTag
+            // 
+            this.txtTag.Location = new System.Drawing.Point(3, 251);
+            this.txtTag.Name = "txtTag";
+            this.txtTag.Size = new System.Drawing.Size(100, 22);
+            this.txtTag.TabIndex = 25;
+            this.txtTag.Visible = false;
             // 
             // frm_RecipeInfos
             // 
@@ -159,7 +249,10 @@ namespace NotesCook.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btn_Delete);
+            this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.grp_recipeInfos);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
@@ -173,6 +266,7 @@ namespace NotesCook.Forms
             this.grp_menu.PerformLayout();
             this.grp_recipeInfos.ResumeLayout(false);
             this.grp_recipeInfos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupNbPersons)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,5 +284,12 @@ namespace NotesCook.Forms
         private System.Windows.Forms.Label lbl_NbPeople;
         private System.Windows.Forms.Label lblTags;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btn_edit;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.NumericUpDown nupNbPersons;
+        private System.Windows.Forms.Label lblNewNbPerson;
+        private System.Windows.Forms.TextBox txtTag;
+        private System.Windows.Forms.ListBox lstTag;
     }
 }
