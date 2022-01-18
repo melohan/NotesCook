@@ -44,6 +44,7 @@ namespace NotesCook.Forms
             this.lblUnity = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.btn_save = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
             this.grp_menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).BeginInit();
@@ -143,13 +144,13 @@ namespace NotesCook.Forms
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(75, 23);
             this.btn_Edit.TabIndex = 17;
-            this.btn_Edit.Text = "Editer";
+            this.btn_Edit.Text = "Modifier";
             this.btn_Edit.UseVisualStyleBackColor = true;
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // nupQuantity
             // 
-            this.nupQuantity.Location = new System.Drawing.Point(147, 447);
+            this.nupQuantity.Location = new System.Drawing.Point(166, 432);
             this.nupQuantity.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -162,7 +163,7 @@ namespace NotesCook.Forms
             // 
             // txtUnit
             // 
-            this.txtUnit.Location = new System.Drawing.Point(147, 477);
+            this.txtUnit.Location = new System.Drawing.Point(166, 458);
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(100, 20);
             this.txtUnit.TabIndex = 23;
@@ -170,7 +171,7 @@ namespace NotesCook.Forms
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(147, 410);
+            this.txtName.Location = new System.Drawing.Point(166, 406);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 22;
@@ -180,7 +181,7 @@ namespace NotesCook.Forms
             // 
             this.lblUnity.AutoSize = true;
             this.lblUnity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnity.Location = new System.Drawing.Point(22, 480);
+            this.lblUnity.Location = new System.Drawing.Point(12, 458);
             this.lblUnity.Name = "lblUnity";
             this.lblUnity.Size = new System.Drawing.Size(39, 16);
             this.lblUnity.TabIndex = 21;
@@ -191,7 +192,7 @@ namespace NotesCook.Forms
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(22, 449);
+            this.lblQuantity.Location = new System.Drawing.Point(12, 432);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(57, 16);
             this.lblQuantity.TabIndex = 20;
@@ -202,7 +203,7 @@ namespace NotesCook.Forms
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(22, 416);
+            this.lblName.Location = new System.Drawing.Point(12, 407);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(37, 16);
@@ -210,11 +211,23 @@ namespace NotesCook.Forms
             this.lblName.Text = "Nom";
             this.lblName.Visible = false;
             // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(190, 488);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 23);
+            this.btn_save.TabIndex = 25;
+            this.btn_save.Text = "Enregistrer";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Visible = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
             // frm_RecipeIngredients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.nupQuantity);
             this.Controls.Add(this.txtUnit);
             this.Controls.Add(this.txtName);
@@ -257,5 +270,6 @@ namespace NotesCook.Forms
         private System.Windows.Forms.Label lblUnity;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btn_save;
     }
 }

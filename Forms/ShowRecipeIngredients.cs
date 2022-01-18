@@ -68,9 +68,29 @@ namespace NotesCook.Forms
                 nupQuantity.Visible = true;
                 txtUnit.Visible = true;
 
+                btn_save.Visible = true;
                 lst_Ingredients.SelectionMode = (SelectionMode)1;
+                btn_Edit.Text = "Verrouiller";
             }
-            else if (lst_Ingredients.SelectedIndex != -1)
+            else
+            {
+                lblName.Visible = false;
+                lblQuantity.Visible = false;
+                lblUnity.Visible = false;
+
+                txtName.Visible = false;
+                nupQuantity.Visible = false;
+                txtUnit.Visible = false;
+
+                btn_save.Visible = false;
+                lst_Ingredients.SelectionMode = (SelectionMode)0;
+                btn_Edit.Text = "Modifier";
+            }
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            if (lst_Ingredients.SelectedIndex != -1)
             {
                 Ingredient selected = recipe.Ingredients.Find(x => x.Name == lst_Ingredients.SelectedItem.ToString().Split('\t')[0]);
                 selected.Name = txtName.Text;
