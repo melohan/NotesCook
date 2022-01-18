@@ -122,6 +122,7 @@ namespace NotesCook.Forms
             this.lst_Ingredients.ItemHeight = 16;
             this.lst_Ingredients.Location = new System.Drawing.Point(11, 184);
             this.lst_Ingredients.Name = "lst_Ingredients";
+            this.lst_Ingredients.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.lst_Ingredients.Size = new System.Drawing.Size(254, 212);
             this.lst_Ingredients.TabIndex = 14;
             this.lst_Ingredients.SelectedIndexChanged += new System.EventHandler(this.lst_Ingredients_SelectedIndexChanged);
@@ -157,6 +158,7 @@ namespace NotesCook.Forms
             this.nupQuantity.Name = "nupQuantity";
             this.nupQuantity.Size = new System.Drawing.Size(100, 20);
             this.nupQuantity.TabIndex = 24;
+            this.nupQuantity.Visible = false;
             // 
             // txtUnit
             // 
@@ -164,6 +166,7 @@ namespace NotesCook.Forms
             this.txtUnit.Name = "txtUnit";
             this.txtUnit.Size = new System.Drawing.Size(100, 20);
             this.txtUnit.TabIndex = 23;
+            this.txtUnit.Visible = false;
             // 
             // txtName
             // 
@@ -171,6 +174,7 @@ namespace NotesCook.Forms
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 22;
+            this.txtName.Visible = false;
             // 
             // lblUnity
             // 
@@ -181,6 +185,7 @@ namespace NotesCook.Forms
             this.lblUnity.Size = new System.Drawing.Size(39, 16);
             this.lblUnity.TabIndex = 21;
             this.lblUnity.Text = "Unité";
+            this.lblUnity.Visible = false;
             // 
             // lblQuantity
             // 
@@ -191,6 +196,7 @@ namespace NotesCook.Forms
             this.lblQuantity.Size = new System.Drawing.Size(57, 16);
             this.lblQuantity.TabIndex = 20;
             this.lblQuantity.Text = "Quantité";
+            this.lblQuantity.Visible = false;
             // 
             // lblName
             // 
@@ -202,6 +208,7 @@ namespace NotesCook.Forms
             this.lblName.Size = new System.Drawing.Size(37, 16);
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Nom";
+            this.lblName.Visible = false;
             // 
             // frm_RecipeIngredients
             // 

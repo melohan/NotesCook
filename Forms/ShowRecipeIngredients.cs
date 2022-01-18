@@ -58,7 +58,19 @@ namespace NotesCook.Forms
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            if (lst_Ingredients.SelectedIndex != -1)
+            if(lblName.Visible == false)
+            {
+                lblName.Visible = true;
+                lblQuantity.Visible = true;
+                lblUnity.Visible = true;
+
+                txtName.Visible = true;
+                nupQuantity.Visible = true;
+                txtUnit.Visible = true;
+
+                lst_Ingredients.SelectionMode = (SelectionMode)1;
+            }
+            else if (lst_Ingredients.SelectedIndex != -1)
             {
                 Ingredient selected = recipe.Ingredients.Find(x => x.Name == lst_Ingredients.SelectedItem.ToString().Split('\t')[0]);
                 selected.Name = txtName.Text;
