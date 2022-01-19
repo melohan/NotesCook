@@ -309,6 +309,7 @@ namespace NotesCook.Forms
             this.btnPrevious.TabIndex = 20;
             this.btnPrevious.Text = "Précédent";
             this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // ShowRecipeList
             // 
@@ -325,6 +326,7 @@ namespace NotesCook.Forms
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
             this.Name = "ShowRecipeList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmShowRecipeList";
             this.Load += new System.EventHandler(this.ShowRecipeList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();

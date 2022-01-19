@@ -32,13 +32,13 @@ namespace NotesCook.Forms
 
         private void ShowRecipeList_Load(object sender, EventArgs e)
         {
-
+            this.grpRecipe1.MouseClick += GrpRecipe1_MouseClick;
+            this.grpRecipe2.MouseClick += GrpRecipe2_MouseClick;
+            this.grpRecipe3.MouseClick += GrpRecipe3_MouseClick;
+            this.grpRecipe4.MouseClick += GrpRecipe4_MouseClick;
         }
 
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void ListElements()
         {
@@ -113,7 +113,51 @@ namespace NotesCook.Forms
                 }
             }
 
+            if(this.page != 1)
+            {
+                btnPrevious.Enabled = true;
+            }
+
+            if(4 * (this.page + 1) - 3 <= this.recipes.Count)
+            {
+                btnNext.Enabled = true;
+            }
+
+            
             
         }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            this.page--;
+            this.LoadPage();
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            this.page++;
+            this.LoadPage();
+        }
+
+        private void GrpRecipe1_MouseClick(Object sender, MouseEventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Etes vous sûr de vouloir supprimer cette recette ?", "Veuillez confirmer", MessageBoxButtons.YesNo);
+        }
+
+        private void GrpRecipe2_MouseClick(Object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void GrpRecipe3_MouseClick(Object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void GrpRecipe4_MouseClick(Object sender, MouseEventArgs e)
+        {
+
+        }
+
     }
 }
