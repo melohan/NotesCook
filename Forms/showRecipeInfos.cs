@@ -12,33 +12,36 @@ using NotesCook.Database;
 
 namespace NotesCook.Forms
 {
-    public partial class frm_RecipeInfos : Form
+    public partial class frmRecipeInfos : Form
     {
         private Recipe recipe;
-        public frm_RecipeInfos(Recipe recipe)
+        public frmRecipeInfos(Recipe recipe)
         {
             this.recipe = recipe;
             InitializeComponent();
-            grp_recipeInfos.Text = recipe.Name;
-            lbl_NbPeople.Text = "Pour " + recipe.NumberOfPersons + " personne";
-            if (recipe.NumberOfPersons > 1) lbl_NbPeople.Text += "s";
+            loadInformation();
+        }
 
-            foreach(Tag tag in recipe.Tags)
+        private void loadInformation()
+        {
+            grpRecipeInfos.Text = recipe.Name;
+            lblNbPersons.Text = "Pour " + recipe.NumberOfPersons + " personne";
+            if (recipe.NumberOfPersons > 1) lblNbPersons.Text += "s";
+
+            lblTags.Text = "";
+            lstTag.Items.Clear();
+
+            foreach (Tag tag in recipe.Tags)
             {
                 lblTags.Text += ("#" + tag.Name + " ");
                 lstTag.Items.Add(tag.Name);
             }
         }
 
-        private void frm_recipe_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblIngredients_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_RecipeIngredients frm_recipeIngredients = new frm_RecipeIngredients(this.recipe);
+            frmRecipeIngredients frm_recipeIngredients = new frmRecipeIngredients(this.recipe);
             frm_recipeIngredients.ShowDialog();
             this.Close();
         }
@@ -46,12 +49,12 @@ namespace NotesCook.Forms
         private void lblSteps_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_ShowRecipeSteps form = new frm_ShowRecipeSteps(this.recipe);
+            frmShowRecipeSteps form = new frmShowRecipeSteps(this.recipe);
             form.ShowDialog();
             this.Close();
         }
 
-        private void btn_Delete_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Etes vous sûr de vouloir supprimer cette recette ?", "Veuillez confirmer", MessageBoxButtons.YesNo);
 
@@ -65,9 +68,9 @@ namespace NotesCook.Forms
             }
         }
 
-        private void btn_edit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(txtName.Visible == false)
+            if(btnSave.Visible == false)
             {
                 txtName.Visible = true;
                 txtName.Text = recipe.Name;
@@ -75,13 +78,17 @@ namespace NotesCook.Forms
                 nupNbPersons.Visible = true;
                 nupNbPersons.Value = recipe.NumberOfPersons;
                 lblNewNbPerson.Visible = true;
+
+                btnMinus.Visible = true;
                 lstTag.Visible = true;
+                lblTag.Visible = true;
 
                 btnSave.Visible = true;
+                
 
-                lbl_NbPeople.Visible = false;
+                lblNbPersons.Visible = false;
                 lblTags.Visible = false;
-                btn_edit.Text = "Verrouiller";
+                btnEdit.Text = "Verrouiller";
             }
             else
             {
@@ -90,12 +97,14 @@ namespace NotesCook.Forms
                 nupNbPersons.Visible = false;
                 lblNewNbPerson.Visible = false;
                 lstTag.Visible = false;
+                lblTag.Visible = false;
 
                 btnSave.Visible = false;
+                btnMinus.Visible = false;
 
-                lbl_NbPeople.Visible = true;
+                lblNbPersons.Visible = true;
                 lblTags.Visible = true;
-                btn_edit.Text = "Modifier";
+                btnEdit.Text = "Modifier";
             }
         }
 
@@ -111,7 +120,7 @@ namespace NotesCook.Forms
         {
             recipe.Name = txtName.Text;
             recipe.NumberOfPersons = (int)nupNbPersons.Value;
-            grp_recipeInfos.Text = recipe.Name;
+            grpRecipeInfos.Text = recipe.Name;
 
             
             if (lstTag.SelectedIndex != -1)
@@ -124,16 +133,16 @@ namespace NotesCook.Forms
 
             recipe.Edit();
 
-            lblTags.Text = "";
-            foreach (Tag tag in recipe.Tags)
-            {
-                lblTags.Text += ("#" + tag.Name + " ");;
-            }
-            lbl_NbPeople.Text = "Pour " + recipe.NumberOfPersons + " personne";
+            loadInformation();
+        }
 
-            if (recipe.NumberOfPersons > 1)
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            if (lstTag.SelectedIndex != -1)
             {
-                lbl_NbPeople.Text += "s";
+                this.recipe.RemoveTagByName(lstTag.SelectedItem.ToString());
+                lstTag.Items.Remove(lstTag.SelectedItem);
+                recipe.Edit();
             }
         }
     }

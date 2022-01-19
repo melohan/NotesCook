@@ -11,13 +11,13 @@ using NotesCook.Models;
 
 namespace NotesCook.Forms
 {
-    public partial class frm_ShowRecipeSteps : Form
+    public partial class frmShowRecipeSteps : Form
     {
         private Recipe recipe;
         private int page=1;
         Step pair;
         Step impair;
-        public frm_ShowRecipeSteps(Recipe recipe)
+        public frmShowRecipeSteps(Recipe recipe)
         {
             this.recipe = recipe;
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace NotesCook.Forms
         private void lblIngredients_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_RecipeIngredients frm_recipeIngredients = new frm_RecipeIngredients(this.recipe);
+            frmRecipeIngredients frm_recipeIngredients = new frmRecipeIngredients(this.recipe);
             frm_recipeIngredients.ShowDialog();
             this.Close();
         }
@@ -35,112 +35,125 @@ namespace NotesCook.Forms
         private void lblRecipe_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_RecipeInfos frm_recipeInfos = new frm_RecipeInfos(recipe);
+            frmRecipeInfos frm_recipeInfos = new frmRecipeInfos(recipe);
             frm_recipeInfos.ShowDialog();
             this.Close();
         }
 
-        private void btn_Next_Click(object sender, EventArgs e)
+        private void btnNext_Click(object sender, EventArgs e)
         {
-                this.page++;
-                loadPage();
+            this.page++;
+            loadPage();
         }
 
-        private void btn_Previous_Click(object sender, EventArgs e)
+        private void btnPrevious_Click(object sender, EventArgs e)
         {
             this.page--;
             loadPage();
         }
 
-        private void loadPage()
+        private void loadImpair()
         {
-            grp_Step1.Visible = false;
-            grp_Step2.Visible = false;
-            lbl_Step1.Visible = false;
-            lbl_Step2.Visible = false;
+            grpStep1.Text = ("Etape " + impair.Position + " : " + impair.Name);
+            lblStep1.Text = impair.Description;
+            grpStep1.Visible = true;
+            lblStep1.Visible = true;
 
-            if (recipe.Steps.Count >= (page * 2 - 1))
-            {
-                impair = recipe.Steps.Find(x => x.Position == page * 2 - 1);
-                grp_Step1.Text = ("Etape " + impair.Position + " : " + impair.Name);
-                lbl_Step1.Text = impair.Description;
-                grp_Step1.Visible = true;
-                lbl_Step1.Visible = true;
-            }
-
-            if (recipe.Steps.Count >= (page * 2))
-            {
-                pair = recipe.Steps.Find(x => x.Position == page * 2);
-                grp_Step2.Text = ("Etape " + pair.Position + " : " + pair.Name);
-                lbl_Step2.Text = pair.Description;
-                grp_Step2.Visible = true;
-                lbl_Step2.Visible = true;
-            }
-
-            if (recipe.Steps.Count < ((page+1) * 2 - 1))
-            {
-                btn_Next.Enabled = false;
-            }
-            else
-            {
-                btn_Next.Enabled = true;
-            }
-
-            if (page == 1)
-            {
-                btn_Previous.Enabled = false;
-            }
-            else
-            {
-                btn_Previous.Enabled = true;
-            }
+            txtNameStep1.Visible = false;
+            txtStep1.Visible = false;
         }
 
-        private void btn_edit_Click(object sender, EventArgs e)
+        private void loadPaire()
         {
+            grpStep2.Text = ("Etape " + pair.Position + " : " + pair.Name);
+            lblStep2.Text = pair.Description;
+            grpStep2.Visible = true;
+            lblStep2.Visible = true;
+
+            txtNameStep2.Visible = false;
+            txtStep2.Visible = false;
+        }
+
+        private void loadPage()
+        {
+            grpStep1.Visible = false;
+            grpStep2.Visible = false;
+            lblStep1.Visible = false;
+            lblStep2.Visible = false;
+            btnEdit.Text = "Modifier";
+            btnSave.Visible = false;
+            btnMinus1.Visible = false;
+            btnMinus2.Visible = false;
+            lblPage.Text = "Page " + page;
+
+            impair = recipe.Steps.Find(x => x.Position == page * 2 - 1);
+            pair = recipe.Steps.Find(x => x.Position == page * 2);
+
             if (impair != null)
             {
-                if (txtNameStep1.Visible == false)
+                loadImpair();
+            }
+
+            if (pair != null)
+            {
+                loadPaire();
+            }
+            
+            btnNext.Enabled = (recipe.Steps.Find(x => x.Position > page * 2) != null);
+            btnPrevious.Enabled = (page != 1);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (impair != null || pair != null)
+            {
+                if (btnSave.Visible == false)
                 {
-                    grp_Step1.Text = "";
-                    grp_Step2.Text = "";
-                    lbl_Step1.Visible = false;
-                    lbl_Step2.Visible = false;
+                    grpStep1.Text = "";
+                    grpStep2.Text = "";
+                    lblStep1.Visible = false;
+                    lblStep2.Visible = false;
 
-                    txtNameStep1.Visible = true;
-                    txtNameStep1.Text = impair.Name;
+                    if (impair != null)
+                    {
+                        txtNameStep1.Visible = true;
+                        txtNameStep1.Text = impair.Name;
 
-                    txt_step1.Visible = true;
-                    txt_step1.Text = impair.Description;
+                        txtStep1.Visible = true;
+                        txtStep1.Text = impair.Description;
+                        btnMinus1.Visible = true;
+                    }
 
                     if (pair != null)
                     {
                         txtNameStep2.Visible = true;
                         txtNameStep2.Text = pair.Name;
-                        txt_step2.Visible = true;
-                        txt_step2.Text = pair.Description;
+
+                        txtStep2.Visible = true;
+                        txtStep2.Text = pair.Description;
+                        btnMinus2.Visible = true;
                     }
                    
-                    btn_edit.Text = "Verrouiller";
+                    btnEdit.Text = "Verrouiller";
                     btnSave.Visible = true;
                 }
                 else
                 {
+
+                    btnEdit.Text = "Modifier";
+                    btnSave.Visible = false;
+                    btnMinus1.Visible = false;
+                    btnMinus2.Visible = false;
+
                     if (pair != null)
                     {
-                        grp_Step2.Text = ("Etape " + pair.Position + " : " + pair.Name);
-                        lbl_Step2.Visible = true;
-                        txt_step2.Visible = false;
-                        txtNameStep2.Visible = false;
+                        loadPaire();
                     }
 
-                    grp_Step1.Text = ("Etape " + impair.Position + " : " + impair.Name);
-                    lbl_Step1.Visible = true;
-                    txtNameStep1.Visible = false;
-                    txt_step1.Visible = false;
-
-                    btn_edit.Text = "Modifier";
-                    btnSave.Visible = false;
+                    if(impair != null)
+                    {
+                        loadImpair();
+                    }
                 }
             }
         }
@@ -150,17 +163,34 @@ namespace NotesCook.Forms
             if (impair != null)
             {
                 impair.Name = txtNameStep1.Text;
-                impair.Description = txt_step1.Text;
-                lbl_Step1.Text = impair.Description;
+                impair.Description = txtStep1.Text;
+                lblStep1.Text = impair.Description;
             }
             if (pair != null)
             {
                 pair.Name = txtNameStep2.Text;
-                pair.Description = txt_step2.Text;
-                lbl_Step2.Text = pair.Description;
+                pair.Description = txtStep2.Text;
+                lblStep2.Text = pair.Description;
             }
-
             recipe.Edit();
+        }
+
+        private void btnMinus1_Click(object sender, EventArgs e)
+        {
+            this.recipe.RemoveStepByPosition(impair.Position);
+            if(pair == null)
+                page = 1;
+            recipe.Edit();
+            loadPage();
+        }
+
+        private void btnMinus2_Click(object sender, EventArgs e)
+        {
+            this.recipe.RemoveStepByPosition(pair.Position);
+            if (impair == null)
+                page = 1;
+            recipe.Edit();
+            loadPage();
         }
     }
 }

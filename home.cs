@@ -15,13 +15,13 @@ namespace NotesCook
 
         public void openCreationRecipe(Object obj)
         {
-            Application.Run(new CreateRecipe());
+            Application.Run(new frmCreateRecipe());
         }
 
         // Clos this process and open new thread for recipe 
         private void btn_new_recipe_Click(object sender, EventArgs e)
         {
-            CreateRecipe cs = new CreateRecipe();
+            frmCreateRecipe cs = new frmCreateRecipe();
             this.Hide();
             cs.ShowDialog();
             this.Close();

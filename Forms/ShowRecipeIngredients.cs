@@ -11,19 +11,23 @@ using NotesCook.Models;
 
 namespace NotesCook.Forms
 {
-    public partial class frm_RecipeIngredients : Form
+    public partial class frmRecipeIngredients : Form
     {
         private Recipe recipe;
-        public frm_RecipeIngredients(Recipe recipe)
+        public frmRecipeIngredients(Recipe recipe)
         {
             this.recipe = recipe;
             InitializeComponent();
+            if (this.recipe.Ingredients.Count == 0)
+            {
+                btnEdit.Visible = false;
+            }
         }
 
         private void lblRecipe_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_RecipeInfos frm_recipeInfos = new frm_RecipeInfos(this.recipe);
+            frmRecipeInfos frm_recipeInfos = new frmRecipeInfos(this.recipe);
             frm_recipeInfos.ShowDialog();
             this.Close();
         }
@@ -31,32 +35,32 @@ namespace NotesCook.Forms
         private void lblSteps_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frm_ShowRecipeSteps form = new frm_ShowRecipeSteps(this.recipe);
+            frmShowRecipeSteps form = new frmShowRecipeSteps(this.recipe);
             form.ShowDialog();
             this.Close();
         }
 
-        private void frm_RecipeIngredients_Load(object sender, EventArgs e)
+        private void frmRecipeIngredients_Load(object sender, EventArgs e)
         {
             foreach(Ingredient ingredient in recipe.Ingredients)
             {
                 String element = ingredient.Name + "\t\t" + ingredient.Quantity.ToString() +" "+ ingredient.Unit;
-                lst_Ingredients.Items.Add(element);
+                lstIngredients.Items.Add(element);
             }
         }
 
-        private void lst_Ingredients_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstIngredients_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lst_Ingredients.SelectedIndex != -1)
+            if (lstIngredients.SelectedIndex != -1)
             {
-                Ingredient selected = recipe.Ingredients.Find(x => x.Name == lst_Ingredients.SelectedItem.ToString().Split('\t')[0]);
+                Ingredient selected = recipe.Ingredients.Find(x => x.Name == lstIngredients.SelectedItem.ToString().Split('\t')[0]);
                 txtName.Text = selected.Name;
                 txtUnit.Text = selected.Unit;
                 nupQuantity.Value = (decimal)selected.Quantity;
             }
         }
 
-        private void btn_Edit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             if(lblName.Visible == false)
             {
@@ -68,9 +72,10 @@ namespace NotesCook.Forms
                 nupQuantity.Visible = true;
                 txtUnit.Visible = true;
 
-                btn_save.Visible = true;
-                lst_Ingredients.SelectionMode = (SelectionMode)1;
-                btn_Edit.Text = "Verrouiller";
+                btnSave.Visible = true;
+                lstIngredients.SelectionMode = (SelectionMode)1;
+                btnEdit.Text = "Verrouiller";
+                btnMinus.Visible = true;
             }
             else
             {
@@ -82,21 +87,32 @@ namespace NotesCook.Forms
                 nupQuantity.Visible = false;
                 txtUnit.Visible = false;
 
-                btn_save.Visible = false;
-                lst_Ingredients.SelectionMode = (SelectionMode)0;
-                btn_Edit.Text = "Modifier";
+                btnSave.Visible = false;
+                lstIngredients.SelectionMode = (SelectionMode)0;
+                btnEdit.Text = "Modifier";
+                btnMinus.Visible = false;
             }
         }
 
-        private void btn_save_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            if (lst_Ingredients.SelectedIndex != -1)
+            if (lstIngredients.SelectedIndex != -1)
             {
-                Ingredient selected = recipe.Ingredients.Find(x => x.Name == lst_Ingredients.SelectedItem.ToString().Split('\t')[0]);
+                Ingredient selected = recipe.Ingredients.Find(x => x.Name == lstIngredients.SelectedItem.ToString().Split('\t')[0]);
                 selected.Name = txtName.Text;
                 selected.Unit = txtUnit.Text;
                 selected.Quantity = (double)nupQuantity.Value;
-                lst_Ingredients.Items[lst_Ingredients.SelectedIndex] = selected.Name + "\t\t" + selected.Quantity.ToString() + " " + selected.Unit;
+                lstIngredients.Items[lstIngredients.SelectedIndex] = selected.Name + "\t\t" + selected.Quantity.ToString() + " " + selected.Unit;
+                recipe.Edit();
+            }
+        }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            if (lstIngredients.SelectedIndex != -1)
+            {
+                this.recipe.RemoveIngredientByName(lstIngredients.SelectedItem.ToString().Split('\t')[0]);
+                lstIngredients.Items.Remove(lstIngredients.SelectedItem);
                 recipe.Edit();
             }
         }
