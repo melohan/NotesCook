@@ -27,6 +27,7 @@ namespace NotesCook.Forms
             this.groups = new OrderedDictionary();
             this.labels = new OrderedDictionary();
             this.ListElements();
+            this.LoadPage();
         }
 
         private void ShowRecipeList_Load(object sender, EventArgs e)
@@ -99,7 +100,7 @@ namespace NotesCook.Forms
             {
                 if (this.recipes.Count >= ((4 * this.page) - (3-i)))
                 {
-                    ((GroupBox)groups["grp" + (i+1).ToString()]).Text = this.recipes[(4 * this.page) - 3 - 1].Name;
+                    ((GroupBox)groups["grp" + (i+1).ToString()]).Text = this.recipes[(4 * this.page) - (3-i) - 1].Name;
 
                     ((GroupBox)groups["grp" + (i + 1).ToString()]).Visible = true;
 
