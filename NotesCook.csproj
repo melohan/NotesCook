@@ -158,6 +158,12 @@
     <Compile Include="Forms\CreateStep.Designer.cs">
       <DependentUpon>CreateStep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ShowRecipeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowRecipeList.Designer.cs">
+      <DependentUpon>ShowRecipeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ShowRecipeSteps.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ShowRecipeInfos.resx">
       <DependentUpon>ShowRecipeInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowRecipeList.resx">
+      <DependentUpon>ShowRecipeList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ShowRecipeSteps.resx">
       <DependentUpon>ShowRecipeSteps.cs</DependentUpon>
