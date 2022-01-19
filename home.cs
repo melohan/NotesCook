@@ -26,5 +26,13 @@ namespace NotesCook
             cs.ShowDialog();
             this.Close();
         }
+
+        private void btnRecipes_Click(object sender, EventArgs e)
+        {
+            ShowRecipeList srl = new ShowRecipeList();
+            this.Hide();
+            srl.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -29,89 +29,90 @@ namespace NotesCook
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_title = new System.Windows.Forms.Label();
-            this.pic_logo1 = new System.Windows.Forms.PictureBox();
-            this.btn_new_recipe = new System.Windows.Forms.Button();
-            this.btn_recently_consulted = new System.Windows.Forms.Button();
-            this.btn_search = new System.Windows.Forms.Button();
-            this.pic_logo2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo2)).BeginInit();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.picLogo1 = new System.Windows.Forms.PictureBox();
+            this.btnNewRecipe = new System.Windows.Forms.Button();
+            this.btnRecipes = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.picLogo2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl_title
+            // lblTitle
             // 
-            this.lbl_title.AutoSize = true;
-            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(128, 23);
-            this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(126, 46);
-            this.lbl_title.TabIndex = 0;
-            this.lbl_title.Text = "!Cook";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(128, 23);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(126, 46);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "!Cook";
             // 
-            // pic_logo1
+            // picLogo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(12, 12);
-            this.pic_logo1.Name = "pic_logo1";
-            this.pic_logo1.Size = new System.Drawing.Size(100, 73);
-            this.pic_logo1.TabIndex = 1;
-            this.pic_logo1.TabStop = false;
+            this.picLogo1.Location = new System.Drawing.Point(12, 12);
+            this.picLogo1.Name = "picLogo1";
+            this.picLogo1.Size = new System.Drawing.Size(100, 73);
+            this.picLogo1.TabIndex = 1;
+            this.picLogo1.TabStop = false;
             // 
-            // btn_new_recipe
+            // btnNewRecipe
             // 
-            this.btn_new_recipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_new_recipe.Location = new System.Drawing.Point(22, 109);
-            this.btn_new_recipe.Name = "btn_new_recipe";
-            this.btn_new_recipe.Size = new System.Drawing.Size(228, 61);
-            this.btn_new_recipe.TabIndex = 2;
-            this.btn_new_recipe.Text = "Nouvelle recette";
-            this.btn_new_recipe.UseVisualStyleBackColor = true;
-            this.btn_new_recipe.Click += new System.EventHandler(this.btn_new_recipe_Click);
+            this.btnNewRecipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewRecipe.Location = new System.Drawing.Point(22, 109);
+            this.btnNewRecipe.Name = "btnNewRecipe";
+            this.btnNewRecipe.Size = new System.Drawing.Size(228, 61);
+            this.btnNewRecipe.TabIndex = 2;
+            this.btnNewRecipe.Text = "Nouvelle recette";
+            this.btnNewRecipe.UseVisualStyleBackColor = true;
+            this.btnNewRecipe.Click += new System.EventHandler(this.btn_new_recipe_Click);
             // 
-            // btn_recently_consulted
+            // btnRecipes
             // 
-            this.btn_recently_consulted.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_recently_consulted.Location = new System.Drawing.Point(22, 204);
-            this.btn_recently_consulted.Name = "btn_recently_consulted";
-            this.btn_recently_consulted.Size = new System.Drawing.Size(228, 61);
-            this.btn_recently_consulted.TabIndex = 3;
-            this.btn_recently_consulted.Text = "Recement consultées";
-            this.btn_recently_consulted.UseVisualStyleBackColor = true;
+            this.btnRecipes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecipes.Location = new System.Drawing.Point(22, 204);
+            this.btnRecipes.Name = "btnRecipes";
+            this.btnRecipes.Size = new System.Drawing.Size(228, 61);
+            this.btnRecipes.TabIndex = 3;
+            this.btnRecipes.Text = "Recettes";
+            this.btnRecipes.UseVisualStyleBackColor = true;
+            this.btnRecipes.Click += new System.EventHandler(this.btnRecipes_Click);
             // 
-            // btn_search
+            // btnSearch
             // 
-            this.btn_search.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_search.Location = new System.Drawing.Point(22, 302);
-            this.btn_search.Name = "btn_search";
-            this.btn_search.Size = new System.Drawing.Size(228, 61);
-            this.btn_search.TabIndex = 4;
-            this.btn_search.Text = "Rechercher";
-            this.btn_search.UseVisualStyleBackColor = true;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(22, 302);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(228, 61);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Rechercher";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
-            // pic_logo2
+            // picLogo2
             // 
-            this.pic_logo2.Location = new System.Drawing.Point(62, 397);
-            this.pic_logo2.Name = "pic_logo2";
-            this.pic_logo2.Size = new System.Drawing.Size(146, 121);
-            this.pic_logo2.TabIndex = 5;
-            this.pic_logo2.TabStop = false;
+            this.picLogo2.Location = new System.Drawing.Point(62, 397);
+            this.picLogo2.Name = "picLogo2";
+            this.picLogo2.Size = new System.Drawing.Size(146, 121);
+            this.picLogo2.TabIndex = 5;
+            this.picLogo2.TabStop = false;
             // 
             // frm_home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
-            this.Controls.Add(this.pic_logo2);
-            this.Controls.Add(this.btn_search);
-            this.Controls.Add(this.btn_recently_consulted);
-            this.Controls.Add(this.btn_new_recipe);
-            this.Controls.Add(this.pic_logo1);
-            this.Controls.Add(this.lbl_title);
+            this.Controls.Add(this.picLogo2);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnRecipes);
+            this.Controls.Add(this.btnNewRecipe);
+            this.Controls.Add(this.picLogo1);
+            this.Controls.Add(this.lblTitle);
             this.Name = "frm_home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NotesCook";
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,12 +120,12 @@ namespace NotesCook
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_title;
-        private System.Windows.Forms.PictureBox pic_logo1;
-        private System.Windows.Forms.Button btn_new_recipe;
-        private System.Windows.Forms.Button btn_recently_consulted;
-        private System.Windows.Forms.Button btn_search;
-        private System.Windows.Forms.PictureBox pic_logo2;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.PictureBox picLogo1;
+        private System.Windows.Forms.Button btnNewRecipe;
+        private System.Windows.Forms.Button btnRecipes;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.PictureBox picLogo2;
     }
 }
 
