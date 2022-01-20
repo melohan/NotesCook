@@ -29,7 +29,7 @@ namespace NotesCook
 
         private void btnRecipes_Click(object sender, EventArgs e)
         {
-            ShowRecipeList srl = new ShowRecipeList();
+            frmShowRecipeList srl = new frmShowRecipeList();
             this.Hide();
             srl.ShowDialog();
             this.Close();
