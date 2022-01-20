@@ -142,22 +142,34 @@ namespace NotesCook.Forms
 
         private void GrpRecipe1_MouseClick(Object sender, MouseEventArgs e)
         {
-            
+            this.Hide();
+            frmRecipeInfos fri = new frmRecipeInfos(this.recipes[(4 * this.page) - 3 - 1]);
+            fri.ShowDialog();
+            this.Close();
         }
 
         private void GrpRecipe2_MouseClick(Object sender, MouseEventArgs e)
         {
-
+            this.Hide();
+            frmRecipeInfos fri = new frmRecipeInfos(this.recipes[(4 * this.page) - 2 - 1]);
+            fri.ShowDialog();
+            this.Close();
         }
 
         private void GrpRecipe3_MouseClick(Object sender, MouseEventArgs e)
         {
-
+            this.Hide();
+            frmRecipeInfos fri = new frmRecipeInfos(this.recipes[(4 * this.page) - 1 - 1]);
+            fri.ShowDialog();
+            this.Close();
         }
 
         private void GrpRecipe4_MouseClick(Object sender, MouseEventArgs e)
         {
-
+            this.Hide();
+            frmRecipeInfos fri = new frmRecipeInfos(this.recipes[(4 * this.page) - 1]);
+            fri.ShowDialog();
+            this.Close();
         }
     }
 }

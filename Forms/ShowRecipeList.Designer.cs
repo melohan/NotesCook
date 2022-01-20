@@ -325,6 +325,8 @@ namespace NotesCook.Forms
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmShowRecipeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmShowRecipeList";
