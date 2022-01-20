@@ -14,17 +14,20 @@ namespace NotesCook.Forms
     public partial class SearchRecipe : Form
     {
 
-        private List<Tag> tags;
-        List<Recipe> results;
-
+        private List<Tag> tags;                  // Tag added in lst
+            
+        /**
+         * Constructor, init tag list
+         **/ 
         public SearchRecipe()
         {
             tags  = new List<Tag>();
-            results = new List<Recipe>();
             InitializeComponent();
         }
 
-
+        /**
+         * Add tag in lstTag
+         **/ 
         private void btnPlus_Click(object sender, EventArgs e)
         {
             string tagName = txtTag.Text.ToString();
@@ -33,7 +36,12 @@ namespace NotesCook.Forms
             txtTag.Text = "";
         }
 
-        private void btmMinus_Click(object sender, EventArgs e)
+        /**
+         * Remove tag from lstTag
+         * @param object sender
+         * @param EventArgs e
+         **/
+        private void btnMinus_Click(object sender, EventArgs e)
         {
             if (lstTag.SelectedIndex != -1)
             {
@@ -44,20 +52,24 @@ namespace NotesCook.Forms
 
         }
 
+        /**
+         * Starts the search and redirects to the display form if all tags are present in a recipe.
+         * @param object sender
+         * @param EventArgs e
+         **/
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (tags.Count > 0)
             {
-                List<Recipe> results = new List<Recipe>();
+                List<Recipe> results = Recipe.All<Recipe>();
                 foreach (Tag tag in tags)
                 {
                     if (results.Count > 0)
                     {
-                        // TODO find matches
-                        /* results = results.FindAll(
+                        results = results.FindAll(
                         delegate(Recipe r) { 
-                        return r.Tags.Find(match: x => x.Name == tag.Name)?r:null; 
-                        });*/
+                        return r.TagMatched(tag); 
+                        });
                     }
                 }
                 if (results.Count > 0)
@@ -66,7 +78,11 @@ namespace NotesCook.Forms
                 }
             }
         }
-        
+
+        /**
+         * Close this form and open RecipeList
+         * @param List<Recipe> results
+         **/
         private void displayResult(List<Recipe> results)
         {
             frmShowRecipeList sr = new frmShowRecipeList(results);
