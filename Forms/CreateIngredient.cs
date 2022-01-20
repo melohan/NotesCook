@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace NotesCook.Forms
 {
-    public partial class CreateIngredient : Form
+    public partial class frmCreateIngredient : Form
     {
         private Recipe recipe;
 
@@ -20,7 +20,7 @@ namespace NotesCook.Forms
             this.recipe = recipe;
         }
 
-        public CreateIngredient()
+        public frmCreateIngredient()
         {
             InitializeComponent();
         }

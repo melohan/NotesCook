@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace NotesCook.Forms
 {
-    public partial class CreateRecipe : Form
+    public partial class frmCreateRecipe : Form
     {
 
         private Recipe recipe;
 
-        public CreateRecipe()
+        public frmCreateRecipe()
         {
             recipe = new Recipe();
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace NotesCook.Forms
             this.recipe.Name = txtName.Text;
             this.recipe.NumberOfPersons = (int)nupNbPersons.Value;
 
-            CreateIngredient cr = new CreateIngredient();
+            frmCreateIngredient cr = new frmCreateIngredient();
             cr.setRecipe(this.recipe);
             this.Hide();
             cr.ShowDialog();

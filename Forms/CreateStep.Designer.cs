@@ -54,9 +54,10 @@ namespace NotesCook.Forms
             // 
             // pic_logo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(28, 19);
+            this.pic_logo1.Location = new System.Drawing.Point(37, 23);
+            this.pic_logo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_logo1.Name = "pic_logo1";
-            this.pic_logo1.Size = new System.Drawing.Size(45, 48);
+            this.pic_logo1.Size = new System.Drawing.Size(60, 59);
             this.pic_logo1.TabIndex = 5;
             this.pic_logo1.TabStop = false;
             // 
@@ -64,9 +65,10 @@ namespace NotesCook.Forms
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(123, 20);
+            this.lbl_title.Location = new System.Drawing.Point(164, 25);
+            this.lbl_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(126, 46);
+            this.lbl_title.Size = new System.Drawing.Size(156, 58);
             this.lbl_title.TabIndex = 4;
             this.lbl_title.Text = "!Cook";
             // 
@@ -75,10 +77,10 @@ namespace NotesCook.Forms
             this.btnEnd.BackColor = System.Drawing.SystemColors.Control;
             this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnd.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnEnd.Location = new System.Drawing.Point(99, 497);
-            this.btnEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEnd.Location = new System.Drawing.Point(132, 612);
+            this.btnEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(75, 35);
+            this.btnEnd.Size = new System.Drawing.Size(100, 43);
             this.btnEnd.TabIndex = 9;
             this.btnEnd.Text = "Terminer";
             this.btnEnd.UseVisualStyleBackColor = true;
@@ -94,11 +96,11 @@ namespace NotesCook.Forms
             this.grpStep.Controls.Add(this.txtName);
             this.grpStep.Controls.Add(this.lblName);
             this.grpStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpStep.Location = new System.Drawing.Point(16, 171);
-            this.grpStep.Margin = new System.Windows.Forms.Padding(2);
+            this.grpStep.Location = new System.Drawing.Point(21, 210);
+            this.grpStep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpStep.Name = "grpStep";
-            this.grpStep.Padding = new System.Windows.Forms.Padding(2);
-            this.grpStep.Size = new System.Drawing.Size(246, 221);
+            this.grpStep.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpStep.Size = new System.Drawing.Size(328, 272);
             this.grpStep.TabIndex = 8;
             this.grpStep.TabStop = false;
             this.grpStep.Text = "Etape";
@@ -110,10 +112,10 @@ namespace NotesCook.Forms
             this.btnPlus.Enabled = false;
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPlus.Location = new System.Drawing.Point(207, 187);
-            this.btnPlus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlus.Location = new System.Drawing.Point(276, 230);
+            this.btnPlus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(26, 28);
+            this.btnPlus.Size = new System.Drawing.Size(35, 34);
             this.btnPlus.TabIndex = 9;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
@@ -122,31 +124,33 @@ namespace NotesCook.Forms
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(12, 110);
+            this.lblDescription.Location = new System.Drawing.Point(16, 135);
+            this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(79, 17);
+            this.lblDescription.Size = new System.Drawing.Size(95, 20);
             this.lblDescription.TabIndex = 8;
             this.lblDescription.Text = "Description";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(15, 130);
+            this.txtDescription.Location = new System.Drawing.Point(20, 160);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(179, 85);
+            this.txtDescription.Size = new System.Drawing.Size(237, 104);
             this.txtDescription.TabIndex = 7;
             // 
             // nupNoStep
             // 
-            this.nupNoStep.Location = new System.Drawing.Point(82, 73);
-            this.nupNoStep.Margin = new System.Windows.Forms.Padding(2);
+            this.nupNoStep.Location = new System.Drawing.Point(109, 90);
+            this.nupNoStep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nupNoStep.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nupNoStep.Name = "nupNoStep";
-            this.nupNoStep.Size = new System.Drawing.Size(134, 23);
+            this.nupNoStep.Size = new System.Drawing.Size(179, 27);
             this.nupNoStep.TabIndex = 6;
             this.nupNoStep.Value = new decimal(new int[] {
             1,
@@ -158,29 +162,27 @@ namespace NotesCook.Forms
             // lblNoStep
             // 
             this.lblNoStep.AutoSize = true;
-            this.lblNoStep.Location = new System.Drawing.Point(12, 73);
-            this.lblNoStep.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoStep.Location = new System.Drawing.Point(16, 90);
             this.lblNoStep.Name = "lblNoStep";
-            this.lblNoStep.Size = new System.Drawing.Size(26, 17);
+            this.lblNoStep.Size = new System.Drawing.Size(30, 20);
             this.lblNoStep.TabIndex = 5;
             this.lblNoStep.Text = "No";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(82, 37);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Location = new System.Drawing.Point(109, 46);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(134, 23);
+            this.txtName.Size = new System.Drawing.Size(177, 27);
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(12, 37);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(16, 46);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(37, 17);
+            this.lblName.Size = new System.Drawing.Size(44, 20);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nom";
             // 
@@ -189,11 +191,11 @@ namespace NotesCook.Forms
             this.groupBox1.Controls.Add(this.lblSteps);
             this.groupBox1.Controls.Add(this.lblIngredients);
             this.groupBox1.Controls.Add(this.lblRecipe);
-            this.groupBox1.Location = new System.Drawing.Point(9, 102);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(12, 126);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(259, 40);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(345, 49);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
@@ -201,10 +203,9 @@ namespace NotesCook.Forms
             // 
             this.lblSteps.AutoSize = true;
             this.lblSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSteps.Location = new System.Drawing.Point(193, 15);
-            this.lblSteps.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSteps.Location = new System.Drawing.Point(257, 18);
             this.lblSteps.Name = "lblSteps";
-            this.lblSteps.Size = new System.Drawing.Size(58, 17);
+            this.lblSteps.Size = new System.Drawing.Size(67, 20);
             this.lblSteps.TabIndex = 8;
             this.lblSteps.Text = "Etapes";
             // 
@@ -212,10 +213,9 @@ namespace NotesCook.Forms
             // 
             this.lblIngredients.AutoSize = true;
             this.lblIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngredients.Location = new System.Drawing.Point(98, 15);
-            this.lblIngredients.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngredients.Location = new System.Drawing.Point(131, 18);
             this.lblIngredients.Name = "lblIngredients";
-            this.lblIngredients.Size = new System.Drawing.Size(89, 17);
+            this.lblIngredients.Size = new System.Drawing.Size(102, 20);
             this.lblIngredients.TabIndex = 7;
             this.lblIngredients.Text = "Ingrédients";
             // 
@@ -223,19 +223,20 @@ namespace NotesCook.Forms
             // 
             this.lblRecipe.AutoSize = true;
             this.lblRecipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecipe.Location = new System.Drawing.Point(13, 15);
-            this.lblRecipe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRecipe.Location = new System.Drawing.Point(17, 18);
             this.lblRecipe.Name = "lblRecipe";
-            this.lblRecipe.Size = new System.Drawing.Size(72, 17);
+            this.lblRecipe.Size = new System.Drawing.Size(84, 20);
             this.lblRecipe.TabIndex = 6;
             this.lblRecipe.Text = "Recettes";
             // 
             // lstStep
             // 
             this.lstStep.FormattingEnabled = true;
-            this.lstStep.Location = new System.Drawing.Point(16, 397);
+            this.lstStep.ItemHeight = 16;
+            this.lstStep.Location = new System.Drawing.Point(21, 489);
+            this.lstStep.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstStep.Name = "lstStep";
-            this.lstStep.Size = new System.Drawing.Size(212, 95);
+            this.lstStep.Size = new System.Drawing.Size(281, 116);
             this.lstStep.TabIndex = 14;
             // 
             // btmMinus
@@ -244,10 +245,10 @@ namespace NotesCook.Forms
             this.btmMinus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btmMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmMinus.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btmMinus.Location = new System.Drawing.Point(242, 432);
-            this.btmMinus.Margin = new System.Windows.Forms.Padding(2);
+            this.btmMinus.Location = new System.Drawing.Point(323, 532);
+            this.btmMinus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btmMinus.Name = "btmMinus";
-            this.btmMinus.Size = new System.Drawing.Size(26, 28);
+            this.btmMinus.Size = new System.Drawing.Size(35, 34);
             this.btmMinus.TabIndex = 15;
             this.btmMinus.Text = "-";
             this.btmMinus.UseVisualStyleBackColor = true;
@@ -255,9 +256,9 @@ namespace NotesCook.Forms
             // 
             // CreateStep
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 552);
+            this.ClientSize = new System.Drawing.Size(369, 679);
             this.Controls.Add(this.btmMinus);
             this.Controls.Add(this.lstStep);
             this.Controls.Add(this.btnEnd);
@@ -265,9 +266,10 @@ namespace NotesCook.Forms
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreateStep";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form1";
+            this.Text = "frmCréer une étape";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             this.grpStep.ResumeLayout(false);
             this.grpStep.PerformLayout();

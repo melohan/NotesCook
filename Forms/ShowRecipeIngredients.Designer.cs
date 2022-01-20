@@ -1,7 +1,7 @@
 ﻿
 namespace NotesCook.Forms
 {
-    partial class frm_RecipeIngredients
+    partial class frmRecipeIngredients
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,46 @@ namespace NotesCook.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.pic_logo1 = new System.Windows.Forms.PictureBox();
-            this.lbl_title = new System.Windows.Forms.Label();
+            this.picLogo1 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.lblSteps = new System.Windows.Forms.Label();
             this.lblIngredients = new System.Windows.Forms.Label();
             this.lblRecipe = new System.Windows.Forms.Label();
-            this.grp_menu = new System.Windows.Forms.GroupBox();
-            this.lst_Ingredients = new System.Windows.Forms.ListBox();
+            this.grpMenu = new System.Windows.Forms.GroupBox();
+            this.lstIngredients = new System.Windows.Forms.ListBox();
             this.lblTableIngredients = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).BeginInit();
-            this.grp_menu.SuspendLayout();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.nupQuantity = new System.Windows.Forms.NumericUpDown();
+            this.txtUnit = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.lblUnity = new System.Windows.Forms.Label();
+            this.lblQuantity = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnMinus = new System.Windows.Forms.Button();
+            this.btnPlus = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
+            this.grpMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).BeginInit();
             this.SuspendLayout();
             // 
-            // pic_logo1
+            // picLogo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(26, 14);
-            this.pic_logo1.Name = "pic_logo1";
-            this.pic_logo1.Size = new System.Drawing.Size(45, 48);
-            this.pic_logo1.TabIndex = 12;
-            this.pic_logo1.TabStop = false;
+            this.picLogo1.Location = new System.Drawing.Point(26, 14);
+            this.picLogo1.Name = "picLogo1";
+            this.picLogo1.Size = new System.Drawing.Size(45, 48);
+            this.picLogo1.TabIndex = 12;
+            this.picLogo1.TabStop = false;
             // 
-            // lbl_title
+            // lblTitle
             // 
-            this.lbl_title.AutoSize = true;
-            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(121, 15);
-            this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(126, 46);
-            this.lbl_title.TabIndex = 11;
-            this.lbl_title.Text = "!Cook";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(121, 15);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(126, 46);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "!Cook";
             // 
             // lblSteps
             // 
@@ -94,29 +105,30 @@ namespace NotesCook.Forms
             this.lblRecipe.Text = "Recettes";
             this.lblRecipe.Click += new System.EventHandler(this.lblRecipe_Click);
             // 
-            // grp_menu
+            // grpMenu
             // 
-            this.grp_menu.Controls.Add(this.lblSteps);
-            this.grp_menu.Controls.Add(this.lblIngredients);
-            this.grp_menu.Controls.Add(this.lblRecipe);
-            this.grp_menu.Location = new System.Drawing.Point(7, 97);
-            this.grp_menu.Margin = new System.Windows.Forms.Padding(2);
-            this.grp_menu.Name = "grp_menu";
-            this.grp_menu.Padding = new System.Windows.Forms.Padding(2);
-            this.grp_menu.Size = new System.Drawing.Size(259, 40);
-            this.grp_menu.TabIndex = 13;
-            this.grp_menu.TabStop = false;
+            this.grpMenu.Controls.Add(this.lblSteps);
+            this.grpMenu.Controls.Add(this.lblIngredients);
+            this.grpMenu.Controls.Add(this.lblRecipe);
+            this.grpMenu.Location = new System.Drawing.Point(7, 97);
+            this.grpMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMenu.Name = "grpMenu";
+            this.grpMenu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMenu.Size = new System.Drawing.Size(259, 40);
+            this.grpMenu.TabIndex = 13;
+            this.grpMenu.TabStop = false;
             // 
-            // lst_Ingredients
+            // lstIngredients
             // 
-            this.lst_Ingredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lst_Ingredients.FormattingEnabled = true;
-            this.lst_Ingredients.ItemHeight = 16;
-            this.lst_Ingredients.Location = new System.Drawing.Point(11, 184);
-            this.lst_Ingredients.Name = "lst_Ingredients";
-            this.lst_Ingredients.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.lst_Ingredients.Size = new System.Drawing.Size(254, 244);
-            this.lst_Ingredients.TabIndex = 14;
+            this.lstIngredients.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstIngredients.FormattingEnabled = true;
+            this.lstIngredients.ItemHeight = 16;
+            this.lstIngredients.Location = new System.Drawing.Point(11, 184);
+            this.lstIngredients.Name = "lstIngredients";
+            this.lstIngredients.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.lstIngredients.Size = new System.Drawing.Size(254, 196);
+            this.lstIngredients.TabIndex = 14;
+            this.lstIngredients.SelectedIndexChanged += new System.EventHandler(this.lstIngredients_SelectedIndexChanged);
             // 
             // lblTableIngredients
             // 
@@ -128,23 +140,150 @@ namespace NotesCook.Forms
             this.lblTableIngredients.TabIndex = 16;
             this.lblTableIngredients.Text = "Ingrédients";
             // 
-            // frm_RecipeIngredients
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(96, 517);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 17;
+            this.btnEdit.Text = "Modifier";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // nupQuantity
+            // 
+            this.nupQuantity.Location = new System.Drawing.Point(166, 432);
+            this.nupQuantity.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.nupQuantity.Name = "nupQuantity";
+            this.nupQuantity.Size = new System.Drawing.Size(100, 20);
+            this.nupQuantity.TabIndex = 24;
+            this.nupQuantity.Visible = false;
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.Location = new System.Drawing.Point(166, 458);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.Size = new System.Drawing.Size(100, 20);
+            this.txtUnit.TabIndex = 23;
+            this.txtUnit.Visible = false;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(166, 406);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 22;
+            this.txtName.Visible = false;
+            // 
+            // lblUnity
+            // 
+            this.lblUnity.AutoSize = true;
+            this.lblUnity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnity.Location = new System.Drawing.Point(12, 458);
+            this.lblUnity.Name = "lblUnity";
+            this.lblUnity.Size = new System.Drawing.Size(39, 16);
+            this.lblUnity.TabIndex = 21;
+            this.lblUnity.Text = "Unité";
+            this.lblUnity.Visible = false;
+            // 
+            // lblQuantity
+            // 
+            this.lblQuantity.AutoSize = true;
+            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantity.Location = new System.Drawing.Point(12, 432);
+            this.lblQuantity.Name = "lblQuantity";
+            this.lblQuantity.Size = new System.Drawing.Size(57, 16);
+            this.lblQuantity.TabIndex = 20;
+            this.lblQuantity.Text = "Quantité";
+            this.lblQuantity.Visible = false;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(12, 407);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(37, 16);
+            this.lblName.TabIndex = 18;
+            this.lblName.Text = "Nom";
+            this.lblName.Visible = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(95, 488);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 25;
+            this.btnSave.Text = "Enregistrer";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Visible = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnMinus
+            // 
+            this.btnMinus.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMinus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnMinus.Location = new System.Drawing.Point(231, 344);
+            this.btnMinus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinus.Name = "btnMinus";
+            this.btnMinus.Size = new System.Drawing.Size(26, 28);
+            this.btnMinus.TabIndex = 26;
+            this.btnMinus.Text = "-";
+            this.btnMinus.UseVisualStyleBackColor = true;
+            this.btnMinus.Visible = false;
+            this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            // 
+            // btnPlus
+            // 
+            this.btnPlus.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPlus.Location = new System.Drawing.Point(198, 344);
+            this.btnPlus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(26, 28);
+            this.btnPlus.TabIndex = 30;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Visible = false;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
+            // frmRecipeIngredients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 552);
+            this.Controls.Add(this.btnPlus);
+            this.Controls.Add(this.btnMinus);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.nupQuantity);
+            this.Controls.Add(this.txtUnit);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.lblUnity);
+            this.Controls.Add(this.lblQuantity);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.lblTableIngredients);
-            this.Controls.Add(this.lst_Ingredients);
-            this.Controls.Add(this.pic_logo1);
-            this.Controls.Add(this.lbl_title);
-            this.Controls.Add(this.grp_menu);
-            this.Name = "frm_RecipeIngredients";
+            this.Controls.Add(this.lstIngredients);
+            this.Controls.Add(this.picLogo1);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.grpMenu);
+            this.Name = "frmRecipeIngredients";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frm_RecipeIngredients_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
-            this.grp_menu.ResumeLayout(false);
-            this.grp_menu.PerformLayout();
+            this.Text = "Ingrédient";
+            this.Load += new System.EventHandler(this.frmRecipeIngredients_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();
+            this.grpMenu.ResumeLayout(false);
+            this.grpMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,13 +291,23 @@ namespace NotesCook.Forms
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pic_logo1;
-        private System.Windows.Forms.Label lbl_title;
+        private System.Windows.Forms.PictureBox picLogo1;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblSteps;
         private System.Windows.Forms.Label lblIngredients;
         private System.Windows.Forms.Label lblRecipe;
-        private System.Windows.Forms.GroupBox grp_menu;
-        private System.Windows.Forms.ListBox lst_Ingredients;
+        private System.Windows.Forms.GroupBox grpMenu;
+        private System.Windows.Forms.ListBox lstIngredients;
         private System.Windows.Forms.Label lblTableIngredients;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.NumericUpDown nupQuantity;
+        private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label lblUnity;
+        private System.Windows.Forms.Label lblQuantity;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnMinus;
+        private System.Windows.Forms.Button btnPlus;
     }
 }
