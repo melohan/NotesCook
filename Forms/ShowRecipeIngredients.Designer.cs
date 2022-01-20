@@ -152,6 +152,7 @@ namespace NotesCook.Forms
             // 
             // nupQuantity
             // 
+            this.nupQuantity.DecimalPlaces = 2;
             this.nupQuantity.Location = new System.Drawing.Point(166, 432);
             this.nupQuantity.Maximum = new decimal(new int[] {
             10000,

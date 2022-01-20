@@ -15,6 +15,11 @@ namespace NotesCook.Forms
     public partial class frmRecipeInfos : Form
     {
         private Recipe recipe;
+
+        /**
+         * Constructor
+         * @param Recipe
+         **/
         public frmRecipeInfos(Recipe recipe)
         {
             this.recipe = recipe;
@@ -22,22 +27,28 @@ namespace NotesCook.Forms
             loadInformation();
         }
 
+        /**
+         * Load the information in the form
+         **/
         private void loadInformation()
         {
-            grpRecipeInfos.Text = recipe.Name;
-            lblNbPersons.Text = "Pour " + recipe.NumberOfPersons + " personne";
-            if (recipe.NumberOfPersons > 1) lblNbPersons.Text += "s";
+            this.grpRecipeInfos.Text = this.recipe.Name;
+            this.lblNbPersons.Text = "Pour " + this.recipe.NumberOfPersons + " personne";
+            if (this.recipe.NumberOfPersons > 1) this.lblNbPersons.Text += "s";
 
-            lblTags.Text = "";
-            lstTag.Items.Clear();
+            this.lblTags.Text = "";
+            this.lstTag.Items.Clear();
 
-            foreach (Tag tag in recipe.Tags)
+            foreach (Tag tag in this.recipe.Tags)
             {
-                lblTags.Text += ("#" + tag.Name + " ");
-                lstTag.Items.Add(tag.Name);
+                this.lblTags.Text += ("#" + tag.Name + " ");
+                this.lstTag.Items.Add(tag.Name);
             }
         }
 
+        /**
+         * Event click of lblIngredients, go to frmRecipeIngredients
+         **/
         private void lblIngredients_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -46,6 +57,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Event click of lblStep, go to frmShowRecipeSteps
+         **/
         private void lblSteps_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -54,6 +68,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Event click of btnDelete, display a confirmation message, if validated delete the recipe and go to frmHome
+         **/
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Etes vous sûr de vouloir supprimer cette recette ?", "Veuillez confirmer", MessageBoxButtons.YesNo);
@@ -68,90 +85,105 @@ namespace NotesCook.Forms
             }
         }
 
+        /**
+         * Event click of btnEdit, toggles between edit and information mode
+         **/
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if(btnSave.Visible == false)
+            if(this.btnSave.Visible == false)
             {
-                txtName.Visible = true;
-                txtName.Text = recipe.Name;
-                txtTag.Visible = true;
-                nupNbPersons.Visible = true;
-                nupNbPersons.Value = recipe.NumberOfPersons;
-                lblNewNbPerson.Visible = true;
+                this.txtName.Visible = true;
+                this.txtName.Text = this.recipe.Name;
+                this.txtTag.Visible = true;
+                this.nupNbPersons.Visible = true;
+                this.nupNbPersons.Value = this.recipe.NumberOfPersons;
+                this.lblNewNbPerson.Visible = true;
 
-                btnMinus.Visible = true;
-                btnPlus.Visible = true;
-                lstTag.Visible = true;
-                lblTag.Visible = true;
+                this.btnMinus.Visible = true;
+                this.btnPlus.Visible = true;
+                this.lstTag.Visible = true;
+                this.lblTag.Visible = true;
 
-                btnSave.Visible = true;
-                
+                this.btnSave.Visible = true;
 
-                lblNbPersons.Visible = false;
-                lblTags.Visible = false;
-                btnEdit.Text = "Verrouiller";
+
+                this.lblNbPersons.Visible = false;
+                this.lblTags.Visible = false;
+                this.btnEdit.Text = "Verrouiller";
             }
             else
             {
-                txtName.Visible = false;
-                txtTag.Visible = false;
-                nupNbPersons.Visible = false;
-                lblNewNbPerson.Visible = false;
-                lstTag.Visible = false;
-                lblTag.Visible = false;
+                this.txtName.Visible = false;
+                this.txtTag.Visible = false;
+                this.nupNbPersons.Visible = false;
+                this.lblNewNbPerson.Visible = false;
+                this.lstTag.Visible = false;
+                this.lblTag.Visible = false;
 
-                btnSave.Visible = false;
-                btnMinus.Visible = false;
-                btnPlus.Visible = false;
+                this.btnSave.Visible = false;
+                this.btnMinus.Visible = false;
+                this.btnPlus.Visible = false;
 
-                lblNbPersons.Visible = true;
-                lblTags.Visible = true;
-                btnEdit.Text = "Modifier";
+                this.lblNbPersons.Visible = true;
+                this.lblTags.Visible = true;
+                this.btnEdit.Text = "Modifier";
             }
         }
 
+        /**
+         *When the selection of lstTag changed, pre-filled TxtTag
+         **/
         private void lstTag_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstTag.SelectedIndex != -1)
+            if (this.lstTag.SelectedIndex != -1)
             {
-                txtTag.Text = recipe.Tags.Find(x => x.Name == lstTag.SelectedItem.ToString()).Name;
+                this.txtTag.Text = this.recipe.Tags.Find(x => x.Name == this.lstTag.SelectedItem.ToString()).Name;
             }
         }
 
+        /**
+         * Event click of btnSave, save the modification of the recipe information
+         **/
         private void btnSave_Click(object sender, EventArgs e)
         {
-            recipe.Name = txtName.Text;
-            recipe.NumberOfPersons = (int)nupNbPersons.Value;
-            grpRecipeInfos.Text = recipe.Name;
+            this.recipe.Name = txtName.Text;
+            this.recipe.NumberOfPersons = (int)this.nupNbPersons.Value;
+            this.grpRecipeInfos.Text = this.recipe.Name;
 
             
-            if (lstTag.SelectedIndex != -1)
+            if (this.lstTag.SelectedIndex != -1)
             {
-                Tag selected = recipe.Tags.Find(x => x.Name == lstTag.SelectedItem.ToString());
-                selected.Name = txtTag.Text;
-                
-                lstTag.Items[lstTag.SelectedIndex] = selected.Name;
+                Tag selected = this.recipe.Tags.Find(x => x.Name == this.lstTag.SelectedItem.ToString());
+                selected.Name = this.txtTag.Text;
+
+                this.lstTag.Items[this.lstTag.SelectedIndex] = selected.Name;
             }
 
-            recipe.Edit();
+            this.recipe.Edit();
 
             loadInformation();
         }
 
+        /**
+         * Event click of btnMinus, remove a tag from lstTags and from the recipe
+         **/
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if (lstTag.SelectedIndex != -1)
+            if (this.lstTag.SelectedIndex != -1)
             {
-                this.recipe.RemoveTagByName(lstTag.SelectedItem.ToString());
-                lstTag.Items.Remove(lstTag.SelectedItem);
-                recipe.Edit();
+                this.recipe.RemoveTagByName(this.lstTag.SelectedItem.ToString());
+                this.lstTag.Items.Remove(this.lstTag.SelectedItem);
+                this.recipe.Edit();
             }
         }
 
+        /**
+         * Event click btnPlus, add a tag to lstTags and to the recipe
+         **/
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            recipe.Add(new Tag("Nouveau tag"));
-            lstTag.Items.Add("Nouveau tag");
+            this.recipe.Add(new Tag("Nouveau tag"));
+            this.lstTag.Items.Add("Nouveau tag");
         }
     }
 }
