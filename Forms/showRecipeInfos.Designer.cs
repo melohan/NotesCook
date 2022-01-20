@@ -36,6 +36,7 @@ namespace NotesCook.Forms
             this.lblRecipe = new System.Windows.Forms.Label();
             this.grpMenu = new System.Windows.Forms.GroupBox();
             this.grpRecipeInfos = new System.Windows.Forms.GroupBox();
+            this.btnPlus = new System.Windows.Forms.Button();
             this.btnMinus = new System.Windows.Forms.Button();
             this.lblTag = new System.Windows.Forms.Label();
             this.txtTag = new System.Windows.Forms.TextBox();
@@ -48,7 +49,6 @@ namespace NotesCook.Forms
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.btnPlus = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).BeginInit();
             this.grpMenu.SuspendLayout();
             this.grpRecipeInfos.SuspendLayout();
@@ -114,9 +114,9 @@ namespace NotesCook.Forms
             this.grpMenu.Controls.Add(this.lblIngredients);
             this.grpMenu.Controls.Add(this.lblRecipe);
             this.grpMenu.Location = new System.Drawing.Point(9, 99);
-            this.grpMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMenu.Margin = new System.Windows.Forms.Padding(2);
             this.grpMenu.Name = "grpMenu";
-            this.grpMenu.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpMenu.Padding = new System.Windows.Forms.Padding(2);
             this.grpMenu.Size = new System.Drawing.Size(259, 40);
             this.grpMenu.TabIndex = 10;
             this.grpMenu.TabStop = false;
@@ -140,6 +140,22 @@ namespace NotesCook.Forms
             this.grpRecipeInfos.TabStop = false;
             this.grpRecipeInfos.Text = "recipeName";
             // 
+            // btnPlus
+            // 
+            this.btnPlus.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPlus.Location = new System.Drawing.Point(183, 184);
+            this.btnPlus.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPlus.Name = "btnPlus";
+            this.btnPlus.Size = new System.Drawing.Size(26, 28);
+            this.btnPlus.TabIndex = 29;
+            this.btnPlus.Text = "+";
+            this.btnPlus.UseVisualStyleBackColor = true;
+            this.btnPlus.Visible = false;
+            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            // 
             // btnMinus
             // 
             this.btnMinus.BackColor = System.Drawing.SystemColors.Control;
@@ -147,7 +163,7 @@ namespace NotesCook.Forms
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMinus.Location = new System.Drawing.Point(213, 184);
-            this.btnMinus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinus.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(26, 28);
             this.btnMinus.TabIndex = 27;
@@ -189,7 +205,7 @@ namespace NotesCook.Forms
             // nupNbPersons
             // 
             this.nupNbPersons.Location = new System.Drawing.Point(164, 30);
-            this.nupNbPersons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupNbPersons.Margin = new System.Windows.Forms.Padding(2);
             this.nupNbPersons.Minimum = new decimal(new int[] {
             1,
             0,
@@ -276,22 +292,6 @@ namespace NotesCook.Forms
             this.txtName.TabIndex = 2;
             this.txtName.Visible = false;
             // 
-            // btnPlus
-            // 
-            this.btnPlus.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPlus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPlus.Location = new System.Drawing.Point(183, 184);
-            this.btnPlus.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(26, 28);
-            this.btnPlus.TabIndex = 29;
-            this.btnPlus.Text = "+";
-            this.btnPlus.UseVisualStyleBackColor = true;
-            this.btnPlus.Visible = false;
-            this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
-            // 
             // frmRecipeInfos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +306,7 @@ namespace NotesCook.Forms
             this.Controls.Add(this.picLogo1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.grpMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRecipeInfos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recette";
