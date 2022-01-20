@@ -11,24 +11,33 @@ namespace NotesCook.Forms
 
         private Recipe recipe;
 
+        /**
+         * Constructor
+         **/
         public frmCreateRecipe()
         {
-            recipe = new Recipe();
+            this.recipe = new Recipe();
             InitializeComponent();
         }
 
+        /**
+         * Event of the btnPlus, allow to add a new tag
+         **/
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            string tagName = txtTag.Text.ToString();
-            lstTag.Items.Add(tagName);
+            string tagName = this.txtTag.Text.ToString();
+            this.lstTag.Items.Add(tagName);
             this.recipe.Add(new Tag(tagName));
-            txtTag.Text = "";
+            this.txtTag.Text = "";
         }
 
+        /**
+         * Event of the btnNext, move to the form CreateIngredient
+         **/
         private void btnNext_Click(object sender, EventArgs e)
         {
-            this.recipe.Name = txtName.Text;
-            this.recipe.NumberOfPersons = (int)nupNbPersons.Value;
+            this.recipe.Name = this.txtName.Text;
+            this.recipe.NumberOfPersons = (int)this.nupNbPersons.Value;
 
             frmCreateIngredient cr = new frmCreateIngredient(recipe);
 
@@ -37,40 +46,50 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Event of the btnMinus, allow to remove tag
+         **/
         private void btmMinus_Click(object sender, EventArgs e)
         {
-            if (lstTag.SelectedIndex != -1)
+            if (this.lstTag.SelectedIndex != -1)
             {
                 this.recipe.RemoveTagByName(lstTag.SelectedItem.ToString());
-                lstTag.Items.Remove(lstTag.SelectedItem);
+                this.lstTag.Items.Remove(lstTag.SelectedItem);
             }
         }
 
+        /**
+         * Check that txtName is empty, if so it is impossible to proceed to the next step
+         **/
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if (txtName.Text.ToString() != "")
-                btnNext.Enabled = true;
+            if (this.txtName.Text.ToString() != "")
+                this.btnNext.Enabled = true;
             else
-                btnNext.Enabled = false;
+                this.btnNext.Enabled = false;
         }
 
+
+        /**
+         * Check that txtTag is not empty, and that it contains a tag not already added to the recipe, if so allow the use of btnPlus
+         **/
         private void txtTag_TextChanged(object sender, EventArgs e)
         {
-            string tagName = txtTag.Text.ToString();
+            string tagName = this.txtTag.Text.ToString();
             if (tagName != "")
             {
-                foreach (Tag tag in recipe.Tags)
+                foreach (Tag tag in this.recipe.Tags)
                 {
                     if (tagName == tag.Name)
                     {
-                        btnPlus.Enabled = false;
+                        this.btnPlus.Enabled = false;
                         return;
                     }
                 }
-                btnPlus.Enabled = true;
+                this.btnPlus.Enabled = true;
             }
             else
-                btnPlus.Enabled = false;
+                this.btnPlus.Enabled = false;
         }
     }
 }
