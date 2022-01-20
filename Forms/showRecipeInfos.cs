@@ -80,6 +80,7 @@ namespace NotesCook.Forms
                 lblNewNbPerson.Visible = true;
 
                 btnMinus.Visible = true;
+                btnPlus.Visible = true;
                 lstTag.Visible = true;
                 lblTag.Visible = true;
 
@@ -101,6 +102,7 @@ namespace NotesCook.Forms
 
                 btnSave.Visible = false;
                 btnMinus.Visible = false;
+                btnPlus.Visible = false;
 
                 lblNbPersons.Visible = true;
                 lblTags.Visible = true;
@@ -144,6 +146,12 @@ namespace NotesCook.Forms
                 lstTag.Items.Remove(lstTag.SelectedItem);
                 recipe.Edit();
             }
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            recipe.Add(new Tag("Nouveau tag"));
+            lstTag.Items.Add("Nouveau tag");
         }
     }
 }
