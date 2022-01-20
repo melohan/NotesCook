@@ -20,9 +20,10 @@ namespace NotesCook.Forms
         private List<Recipe> recipes;
         private OrderedDictionary groups;
         private OrderedDictionary labels;
-        public frmShowRecipeList()
+
+        public frmShowRecipeList(List<Recipe> recipes)
         {
-            this.recipes = Recipe.All<Recipe>();
+            this.recipes = recipes; 
             this.page = 1;
             InitializeComponent();
             this.groups = new OrderedDictionary();

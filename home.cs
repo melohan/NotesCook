@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Threading;
 using NotesCook.Forms;
+using NotesCook.Models;
 
 namespace NotesCook
 {
@@ -29,7 +30,7 @@ namespace NotesCook
 
         private void btnRecipes_Click(object sender, EventArgs e)
         {
-            frmShowRecipeList srl = new frmShowRecipeList();
+            frmShowRecipeList srl = new frmShowRecipeList(Recipe.All<Recipe>());
             this.Hide();
             srl.ShowDialog();
             this.Close();
