@@ -16,11 +16,9 @@ namespace NotesCook
         [STAThread]
         static void Main()
         {
-            Recipe test = Recipe.FindOne<Recipe, string>("Name", "Test2");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frm_home());
-            Application.Run(new frmRecipeIngredients(test));
+            Application.Run(new frm_home());
         }
     }
 }
