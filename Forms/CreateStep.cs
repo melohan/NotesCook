@@ -16,21 +16,31 @@ namespace NotesCook.Forms
     {
         private Recipe recipe;
 
+        /**
+         * Constructor
+         * @param Recipe
+         **/
         public CreateStep(Recipe recipe)
         {
             this.recipe = recipe;
             InitializeComponent();
         }
 
+        /**
+         * Event click of btnPlus, add a new step in the recipe and in lstStep
+         **/
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            this.recipe.Add(new Step((int)nupNoStep.Value,txtName.Text,txtDescription.Text));
-            lstStep.Items.Add(nupNoStep.Value.ToString() + ". " + txtName.Text);
-            txtName.Text = "";
-            nupNoStep.Value += 1;
-            txtDescription.Text = "";
+            this.recipe.Add(new Step((int)this.nupNoStep.Value, this.txtName.Text, this.txtDescription.Text));
+            this.lstStep.Items.Add(this.nupNoStep.Value.ToString() + ". " + this.txtName.Text);
+            this.txtName.Text = "";
+            this.nupNoStep.Value += 1;
+            this.txtDescription.Text = "";
         }
 
+        /**
+         * Event click of btnEnd, create the recipe in the database and return to frm_home
+         **/
         private void btnEnd_Click(object sender, EventArgs e)
         {
             this.recipe.Create();
@@ -40,14 +50,18 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Allows to know if btnPlus should be enabled
+         * @return True if btnPlus must be active, otherwise false
+         **/
         private bool btnEnabler()
         {
-            string name = txtName.Text.ToString();
+            string name = this.txtName.Text.ToString();
             if (name != "")
             {
-                foreach (Step step in recipe.Steps)
+                foreach (Step step in this.recipe.Steps)
                 {
-                    if (nupNoStep.Value == step.Position)
+                    if (this.nupNoStep.Value == step.Position)
                     {
                         return false;
                     }
@@ -58,24 +72,33 @@ namespace NotesCook.Forms
                 return false;
         }
 
-        private void btmMinus_Click(object sender, EventArgs e)
+        /**
+         * Event click of btnMinus, remove selected step form lstStep and from recipe
+         **/
+        private void btnMinus_Click(object sender, EventArgs e)
         {
             if (lstStep.SelectedIndex != -1)
             {
-                int position = Convert.ToInt32(lstStep.SelectedItem.ToString().Split('.')[0]);
+                int position = Convert.ToInt32(this.lstStep.SelectedItem.ToString().Split('.')[0]);
                 this.recipe.RemoveStepByPosition(position);
-                lstStep.Items.Remove(lstStep.SelectedItem);
+                this.lstStep.Items.Remove(lstStep.SelectedItem);
             }
         }
 
+        /**
+         * When text changed in txtName enbale or disable btnPlus
+         **/
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            btnPlus.Enabled = btnEnabler();
+            this.btnPlus.Enabled = btnEnabler();
         }
 
+        /**
+         * When value of nupNoStep changed enbale or disable btnPlus
+         **/
         private void nupNoStep_ValueChanged(object sender, EventArgs e)
         {
-            btnPlus.Enabled = btnEnabler();
+            this.btnPlus.Enabled = btnEnabler();
         }
     }
 }

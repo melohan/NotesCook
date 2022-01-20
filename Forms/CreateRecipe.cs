@@ -21,7 +21,7 @@ namespace NotesCook.Forms
         }
 
         /**
-         * Event of the btnPlus, allow to add a new tag
+         * Event click of btnPlus, allow to add a new tag
          **/
         private void btnPlus_Click(object sender, EventArgs e)
         {
@@ -32,7 +32,7 @@ namespace NotesCook.Forms
         }
 
         /**
-         * Event of the btnNext, move to the form CreateIngredient
+         * Event click of btnNext, move to the form CreateIngredient
          **/
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -47,7 +47,7 @@ namespace NotesCook.Forms
         }
 
         /**
-         * Event of the btnMinus, allow to remove tag
+         * Event click of btnMinus, allow to remove tag
          **/
         private void btmMinus_Click(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace NotesCook.Forms
         }
 
         /**
-         * Check that txtName is empty, if so it is impossible to proceed to the next step
+         * When text changed in txtName check if it is empty, if so it is impossible to proceed to the next step
          **/
         private void txtName_TextChanged(object sender, EventArgs e)
         {
@@ -71,7 +71,7 @@ namespace NotesCook.Forms
 
 
         /**
-         * Check that txtTag is not empty, and that it contains a tag not already added to the recipe, if so allow the use of btnPlus
+         * When text changed in txt tag check if txtTag is not empty, and that it contains a tag not already added to the recipe, if so allow the use of btnPlus
          **/
         private void txtTag_TextChanged(object sender, EventArgs e)
         {

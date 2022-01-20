@@ -15,23 +15,32 @@ namespace NotesCook.Forms
     {
         private Recipe recipe;
 
-
+        /**
+         * Constructor
+         * @param Recipe
+         **/
         public frmCreateIngredient(Recipe recipe)
         {
             this.recipe = recipe;
             InitializeComponent();
         }
 
+        /**
+         * Event click of btnPlus, add an ingredient to the recipe and to lstIngredient
+         **/
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            String name = txtName.Text.Trim(',');
-            String unit = txtUnit.Text.Trim(',');
-            lstIngredient.Items.Add(name + "," + nupQuantity.Value.ToString() + "," + unit);
-            recipe.Add(new Ingredient(name,((double)nupQuantity.Value),unit));
-            txtName.Text = "";
-            nupQuantity.Value = 0;  
+            String name = this.txtName.Text.Trim(',');
+            String unit = this.txtUnit.Text.Trim(',');
+            this.lstIngredient.Items.Add(name + "," + this.nupQuantity.Value.ToString() + "," + unit);
+            this.recipe.Add(new Ingredient(name,((double)this.nupQuantity.Value),unit));
+            this.txtName.Text = "";
+            this.nupQuantity.Value = 0;  
         }
 
+        /**
+         * Event click of btnNext, move to the form CreateStep
+         **/
         private void btnNext_Click(object sender, EventArgs e)
         {
             CreateStep cs = new CreateStep(recipe);
@@ -40,21 +49,28 @@ namespace NotesCook.Forms
             this.Close();
         }
 
-        private void btmMinus_Click(object sender, EventArgs e)
+        /**
+         * Event click btnMinus, remove an ingredient from lstIngredient and from recipe
+         **/
+        private void btnMinus_Click(object sender, EventArgs e)
         {
-            if (lstIngredient.SelectedIndex != -1)
+            if (this.lstIngredient.SelectedIndex != -1)
             {
-                recipe.RemoveIngredientByName(lstIngredient.SelectedItem.ToString().Split(',')[0]);
-                lstIngredient.Items.Remove(lstIngredient.SelectedItem);
+                this.recipe.RemoveIngredientByName(this.lstIngredient.SelectedItem.ToString().Split(',')[0]);
+                this.lstIngredient.Items.Remove(lstIngredient.SelectedItem);
             }
         }
 
+        /**
+         * Allows to know if btnPlus should be enabled
+         * @return True if btnPlus must be active, otherwise false
+         **/
         private bool btnEnabler()
         {
-            String name = txtName.Text.Trim(',');
-            if (name != "" && txtUnit.Text.Trim(',') != "")
+            String name = this.txtName.Text.Trim(',');
+            if (name != "" && this.txtUnit.Text.Trim(',') != "")
             {
-                foreach (Ingredient ingredient in recipe.Ingredients)
+                foreach (Ingredient ingredient in this.recipe.Ingredients)
                 {
                     if (name == ingredient.Name)
                     {
@@ -67,14 +83,20 @@ namespace NotesCook.Forms
                 return false;
         }
 
+        /**
+         * When text changed in txtUnit enbale or disable btnPlus
+         **/
         private void txtUnit_TextChanged(object sender, EventArgs e)
         {
-            btnPlus.Enabled = btnEnabler();
+            this.btnPlus.Enabled = btnEnabler();
         }
 
+        /**
+         * When text changed in txtUnit enbale or disable btnPlus
+         **/
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            btnPlus.Enabled = btnEnabler();
+            this.btnPlus.Enabled = btnEnabler();
         }
     }
 }

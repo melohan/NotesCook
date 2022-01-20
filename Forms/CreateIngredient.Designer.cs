@@ -237,7 +237,7 @@ namespace NotesCook.Forms
             this.btmMinus.TabIndex = 11;
             this.btmMinus.Text = "-";
             this.btmMinus.UseVisualStyleBackColor = true;
-            this.btmMinus.Click += new System.EventHandler(this.btmMinus_Click);
+            this.btmMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
             // lstIngredient
             // 
