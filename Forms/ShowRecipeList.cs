@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections.Specialized;
 using NotesCook.Models;
+using NotesCook.Forms;
 
 
 namespace NotesCook.Forms
 {
-    public partial class ShowRecipeList : Form
+    public partial class frmShowRecipeList : Form
     {
         private int page;
         private List<Recipe> recipes;
         private OrderedDictionary groups;
         private OrderedDictionary labels;
-        public ShowRecipeList()
+        public frmShowRecipeList()
         {
             this.recipes = Recipe.All<Recipe>();
             this.page = 1;
@@ -141,7 +142,7 @@ namespace NotesCook.Forms
 
         private void GrpRecipe1_MouseClick(Object sender, MouseEventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Etes vous sûr de vouloir supprimer cette recette ?", "Veuillez confirmer", MessageBoxButtons.YesNo);
+            
         }
 
         private void GrpRecipe2_MouseClick(Object sender, MouseEventArgs e)
@@ -158,6 +159,5 @@ namespace NotesCook.Forms
         {
 
         }
-
     }
 }

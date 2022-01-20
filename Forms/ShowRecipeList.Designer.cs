@@ -1,7 +1,7 @@
 ﻿
 namespace NotesCook.Forms
 {
-    partial class ShowRecipeList
+    partial class frmShowRecipeList
     {
         /// <summary>
         /// Required designer variable.
@@ -311,7 +311,7 @@ namespace NotesCook.Forms
             this.btnPrevious.UseVisualStyleBackColor = true;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // ShowRecipeList
+            // frmShowRecipeList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,7 +325,7 @@ namespace NotesCook.Forms
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
-            this.Name = "ShowRecipeList";
+            this.Name = "frmShowRecipeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmShowRecipeList";
             this.Load += new System.EventHandler(this.ShowRecipeList_Load);
