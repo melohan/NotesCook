@@ -128,6 +128,22 @@ namespace NotesCook.Models
             }
         }
 
+        /**
+         * Return true if the tag is contained in the recipe list tag.
+         * @param Tag other
+         **/
+        public bool TagMatched(Tag other)
+        {
+            foreach (Tag current in this.Tags)
+            {
+                if (current.Name == other.Name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
     /************************************************
      *             Operations on records
      ***********************************************/
