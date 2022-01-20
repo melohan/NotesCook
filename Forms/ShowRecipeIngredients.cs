@@ -76,6 +76,7 @@ namespace NotesCook.Forms
                 lstIngredients.SelectionMode = (SelectionMode)1;
                 btnEdit.Text = "Verrouiller";
                 btnMinus.Visible = true;
+                btnPlus.Visible = true;
             }
             else
             {
@@ -91,6 +92,7 @@ namespace NotesCook.Forms
                 lstIngredients.SelectionMode = (SelectionMode)0;
                 btnEdit.Text = "Modifier";
                 btnMinus.Visible = false;
+                btnPlus.Visible = false;
             }
         }
 
@@ -115,6 +117,12 @@ namespace NotesCook.Forms
                 lstIngredients.Items.Remove(lstIngredients.SelectedItem);
                 recipe.Edit();
             }
+        }
+
+        private void btnPlus_Click(object sender, EventArgs e)
+        {
+            recipe.Add(new Ingredient("Nouvelle ingrédient",0,"unité"));
+            lstIngredients.Items.Add("Nouvelle ingrédient" + "\t\t" + "0" + " unité");
         }
     }
 }
