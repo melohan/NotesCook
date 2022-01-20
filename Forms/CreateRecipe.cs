@@ -30,8 +30,8 @@ namespace NotesCook.Forms
             this.recipe.Name = txtName.Text;
             this.recipe.NumberOfPersons = (int)nupNbPersons.Value;
 
-            frmCreateIngredient cr = new frmCreateIngredient();
-            cr.setRecipe(this.recipe);
+            frmCreateIngredient cr = new frmCreateIngredient(recipe);
+
             this.Hide();
             cr.ShowDialog();
             this.Close();
@@ -39,7 +39,7 @@ namespace NotesCook.Forms
 
         private void btmMinus_Click(object sender, EventArgs e)
         {
-            if(lstTag.SelectedIndex != -1)
+            if (lstTag.SelectedIndex != -1)
             {
                 this.recipe.RemoveTagByName(lstTag.SelectedItem.ToString());
                 lstTag.Items.Remove(lstTag.SelectedItem);

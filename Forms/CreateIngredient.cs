@@ -15,13 +15,10 @@ namespace NotesCook.Forms
     {
         private Recipe recipe;
 
-        public void setRecipe(Recipe recipe)
+
+        public frmCreateIngredient(Recipe recipe)
         {
             this.recipe = recipe;
-        }
-
-        public frmCreateIngredient()
-        {
             InitializeComponent();
         }
 
@@ -37,8 +34,7 @@ namespace NotesCook.Forms
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            CreateStep cs = new CreateStep();
-            cs.setRecipe(this.recipe);
+            CreateStep cs = new CreateStep(recipe);
             this.Hide();
             cs.ShowDialog();
             this.Close();
@@ -48,7 +44,7 @@ namespace NotesCook.Forms
         {
             if (lstIngredient.SelectedIndex != -1)
             {
-                this.recipe.RemoveIngredientByName(lstIngredient.SelectedItem.ToString().Split(',')[0]);
+                recipe.RemoveIngredientByName(lstIngredient.SelectedItem.ToString().Split(',')[0]);
                 lstIngredient.Items.Remove(lstIngredient.SelectedItem);
             }
         }

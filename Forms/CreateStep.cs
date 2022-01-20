@@ -16,12 +16,9 @@ namespace NotesCook.Forms
     {
         private Recipe recipe;
 
-        public void setRecipe(Recipe recipe)
+        public CreateStep(Recipe recipe)
         {
             this.recipe = recipe;
-        }
-        public CreateStep()
-        {
             InitializeComponent();
         }
 
