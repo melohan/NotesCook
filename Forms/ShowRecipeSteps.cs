@@ -15,8 +15,13 @@ namespace NotesCook.Forms
     {
         private Recipe recipe;
         private int page=1;
-        Step pair;
-        Step impair;
+        private Step even;
+        private Step odd;
+
+        /**
+         * Constructor
+         * @param Recipe
+         **/
         public frmShowRecipeSteps(Recipe recipe)
         {
             this.recipe = recipe;
@@ -24,6 +29,9 @@ namespace NotesCook.Forms
             loadPage();
         }
 
+        /**
+         * Event click of lblIngredients, go to frmRecipeIngredients
+         **/
         private void lblIngredients_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -32,6 +40,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Event click of lblRecipe, go to frmRecipeInfos
+         **/
         private void lblRecipe_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -40,181 +51,214 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Event click of btnNext, load the next page
+         **/
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.page++;
             loadPage();
         }
 
+        /**
+         * Event click of btnPrevious, load the previous page
+         **/
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             this.page--;
             loadPage();
         }
 
-        private void loadImpair()
+        /**
+         * Load the information of the odd step in the form
+         **/
+        private void loadOdd()
         {
-            grpStep1.Text = ("Etape " + impair.Position + " : " + impair.Name);
-            lblStep1.Text = impair.Description;
-            grpStep1.Visible = true;
-            lblStep1.Visible = true;
+            this.grpStep1.Text = ("Etape " + this.odd.Position + " : " + this.odd.Name);
+            this.lblStep1.Text = this.odd.Description;
+            this.grpStep1.Visible = true;
+            this.lblStep1.Visible = true;
 
-            txtNameStep1.Visible = false;
-            txtStep1.Visible = false;
+            this.txtNameStep1.Visible = false;
+            this.txtStep1.Visible = false;
         }
 
-        private void loadPaire()
+        /**
+         * Load the information of the even step in the form
+         **/
+        private void loadEven()
         {
-            grpStep2.Text = ("Etape " + pair.Position + " : " + pair.Name);
-            lblStep2.Text = pair.Description;
-            grpStep2.Visible = true;
-            lblStep2.Visible = true;
+            this.grpStep2.Text = ("Etape " + this.even.Position + " : " + this.even.Name);
+            this.lblStep2.Text = this.even.Description;
+            this.grpStep2.Visible = true;
+            this.lblStep2.Visible = true;
 
-            txtNameStep2.Visible = false;
-            txtStep2.Visible = false;
+            this.txtNameStep2.Visible = false;
+            this.txtStep2.Visible = false;
         }
 
+        /**
+         * Load the information in the form
+         **/
         private void loadPage()
         {
-            grpStep1.Visible = false;
-            grpStep2.Visible = false;
-            lblStep1.Visible = false;
-            lblStep2.Visible = false;
-            btnEdit.Text = "Modifier";
-            btnSave.Visible = false;
-            btnMinus1.Visible = false;
-            btnMinus2.Visible = false; 
-            btnPlus1.Visible = false;
-            btnPlus2.Visible = false;
-            lblPage.Text = "Page " + page;
-            txtNameStep1.Text = "";
-            txtNameStep2.Text = "";
-            txtStep1.Text = "";
-            txtStep2.Text = "";
+            this.grpStep1.Visible = false;
+            this.grpStep2.Visible = false;
+            this.lblStep1.Visible = false;
+            this.lblStep2.Visible = false;
+            this.btnEdit.Text = "Modifier";
+            this.btnSave.Visible = false;
+            this.btnMinus1.Visible = false;
+            this.btnMinus2.Visible = false;
+            this.btnPlus1.Visible = false;
+            this.btnPlus2.Visible = false;
+            this.lblPage.Text = "Page " + this.page;
+            this.txtNameStep1.Text = "";
+            this.txtNameStep2.Text = "";
+            this.txtStep1.Text = "";
+            this.txtStep2.Text = "";
 
-            impair = recipe.Steps.Find(x => x.Position == page * 2 - 1);
-            pair = recipe.Steps.Find(x => x.Position == page * 2);
+            this.odd = this.recipe.Steps.Find(x => x.Position == this.page * 2 - 1);
+            this.even = this.recipe.Steps.Find(x => x.Position == this.page * 2);
 
-            if (impair != null)
+            if (this.odd != null)
             {
-                loadImpair();
+                loadOdd();
             }
 
-            if (pair != null)
+            if (this.even != null)
             {
-                loadPaire();
+                loadEven();
             }
-            
-            btnNext.Enabled = (recipe.Steps.Find(x => x.Position > page * 2) != null);
-            btnPrevious.Enabled = (page != 1);
+
+            this.btnNext.Enabled = (this.recipe.Steps.Find(x => x.Position > this.page * 2) != null);
+            this.btnPrevious.Enabled = (this.page != 1);
         }
 
+        /**
+         * Event click of btnEdit, toggles between edit and locked mode
+         **/
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (btnSave.Visible == false)
+            if (this.btnSave.Visible == false)
             {
-                grpStep1.Text = "";
-                grpStep2.Text = "";
-                lblStep1.Visible = false;
-                lblStep2.Visible = false;
-                btnEdit.Text = "Verrouiller";
-                btnSave.Visible = true;
+                this.grpStep1.Text = "";
+                this.grpStep2.Text = "";
+                this.lblStep1.Visible = false;
+                this.lblStep2.Visible = false;
+                this.btnEdit.Text = "Verrouiller";
+                this.btnSave.Visible = true;
 
-                if (impair != null)
+                if (this.odd != null)
                 {
-                    txtNameStep1.Visible = true;
-                    txtNameStep1.Text = impair.Name;
+                    this.txtNameStep1.Visible = true;
+                    this.txtNameStep1.Text = this.odd.Name;
 
-                    txtStep1.Visible = true;
-                    txtStep1.Text = impair.Description;
-                    btnMinus1.Visible = true;
+                    this.txtStep1.Visible = true;
+                    this.txtStep1.Text = this.odd.Description;
+                    this.btnMinus1.Visible = true;
                 }
 
                 else
                 {
-                    grpStep1.Visible = true;
-                    btnPlus1.Visible = true;
+                    this.grpStep1.Visible = true;
+                    this.btnPlus1.Visible = true;
                 }
 
-                if (pair != null)
+                if (this.even != null)
                 {
-                    txtNameStep2.Visible = true;
-                    txtNameStep2.Text = pair.Name;
+                    this.txtNameStep2.Visible = true;
+                    this.txtNameStep2.Text = this.even.Name;
 
-                    txtStep2.Visible = true;
-                    txtStep2.Text = pair.Description;
-                    btnMinus2.Visible = true;
+                    this.txtStep2.Visible = true;
+                    this.txtStep2.Text = this.even.Description;
+                    this.btnMinus2.Visible = true;
                 }
 
                 else
                 {
-                    grpStep2.Visible = true;
-                    btnPlus2.Visible = true;
+                    this.grpStep2.Visible = true;
+                    this.btnPlus2.Visible = true;
                 }
 
-                if (impair != null && pair != null)
+                if (this.odd != null && this.even != null)
                 {
-                    btnNext.Enabled = true;
+                    this.btnNext.Enabled = true;
                 }
             }
             else
             {
 
-                btnEdit.Text = "Modifier";
-                btnSave.Visible = false;
-                btnMinus1.Visible = false;
-                btnMinus2.Visible = false;
+                this.btnEdit.Text = "Modifier";
+                this.btnSave.Visible = false;
+                this.btnMinus1.Visible = false;
+                this.btnMinus2.Visible = false;
 
                 loadPage();
             }
         }
 
+        /**
+         * Event click of btnSave, save the modification of the step in the database
+         **/
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (impair != null)
+            if (this.odd != null)
             {
-                impair.Name = txtNameStep1.Text;
-                impair.Description = txtStep1.Text;
-                lblStep1.Text = impair.Description;
+                this.odd.Name = this.txtNameStep1.Text;
+                this.odd.Description = this.txtStep1.Text;
+                this.lblStep1.Text = this.odd.Description;
             }
-            if (pair != null)
+            if (this.even != null)
             {
-                pair.Name = txtNameStep2.Text;
-                pair.Description = txtStep2.Text;
-                lblStep2.Text = pair.Description;
+                this.even.Name = this.txtNameStep2.Text;
+                this.even.Description = this.txtStep2.Text;
+                this.lblStep2.Text = this.even.Description;
             }
-            recipe.Edit();
+            this.recipe.Edit();
         }
 
+        /**
+         * Event click of btnMinus1, remove the odd step of the page in the database
+         **/
         private void btnMinus1_Click(object sender, EventArgs e)
         {
-            this.recipe.RemoveStepByPosition(impair.Position);
-            if(pair == null)
-                page = 1;
-            recipe.Edit();
+            this.recipe.RemoveStepByPosition(this.odd.Position);
+            if(this.even == null)
+                this.page = 1;
+            this.recipe.Edit();
             loadPage();
         }
 
+        /**
+         * Event click of btnMinus2, remove the even step of the page in the database
+         **/
         private void btnMinus2_Click(object sender, EventArgs e)
         {
-            this.recipe.RemoveStepByPosition(pair.Position);
-            if (impair == null)
-                page = 1;
-            recipe.Edit();
+            this.recipe.RemoveStepByPosition(this.even.Position);
+            if (this.odd == null)
+                this.page = 1;
+            this.recipe.Edit();
             loadPage();
         }
 
+        /**
+         * Event click of btnPlus1, add a step in the database which position = page*2-1
+         **/
         private void btnPlus1_Click(object sender, EventArgs e)
         {
-            this.recipe.Add(new Step((page * 2 - 1), txtNameStep1.Text, txtStep1.Text));
-            recipe.Edit();
+            this.recipe.Add(new Step((this.page * 2 - 1), this.txtNameStep1.Text, this.txtStep1.Text));
+            this.recipe.Edit();
             loadPage();
         }
 
+        /**
+         * Event click of btnPlus2, add a step in the database which position = page*2
+         **/
         private void btnPlus2_Click(object sender, EventArgs e)
         {
-            this.recipe.Add(new Step((page * 2), txtNameStep2.Text, txtStep2.Text));
-            recipe.Edit();
+            this.recipe.Add(new Step((this.page * 2), this.txtNameStep2.Text, this.txtStep2.Text));
+            this.recipe.Edit();
             loadPage();
         }
     }
