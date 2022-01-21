@@ -35,5 +35,13 @@ namespace NotesCook
             srl.ShowDialog();
             this.Close();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchRecipe s = new SearchRecipe();
+            this.Hide();
+            s.ShowDialog();
+            this.Close();
+        }
     }
 }
