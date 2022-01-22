@@ -1,0 +1,382 @@
+[{
+  "_id": {
+    "$binary": {
+      "base64": "JFxj5w2no0OovVFRnMZVGg==",
+      "subType": "03"
+    }
+  },
+  "Name": "Pâtes au beurre",
+  "NumberOfPersons": 1,
+  "Tags": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "0Yqxi4LNhEmObXytMt+KSQ==",
+          "subType": "03"
+        }
+      },
+      "Name": "pâtes"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "h0OVFSNCyUajNo4ehUvoNg==",
+          "subType": "03"
+        }
+      },
+      "Name": "facile"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "RG9cRmOm1EOHW1kXhpnygg==",
+          "subType": "03"
+        }
+      },
+      "Name": "rapide"
+    }
+  ],
+  "Ingredients": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "JIbxYcFhXUSlIPtGHUDH4g==",
+          "subType": "03"
+        }
+      },
+      "Name": "pâtes",
+      "Quantity": 75,
+      "Unit": "g"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "tkrNIz5oXUmtJnfsLZ90yg==",
+          "subType": "03"
+        }
+      },
+      "Name": "beurre",
+      "Quantity": 20,
+      "Unit": "g"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "xZWlrPh+T0yjzAaYPaSZtg==",
+          "subType": "03"
+        }
+      },
+      "Name": "eau",
+      "Quantity": 100,
+      "Unit": "ml"
+    }
+  ],
+  "Steps": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "XLASQYpgS0m/4398E4nwfA==",
+          "subType": "03"
+        }
+      },
+      "Position": 1,
+      "Name": "Cuire les pâtes",
+      "Description": "Verser les pâtes dans l'eau bouillante."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "RrOgRAesBEy33V0VB0KHOQ==",
+          "subType": "03"
+        }
+      },
+      "Position": 2,
+      "Name": "Egouter les pâtes",
+      "Description": "Egouter les pâtes après 7 à 10 min environ en fonction de la cuisson."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "GJBhNB5WVUqWLkvDmYvxXQ==",
+          "subType": "03"
+        }
+      },
+      "Position": 3,
+      "Name": "Chauffer le beurre",
+      "Description": "Ajouter le beurre dans la casserole avec du sel."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "Cp4ecWWQB0CTosriS9FTmQ==",
+          "subType": "03"
+        }
+      },
+      "Position": 4,
+      "Name": "Ajouter les pâtes",
+      "Description": "Ajouter les pâtes dans la casserolle avec du beurre."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "TgQoZZclBkOT/pfqXeX8LA==",
+          "subType": "03"
+        }
+      },
+      "Position": 5,
+      "Name": "Servir",
+      "Description": "Après avoir remué les pâtes, servir éventuellement avec du fromage!"
+    }
+  ]
+},{
+  "_id": {
+    "$binary": {
+      "base64": "kD+uoVboa0m9hiM3cpZMJQ==",
+      "subType": "03"
+    }
+  },
+  "Name": "Salade de fruits",
+  "NumberOfPersons": 1,
+  "Tags": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "dbDNKmYluE29WhjJTcY0gg==",
+          "subType": "03"
+        }
+      },
+      "Name": "salade"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "0GNhOTzTYk2ICQvcs71oGQ==",
+          "subType": "03"
+        }
+      },
+      "Name": "été"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "v+kGOf1BqE27qoWibqjmQg==",
+          "subType": "03"
+        }
+      },
+      "Name": "fruit"
+    }
+  ],
+  "Ingredients": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "hpwjmoJTUE62s5pkYGq7Ww==",
+          "subType": "03"
+        }
+      },
+      "Name": "banane",
+      "Quantity": 1,
+      "Unit": "u"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "wOqM5CEXN0uDbFmHOLKpWg==",
+          "subType": "03"
+        }
+      },
+      "Name": "pomme",
+      "Quantity": 1,
+      "Unit": "u"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "y4+Liv3XZU68WxyQ2lJXYw==",
+          "subType": "03"
+        }
+      },
+      "Name": "raisins",
+      "Quantity": 100,
+      "Unit": "gr"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "QZ4LMfMkCU+KTkbfvDAsjA==",
+          "subType": "03"
+        }
+      },
+      "Name": "sirop d'agave",
+      "Quantity": 1,
+      "Unit": "cu à soupe"
+    }
+  ],
+  "Steps": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "1fn1eCbj9EOyxYRUKYQbuQ==",
+          "subType": "03"
+        }
+      },
+      "Position": 1,
+      "Name": "Couper les fruits",
+      "Description": "Couper les fruits dans un grand saladier."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "5pEBafy9bUitCFwI1W+GaQ==",
+          "subType": "03"
+        }
+      },
+      "Position": 2,
+      "Name": "Ajouter le sirop d'agave",
+      "Description": ""
+    }
+  ]
+},{
+  "_id": {
+    "$binary": {
+      "base64": "yRB/MMVsNEG7YIqrXJu+6Q==",
+      "subType": "03"
+    }
+  },
+  "Name": "Tofu grillé",
+  "NumberOfPersons": 2,
+  "Tags": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "ooAe9P2pVkyuI0ndWRJYEQ==",
+          "subType": "03"
+        }
+      },
+      "Name": "tofu"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "9GkshSr/aEyF1TQmiEriLQ==",
+          "subType": "03"
+        }
+      },
+      "Name": "vegan"
+    }
+  ],
+  "Ingredients": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "rCC3a4vfPE+SWNb3hjq+qA==",
+          "subType": "03"
+        }
+      },
+      "Name": "tofu",
+      "Quantity": 200,
+      "Unit": "g"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "S0VIebvsxkaEMt19H3mQlw==",
+          "subType": "03"
+        }
+      },
+      "Name": "épices paprika",
+      "Quantity": 1,
+      "Unit": "cu à soupe"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "R01UIZi2OU6f6+bpT06gvw==",
+          "subType": "03"
+        }
+      },
+      "Name": "épices curry",
+      "Quantity": 1,
+      "Unit": "cu à soupe"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "WalTy/y450mkEFtCQ+E4dg==",
+          "subType": "03"
+        }
+      },
+      "Name": "herbe de provences",
+      "Quantity": 0.5,
+      "Unit": "cu à soupe"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "xvarKGa9H0WiJyMIC87PwA==",
+          "subType": "03"
+        }
+      },
+      "Name": "sel",
+      "Quantity": 1,
+      "Unit": "cu à café"
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "6egb/B+v0EyUmLHMWoN2tw==",
+          "subType": "03"
+        }
+      },
+      "Name": "poivre",
+      "Quantity": 1,
+      "Unit": "u"
+    }
+  ],
+  "Steps": [
+    {
+      "_id": {
+        "$binary": {
+          "base64": "ibZ6Ap/Ll0KI1HZ7EkYnGA==",
+          "subType": "03"
+        }
+      },
+      "Position": 1,
+      "Name": "Egouter le tofu",
+      "Description": "Egouter le tofu pour qu'il ne soit pas trop imbibé de son jus."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "+yILP2kk0EeDZqhylhmGYA==",
+          "subType": "03"
+        }
+      },
+      "Position": 2,
+      "Name": "Couper le tofu",
+      "Description": "Couper le tofu sur la largeur en fine lamelles (environ 2 à 5 mm d'épaisseur)."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "Zk9fx8x/VEmcJVeQSe/Nnw==",
+          "subType": "03"
+        }
+      },
+      "Position": 3,
+      "Name": "Epicer",
+      "Description": "Répartissez les lamelles sur la plaque de cuisson et répartissez les épices."
+    },
+    {
+      "_id": {
+        "$binary": {
+          "base64": "qKdRJeZxoUO78OPB3LX6LQ==",
+          "subType": "03"
+        }
+      },
+      "Position": 4,
+      "Name": "Cuire",
+      "Description": "Chauffer 10 min à 200°C jusqu'à ce que le tofu soit croustillant."
+    }
+  ]
+}]
