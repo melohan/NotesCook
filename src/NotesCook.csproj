@@ -139,94 +139,94 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\DB.cs" />
-    <Compile Include="Forms\CreateIngredient.cs">
+    <Compile Include="App\Database\DB.cs" />
+    <Compile Include="App\Forms\Create\CreateIngredient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CreateIngredient.Designer.cs">
+    <Compile Include="App\Forms\Create\CreateIngredient.Designer.cs">
       <DependentUpon>CreateIngredient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CreateRecipe.cs">
+    <Compile Include="App\Forms\Create\CreateRecipe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CreateRecipe.Designer.cs">
+    <Compile Include="App\Forms\Create\CreateRecipe.Designer.cs">
       <DependentUpon>CreateRecipe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CreateStep.cs">
+    <Compile Include="App\Forms\Create\CreateStep.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CreateStep.Designer.cs">
+    <Compile Include="App\Forms\Create\CreateStep.Designer.cs">
       <DependentUpon>CreateStep.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SearchRecipe.cs">
+    <Compile Include="App\Forms\Search\SearchRecipe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SearchRecipe.Designer.cs">
+    <Compile Include="App\Forms\Search\SearchRecipe.Designer.cs">
       <DependentUpon>SearchRecipe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ShowRecipeList.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ShowRecipeList.Designer.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeList.Designer.cs">
       <DependentUpon>ShowRecipeList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ShowRecipeSteps.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeSteps.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ShowRecipeSteps.Designer.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeSteps.Designer.cs">
       <DependentUpon>ShowRecipeSteps.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ShowRecipeIngredients.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeIngredients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ShowRecipeIngredients.Designer.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeIngredients.Designer.cs">
       <DependentUpon>ShowRecipeIngredients.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ShowRecipeInfos.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeInfos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ShowRecipeInfos.Designer.cs">
+    <Compile Include="App\Forms\Show\ShowRecipeInfos.Designer.cs">
       <DependentUpon>ShowRecipeInfos.cs</DependentUpon>
     </Compile>
-    <Compile Include="home.cs">
+    <Compile Include="App\Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="home.Designer.cs">
-      <DependentUpon>home.cs</DependentUpon>
+    <Compile Include="App\Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Ingredient.cs" />
-    <Compile Include="Models\Model.cs" />
-    <Compile Include="Models\Recipe.cs" />
-    <Compile Include="Models\Step.cs" />
-    <Compile Include="Models\Tag.cs" />
+    <Compile Include="App\Models\Ingredient.cs" />
+    <Compile Include="App\Models\Model.cs" />
+    <Compile Include="App\Models\Recipe.cs" />
+    <Compile Include="App\Models\Step.cs" />
+    <Compile Include="App\Models\Tag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\CreateIngredient.resx">
+    <EmbeddedResource Include="App\Forms\Create\CreateIngredient.resx">
       <DependentUpon>CreateIngredient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CreateRecipe.resx">
+    <EmbeddedResource Include="App\Forms\Create\CreateRecipe.resx">
       <DependentUpon>CreateRecipe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CreateStep.resx">
+    <EmbeddedResource Include="App\Forms\Create\CreateStep.resx">
       <DependentUpon>CreateStep.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SearchRecipe.resx">
+    <EmbeddedResource Include="App\Forms\Search\SearchRecipe.resx">
       <DependentUpon>SearchRecipe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ShowRecipeIngredients.resx">
+    <EmbeddedResource Include="App\Forms\Show\ShowRecipeIngredients.resx">
       <DependentUpon>ShowRecipeIngredients.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ShowRecipeInfos.resx">
+    <EmbeddedResource Include="App\Forms\Show\ShowRecipeInfos.resx">
       <DependentUpon>ShowRecipeInfos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ShowRecipeList.resx">
+    <EmbeddedResource Include="App\Forms\Show\ShowRecipeList.resx">
       <DependentUpon>ShowRecipeList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ShowRecipeSteps.resx">
+    <EmbeddedResource Include="App\Forms\Show\ShowRecipeSteps.resx">
       <DependentUpon>ShowRecipeSteps.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="home.resx">
-      <DependentUpon>home.cs</DependentUpon>
+    <EmbeddedResource Include="App\Forms\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
