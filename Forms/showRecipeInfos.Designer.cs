@@ -62,6 +62,7 @@ namespace NotesCook.Forms
             this.picLogo1.Size = new System.Drawing.Size(45, 48);
             this.picLogo1.TabIndex = 9;
             this.picLogo1.TabStop = false;
+            this.picLogo1.Click += new System.EventHandler(this.picLogo1_Click);
             // 
             // lblTitle
             // 
@@ -72,6 +73,7 @@ namespace NotesCook.Forms
             this.lblTitle.Size = new System.Drawing.Size(126, 46);
             this.lblTitle.TabIndex = 8;
             this.lblTitle.Text = "!Cook";
+            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // lblSteps
             // 

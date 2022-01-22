@@ -14,10 +14,25 @@ namespace NotesCook.Forms
         /**
          * Constructor
          **/
-        public frmCreateRecipe()
+        public frmCreateRecipe(Recipe recipe = null)
         {
-            this.recipe = new Recipe();
             InitializeComponent();
+            if (recipe == null)
+            {
+                this.recipe = new Recipe();
+            }
+            else
+            {
+                this.recipe = recipe;
+                this.txtName.Text = this.recipe.Name;
+                this.nupNbPersons.Value = this.recipe.NumberOfPersons;
+                foreach (Tag tag in this.recipe.Tags)
+                {
+                    this.lstTag.Items.Add(tag.Name);
+                }
+            }
+            
+            
         }
 
         /**
@@ -90,6 +105,22 @@ namespace NotesCook.Forms
             }
             else
                 this.btnPlus.Enabled = false;
+        }
+
+        private void lbl_title_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void pic_logo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

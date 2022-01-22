@@ -1,7 +1,7 @@
 ﻿
 namespace NotesCook.Forms
 {
-    partial class SearchRecipe
+    partial class frmSearchRecipe
     {
         /// <summary>
         /// Required designer variable.
@@ -42,31 +42,30 @@ namespace NotesCook.Forms
             // 
             // pic_logo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(40, 25);
-            this.pic_logo1.Margin = new System.Windows.Forms.Padding(4);
+            this.pic_logo1.Location = new System.Drawing.Point(30, 20);
             this.pic_logo1.Name = "pic_logo1";
-            this.pic_logo1.Size = new System.Drawing.Size(60, 59);
+            this.pic_logo1.Size = new System.Drawing.Size(45, 48);
             this.pic_logo1.TabIndex = 10;
             this.pic_logo1.TabStop = false;
+            this.pic_logo1.Click += new System.EventHandler(this.pic_logo1_Click);
             // 
             // lbl_title
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(167, 26);
-            this.lbl_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_title.Location = new System.Drawing.Point(125, 21);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(156, 58);
+            this.lbl_title.Size = new System.Drawing.Size(126, 46);
             this.lbl_title.TabIndex = 8;
             this.lbl_title.Text = "!Cook";
+            this.lbl_title.Click += new System.EventHandler(this.lbl_title_Click);
             // 
             // btnPlus
             // 
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
-            this.btnPlus.Location = new System.Drawing.Point(308, 161);
-            this.btnPlus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPlus.Location = new System.Drawing.Point(231, 131);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(35, 34);
+            this.btnPlus.Size = new System.Drawing.Size(26, 28);
             this.btnPlus.TabIndex = 13;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
@@ -74,18 +73,19 @@ namespace NotesCook.Forms
             // 
             // txtTag
             // 
-            this.txtTag.Location = new System.Drawing.Point(47, 161);
-            this.txtTag.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTag.Location = new System.Drawing.Point(35, 131);
+            this.txtTag.Margin = new System.Windows.Forms.Padding(2);
             this.txtTag.Name = "txtTag";
-            this.txtTag.Size = new System.Drawing.Size(248, 22);
+            this.txtTag.Size = new System.Drawing.Size(187, 20);
             this.txtTag.TabIndex = 11;
             // 
             // lblTag
             // 
             this.lblTag.AutoSize = true;
-            this.lblTag.Location = new System.Drawing.Point(43, 128);
+            this.lblTag.Location = new System.Drawing.Point(32, 104);
+            this.lblTag.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTag.Name = "lblTag";
-            this.lblTag.Size = new System.Drawing.Size(118, 17);
+            this.lblTag.Size = new System.Drawing.Size(89, 13);
             this.lblTag.TabIndex = 9;
             this.lblTag.Text = "Tag à rechercher";
             // 
@@ -95,10 +95,10 @@ namespace NotesCook.Forms
             this.btmMinus.Cursor = System.Windows.Forms.Cursors.Default;
             this.btmMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.btmMinus.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btmMinus.Location = new System.Drawing.Point(308, 218);
-            this.btmMinus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btmMinus.Location = new System.Drawing.Point(231, 177);
+            this.btmMinus.Margin = new System.Windows.Forms.Padding(2);
             this.btmMinus.Name = "btmMinus";
-            this.btmMinus.Size = new System.Drawing.Size(35, 34);
+            this.btmMinus.Size = new System.Drawing.Size(26, 28);
             this.btmMinus.TabIndex = 14;
             this.btmMinus.Text = "-";
             this.btmMinus.UseVisualStyleBackColor = true;
@@ -107,11 +107,9 @@ namespace NotesCook.Forms
             // lstTag
             // 
             this.lstTag.FormattingEnabled = true;
-            this.lstTag.ItemHeight = 16;
-            this.lstTag.Location = new System.Drawing.Point(47, 218);
-            this.lstTag.Margin = new System.Windows.Forms.Padding(4);
+            this.lstTag.Location = new System.Drawing.Point(35, 177);
             this.lstTag.Name = "lstTag";
-            this.lstTag.Size = new System.Drawing.Size(248, 228);
+            this.lstTag.Size = new System.Drawing.Size(187, 186);
             this.lstTag.TabIndex = 15;
             // 
             // btnSearch
@@ -119,20 +117,20 @@ namespace NotesCook.Forms
             this.btnSearch.BackColor = System.Drawing.SystemColors.Control;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSearch.Location = new System.Drawing.Point(135, 478);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(101, 388);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 43);
+            this.btnSearch.Size = new System.Drawing.Size(75, 35);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Chercher";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // SearchRecipe
+            // frmSearchRecipe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 679);
+            this.ClientSize = new System.Drawing.Size(277, 552);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.btnPlus);
@@ -141,8 +139,7 @@ namespace NotesCook.Forms
             this.Controls.Add(this.btmMinus);
             this.Controls.Add(this.lstTag);
             this.Controls.Add(this.btnSearch);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "SearchRecipe";
+            this.Name = "frmSearchRecipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SearchRecipe";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();

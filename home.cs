@@ -6,10 +6,10 @@ using NotesCook.Models;
 
 namespace NotesCook
 {
-    public partial class frm_home : Form
+    public partial class frmHome : Form
     {
 
-        public frm_home()
+        public frmHome()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace NotesCook
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchRecipe s = new SearchRecipe();
+            frmSearchRecipe s = new frmSearchRecipe();
             this.Hide();
             s.ShowDialog();
             this.Close();

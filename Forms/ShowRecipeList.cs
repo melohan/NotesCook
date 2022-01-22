@@ -172,5 +172,29 @@ namespace NotesCook.Forms
             fri.ShowDialog();
             this.Close();
         }
+
+        private void lbl_title_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void pic_logo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            frmSearchRecipe frm = new frmSearchRecipe();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }

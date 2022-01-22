@@ -23,6 +23,11 @@ namespace NotesCook.Forms
         {
             this.recipe = recipe;
             InitializeComponent();
+
+            foreach(Ingredient ingredient in this.recipe.Ingredients)
+            {
+                this.lstIngredient.Items.Add(ingredient.Name + "," + ingredient.Quantity.ToString() + "," + ingredient.Unit);
+            }
         }
 
         /**
@@ -43,7 +48,7 @@ namespace NotesCook.Forms
          **/
         private void btnNext_Click(object sender, EventArgs e)
         {
-            CreateStep cs = new CreateStep(recipe);
+            frmCreateStep cs = new frmCreateStep(recipe);
             this.Hide();
             cs.ShowDialog();
             this.Close();
@@ -97,6 +102,38 @@ namespace NotesCook.Forms
         private void txtName_TextChanged(object sender, EventArgs e)
         {
             this.btnPlus.Enabled = btnEnabler();
+        }
+
+        private void lbl_title_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void pic_logo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void lblRecipe_Click(object sender, EventArgs e)
+        {
+            frmCreateRecipe frm = new frmCreateRecipe(this.recipe);
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void lblSteps_Click(object sender, EventArgs e)
+        {
+            frmCreateStep frm = new frmCreateStep(this.recipe);
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

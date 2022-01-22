@@ -1,7 +1,7 @@
 ﻿
 namespace NotesCook.Forms
 {
-    partial class CreateStep
+    partial class frmCreateStep
     {
         /// <summary>
         /// Required designer variable.
@@ -59,6 +59,7 @@ namespace NotesCook.Forms
             this.pic_logo1.Size = new System.Drawing.Size(45, 48);
             this.pic_logo1.TabIndex = 5;
             this.pic_logo1.TabStop = false;
+            this.pic_logo1.Click += new System.EventHandler(this.pic_logo1_Click);
             // 
             // lbl_title
             // 
@@ -69,6 +70,7 @@ namespace NotesCook.Forms
             this.lbl_title.Size = new System.Drawing.Size(126, 46);
             this.lbl_title.TabIndex = 4;
             this.lbl_title.Text = "!Cook";
+            this.lbl_title.Click += new System.EventHandler(this.lbl_title_Click);
             // 
             // btnEnd
             // 
@@ -76,7 +78,7 @@ namespace NotesCook.Forms
             this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEnd.Location = new System.Drawing.Point(99, 497);
-            this.btnEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEnd.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnd.Name = "btnEnd";
             this.btnEnd.Size = new System.Drawing.Size(75, 35);
             this.btnEnd.TabIndex = 9;
@@ -95,9 +97,9 @@ namespace NotesCook.Forms
             this.grpStep.Controls.Add(this.lblName);
             this.grpStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpStep.Location = new System.Drawing.Point(16, 171);
-            this.grpStep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpStep.Margin = new System.Windows.Forms.Padding(2);
             this.grpStep.Name = "grpStep";
-            this.grpStep.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grpStep.Padding = new System.Windows.Forms.Padding(2);
             this.grpStep.Size = new System.Drawing.Size(246, 221);
             this.grpStep.TabIndex = 8;
             this.grpStep.TabStop = false;
@@ -111,7 +113,7 @@ namespace NotesCook.Forms
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPlus.Location = new System.Drawing.Point(207, 187);
-            this.btnPlus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPlus.Margin = new System.Windows.Forms.Padding(2);
             this.btnPlus.Name = "btnPlus";
             this.btnPlus.Size = new System.Drawing.Size(26, 28);
             this.btnPlus.TabIndex = 9;
@@ -139,7 +141,7 @@ namespace NotesCook.Forms
             // nupNoStep
             // 
             this.nupNoStep.Location = new System.Drawing.Point(82, 73);
-            this.nupNoStep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nupNoStep.Margin = new System.Windows.Forms.Padding(2);
             this.nupNoStep.Minimum = new decimal(new int[] {
             1,
             0,
@@ -168,7 +170,7 @@ namespace NotesCook.Forms
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(82, 37);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(134, 23);
             this.txtName.TabIndex = 1;
@@ -190,9 +192,9 @@ namespace NotesCook.Forms
             this.groupBox1.Controls.Add(this.lblIngredients);
             this.groupBox1.Controls.Add(this.lblRecipe);
             this.groupBox1.Location = new System.Drawing.Point(9, 102);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(259, 40);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
@@ -218,6 +220,7 @@ namespace NotesCook.Forms
             this.lblIngredients.Size = new System.Drawing.Size(89, 17);
             this.lblIngredients.TabIndex = 7;
             this.lblIngredients.Text = "Ingrédients";
+            this.lblIngredients.Click += new System.EventHandler(this.lblIngredients_Click);
             // 
             // lblRecipe
             // 
@@ -229,6 +232,7 @@ namespace NotesCook.Forms
             this.lblRecipe.Size = new System.Drawing.Size(72, 17);
             this.lblRecipe.TabIndex = 6;
             this.lblRecipe.Text = "Recettes";
+            this.lblRecipe.Click += new System.EventHandler(this.lblRecipe_Click);
             // 
             // lstStep
             // 
@@ -245,7 +249,7 @@ namespace NotesCook.Forms
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinus.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnMinus.Location = new System.Drawing.Point(242, 432);
-            this.btnMinus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinus.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinus.Name = "btnMinus";
             this.btnMinus.Size = new System.Drawing.Size(26, 28);
             this.btnMinus.TabIndex = 15;
@@ -253,7 +257,7 @@ namespace NotesCook.Forms
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
             // 
-            // CreateStep
+            // frmCreateStep
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,9 +269,9 @@ namespace NotesCook.Forms
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
-            this.Name = "CreateStep";
+            this.Name = "frmCreateStep";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmCréer une étape";
+            this.Text = "Créer une étape";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             this.grpStep.ResumeLayout(false);
             this.grpStep.PerformLayout();

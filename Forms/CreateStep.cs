@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace NotesCook.Forms
 {
-    public partial class CreateStep : Form
+    public partial class frmCreateStep : Form
     {
         private Recipe recipe;
 
@@ -20,10 +20,14 @@ namespace NotesCook.Forms
          * Constructor
          * @param Recipe
          **/
-        public CreateStep(Recipe recipe)
+        public frmCreateStep(Recipe recipe)
         {
             this.recipe = recipe;
             InitializeComponent();
+            foreach (Step step in this.recipe.Steps)
+            {
+                this.lstStep.Items.Add(step.Position.ToString() + ". " + step.Name);
+            }
         }
 
         /**
@@ -45,7 +49,7 @@ namespace NotesCook.Forms
         {
             this.recipe.Create();
             this.Hide();
-            frm_home h = new frm_home();
+            frmHome h = new frmHome();
             h.ShowDialog();
             this.Close();
         }
@@ -99,6 +103,38 @@ namespace NotesCook.Forms
         private void nupNoStep_ValueChanged(object sender, EventArgs e)
         {
             this.btnPlus.Enabled = btnEnabler();
+        }
+
+        private void lbl_title_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void pic_logo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void lblRecipe_Click(object sender, EventArgs e)
+        {
+            frmCreateRecipe frm = new frmCreateRecipe(this.recipe);
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void lblIngredients_Click(object sender, EventArgs e)
+        {
+            frmCreateIngredient frm = new frmCreateIngredient(this.recipe);
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

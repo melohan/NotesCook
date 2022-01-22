@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace NotesCook.Forms
 {
-    public partial class SearchRecipe : Form
+    public partial class frmSearchRecipe : Form
     {
 
         private List<Tag> tags;                  // Tag added in lst
@@ -19,7 +19,7 @@ namespace NotesCook.Forms
         /**
          * Constructor, init tag list
          **/ 
-        public SearchRecipe()
+        public frmSearchRecipe()
         {
             tags  = new List<Tag>();
             InitializeComponent();
@@ -91,6 +91,21 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        private void lbl_title_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void pic_logo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 
 }

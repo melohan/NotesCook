@@ -1,7 +1,7 @@
 ﻿
 namespace NotesCook
 {
-    partial class frm_home
+    partial class frmHome
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -98,7 +98,7 @@ namespace NotesCook
             this.picLogo2.TabIndex = 5;
             this.picLogo2.TabStop = false;
             // 
-            // frm_home
+            // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,7 +109,7 @@ namespace NotesCook
             this.Controls.Add(this.btnNewRecipe);
             this.Controls.Add(this.picLogo1);
             this.Controls.Add(this.lblTitle);
-            this.Name = "frm_home";
+            this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NotesCook";
             ((System.ComponentModel.ISupportInitialize)(this.picLogo1)).EndInit();

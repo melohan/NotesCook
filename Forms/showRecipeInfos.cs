@@ -79,7 +79,7 @@ namespace NotesCook.Forms
             {
                 this.recipe.Destroy();
                 this.Hide();
-                frm_home form = new frm_home();
+                frmHome form = new frmHome();
                 form.ShowDialog();
                 this.Close();
             }
@@ -184,6 +184,22 @@ namespace NotesCook.Forms
         {
             this.recipe.Add(new Tag("Nouveau tag"));
             this.lstTag.Items.Add("Nouveau tag");
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void picLogo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

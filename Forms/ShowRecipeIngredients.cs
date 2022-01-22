@@ -153,5 +153,21 @@ namespace NotesCook.Forms
             this.recipe.Add(new Ingredient("Nouvelle ingrédient",0,"unité"));
             this.lstIngredients.Items.Add("Nouvelle ingrédient" + "\t\t" + "0" + " unité");
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void picLogo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }

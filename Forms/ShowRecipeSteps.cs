@@ -261,5 +261,21 @@ namespace NotesCook.Forms
             this.recipe.Edit();
             loadPage();
         }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void picLogo1_Click(object sender, EventArgs e)
+        {
+            frmHome frm = new frmHome();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
     }
 }
