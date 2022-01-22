@@ -77,7 +77,7 @@ namespace NotesCook.Forms
 
             if(dialogResult == DialogResult.Yes)
             {
-                this.recipe.Destroy();
+                this.recipe.Remove();
                 this.Hide();
                 frmHome form = new frmHome();
                 form.ShowDialog();

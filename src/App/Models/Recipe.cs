@@ -72,15 +72,6 @@ namespace NotesCook.Models
          ***********************************************/
 
         /**
-         * Destroy Recipe
-         **/
-        public void Destroy()
-        {
-            DB dB = new DB("NotesCook", "Recipe");
-            dB.Delete<Recipe>(this.Id);
-        }
-
-        /**
          * Remove step
          * @param position
          **/

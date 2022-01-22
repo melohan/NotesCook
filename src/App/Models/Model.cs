@@ -14,7 +14,7 @@ namespace NotesCook.Models
          **/
         private static DB GetDb()
         {
-            DB db = new DB("NotesCook", "Recipes");
+            DB db = new DB("NotesCook", "recipes");
             return db;
         }
 
