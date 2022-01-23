@@ -64,9 +64,10 @@ namespace NotesCook.Forms
             // 
             // pic_logo1
             // 
-            this.pic_logo1.Location = new System.Drawing.Point(26, 14);
+            this.pic_logo1.Location = new System.Drawing.Point(35, 17);
+            this.pic_logo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_logo1.Name = "pic_logo1";
-            this.pic_logo1.Size = new System.Drawing.Size(45, 48);
+            this.pic_logo1.Size = new System.Drawing.Size(60, 59);
             this.pic_logo1.TabIndex = 15;
             this.pic_logo1.TabStop = false;
             this.pic_logo1.Click += new System.EventHandler(this.pic_logo1_Click);
@@ -75,9 +76,10 @@ namespace NotesCook.Forms
             // 
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title.Location = new System.Drawing.Point(121, 15);
+            this.lbl_title.Location = new System.Drawing.Point(161, 18);
+            this.lbl_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_title.Name = "lbl_title";
-            this.lbl_title.Size = new System.Drawing.Size(126, 46);
+            this.lbl_title.Size = new System.Drawing.Size(156, 58);
             this.lbl_title.TabIndex = 14;
             this.lbl_title.Text = "!Cook";
             this.lbl_title.Click += new System.EventHandler(this.lbl_title_Click);
@@ -86,9 +88,10 @@ namespace NotesCook.Forms
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(102, 94);
+            this.lblTitle.Location = new System.Drawing.Point(136, 116);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(74, 20);
+            this.lblTitle.Size = new System.Drawing.Size(88, 25);
             this.lblTitle.TabIndex = 16;
             this.lblTitle.Text = "Recettes";
             // 
@@ -99,9 +102,11 @@ namespace NotesCook.Forms
             this.grpRecipe1.Controls.Add(this.lblTag13);
             this.grpRecipe1.Controls.Add(this.lblTag11);
             this.grpRecipe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRecipe1.Location = new System.Drawing.Point(12, 133);
+            this.grpRecipe1.Location = new System.Drawing.Point(16, 164);
+            this.grpRecipe1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpRecipe1.Name = "grpRecipe1";
-            this.grpRecipe1.Size = new System.Drawing.Size(253, 85);
+            this.grpRecipe1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpRecipe1.Size = new System.Drawing.Size(337, 105);
             this.grpRecipe1.TabIndex = 17;
             this.grpRecipe1.TabStop = false;
             this.grpRecipe1.Text = "Recipe1";
@@ -109,36 +114,40 @@ namespace NotesCook.Forms
             // lblTag14
             // 
             this.lblTag14.AutoSize = true;
-            this.lblTag14.Location = new System.Drawing.Point(130, 52);
+            this.lblTag14.Location = new System.Drawing.Point(173, 64);
+            this.lblTag14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag14.Name = "lblTag14";
-            this.lblTag14.Size = new System.Drawing.Size(41, 16);
+            this.lblTag14.Size = new System.Drawing.Size(50, 20);
             this.lblTag14.TabIndex = 3;
             this.lblTag14.Text = "tag14";
             // 
             // lblTag12
             // 
             this.lblTag12.AutoSize = true;
-            this.lblTag12.Location = new System.Drawing.Point(130, 25);
+            this.lblTag12.Location = new System.Drawing.Point(173, 31);
+            this.lblTag12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag12.Name = "lblTag12";
-            this.lblTag12.Size = new System.Drawing.Size(41, 16);
+            this.lblTag12.Size = new System.Drawing.Size(50, 20);
             this.lblTag12.TabIndex = 2;
             this.lblTag12.Text = "tag12";
             // 
             // lblTag13
             // 
             this.lblTag13.AutoSize = true;
-            this.lblTag13.Location = new System.Drawing.Point(24, 52);
+            this.lblTag13.Location = new System.Drawing.Point(32, 64);
+            this.lblTag13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag13.Name = "lblTag13";
-            this.lblTag13.Size = new System.Drawing.Size(41, 16);
+            this.lblTag13.Size = new System.Drawing.Size(50, 20);
             this.lblTag13.TabIndex = 1;
             this.lblTag13.Text = "tag13";
             // 
             // lblTag11
             // 
             this.lblTag11.AutoSize = true;
-            this.lblTag11.Location = new System.Drawing.Point(24, 25);
+            this.lblTag11.Location = new System.Drawing.Point(32, 31);
+            this.lblTag11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag11.Name = "lblTag11";
-            this.lblTag11.Size = new System.Drawing.Size(41, 16);
+            this.lblTag11.Size = new System.Drawing.Size(50, 20);
             this.lblTag11.TabIndex = 0;
             this.lblTag11.Text = "tag11";
             // 
@@ -149,9 +158,11 @@ namespace NotesCook.Forms
             this.grpRecipe2.Controls.Add(this.lblTag22);
             this.grpRecipe2.Controls.Add(this.lblTag21);
             this.grpRecipe2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRecipe2.Location = new System.Drawing.Point(12, 224);
+            this.grpRecipe2.Location = new System.Drawing.Point(16, 276);
+            this.grpRecipe2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpRecipe2.Name = "grpRecipe2";
-            this.grpRecipe2.Size = new System.Drawing.Size(253, 85);
+            this.grpRecipe2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpRecipe2.Size = new System.Drawing.Size(337, 105);
             this.grpRecipe2.TabIndex = 18;
             this.grpRecipe2.TabStop = false;
             this.grpRecipe2.Text = "Recipe2";
@@ -159,36 +170,40 @@ namespace NotesCook.Forms
             // lblTag24
             // 
             this.lblTag24.AutoSize = true;
-            this.lblTag24.Location = new System.Drawing.Point(130, 52);
+            this.lblTag24.Location = new System.Drawing.Point(173, 64);
+            this.lblTag24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag24.Name = "lblTag24";
-            this.lblTag24.Size = new System.Drawing.Size(41, 16);
+            this.lblTag24.Size = new System.Drawing.Size(50, 20);
             this.lblTag24.TabIndex = 7;
             this.lblTag24.Text = "tag24";
             // 
             // lblTag23
             // 
             this.lblTag23.AutoSize = true;
-            this.lblTag23.Location = new System.Drawing.Point(24, 52);
+            this.lblTag23.Location = new System.Drawing.Point(32, 64);
+            this.lblTag23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag23.Name = "lblTag23";
-            this.lblTag23.Size = new System.Drawing.Size(41, 16);
+            this.lblTag23.Size = new System.Drawing.Size(50, 20);
             this.lblTag23.TabIndex = 6;
             this.lblTag23.Text = "tag23";
             // 
             // lblTag22
             // 
             this.lblTag22.AutoSize = true;
-            this.lblTag22.Location = new System.Drawing.Point(130, 26);
+            this.lblTag22.Location = new System.Drawing.Point(173, 32);
+            this.lblTag22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag22.Name = "lblTag22";
-            this.lblTag22.Size = new System.Drawing.Size(41, 16);
+            this.lblTag22.Size = new System.Drawing.Size(50, 20);
             this.lblTag22.TabIndex = 5;
             this.lblTag22.Text = "tag22";
             // 
             // lblTag21
             // 
             this.lblTag21.AutoSize = true;
-            this.lblTag21.Location = new System.Drawing.Point(24, 26);
+            this.lblTag21.Location = new System.Drawing.Point(32, 32);
+            this.lblTag21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag21.Name = "lblTag21";
-            this.lblTag21.Size = new System.Drawing.Size(41, 16);
+            this.lblTag21.Size = new System.Drawing.Size(50, 20);
             this.lblTag21.TabIndex = 4;
             this.lblTag21.Text = "tag21";
             // 
@@ -199,9 +214,11 @@ namespace NotesCook.Forms
             this.grpRecipe3.Controls.Add(this.lblTag32);
             this.grpRecipe3.Controls.Add(this.lblTag31);
             this.grpRecipe3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRecipe3.Location = new System.Drawing.Point(12, 315);
+            this.grpRecipe3.Location = new System.Drawing.Point(16, 388);
+            this.grpRecipe3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpRecipe3.Name = "grpRecipe3";
-            this.grpRecipe3.Size = new System.Drawing.Size(253, 85);
+            this.grpRecipe3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpRecipe3.Size = new System.Drawing.Size(337, 105);
             this.grpRecipe3.TabIndex = 18;
             this.grpRecipe3.TabStop = false;
             this.grpRecipe3.Text = "Recipe3";
@@ -209,36 +226,40 @@ namespace NotesCook.Forms
             // lblTag34
             // 
             this.lblTag34.AutoSize = true;
-            this.lblTag34.Location = new System.Drawing.Point(130, 56);
+            this.lblTag34.Location = new System.Drawing.Point(173, 69);
+            this.lblTag34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag34.Name = "lblTag34";
-            this.lblTag34.Size = new System.Drawing.Size(41, 16);
+            this.lblTag34.Size = new System.Drawing.Size(50, 20);
             this.lblTag34.TabIndex = 8;
             this.lblTag34.Text = "tag34";
             // 
             // lblTag33
             // 
             this.lblTag33.AutoSize = true;
-            this.lblTag33.Location = new System.Drawing.Point(24, 56);
+            this.lblTag33.Location = new System.Drawing.Point(32, 69);
+            this.lblTag33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag33.Name = "lblTag33";
-            this.lblTag33.Size = new System.Drawing.Size(41, 16);
+            this.lblTag33.Size = new System.Drawing.Size(50, 20);
             this.lblTag33.TabIndex = 8;
             this.lblTag33.Text = "tag33";
             // 
             // lblTag32
             // 
             this.lblTag32.AutoSize = true;
-            this.lblTag32.Location = new System.Drawing.Point(130, 28);
+            this.lblTag32.Location = new System.Drawing.Point(173, 34);
+            this.lblTag32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag32.Name = "lblTag32";
-            this.lblTag32.Size = new System.Drawing.Size(41, 16);
+            this.lblTag32.Size = new System.Drawing.Size(50, 20);
             this.lblTag32.TabIndex = 8;
             this.lblTag32.Text = "tag32";
             // 
             // lblTag31
             // 
             this.lblTag31.AutoSize = true;
-            this.lblTag31.Location = new System.Drawing.Point(24, 28);
+            this.lblTag31.Location = new System.Drawing.Point(32, 34);
+            this.lblTag31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag31.Name = "lblTag31";
-            this.lblTag31.Size = new System.Drawing.Size(41, 16);
+            this.lblTag31.Size = new System.Drawing.Size(50, 20);
             this.lblTag31.TabIndex = 8;
             this.lblTag31.Text = "tag31";
             // 
@@ -249,9 +270,11 @@ namespace NotesCook.Forms
             this.grpRecipe4.Controls.Add(this.lblTag42);
             this.grpRecipe4.Controls.Add(this.lblTag41);
             this.grpRecipe4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpRecipe4.Location = new System.Drawing.Point(12, 406);
+            this.grpRecipe4.Location = new System.Drawing.Point(16, 500);
+            this.grpRecipe4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpRecipe4.Name = "grpRecipe4";
-            this.grpRecipe4.Size = new System.Drawing.Size(253, 85);
+            this.grpRecipe4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpRecipe4.Size = new System.Drawing.Size(337, 105);
             this.grpRecipe4.TabIndex = 18;
             this.grpRecipe4.TabStop = false;
             this.grpRecipe4.Text = "Recipe4";
@@ -259,45 +282,50 @@ namespace NotesCook.Forms
             // lblTag44
             // 
             this.lblTag44.AutoSize = true;
-            this.lblTag44.Location = new System.Drawing.Point(130, 52);
+            this.lblTag44.Location = new System.Drawing.Point(173, 64);
+            this.lblTag44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag44.Name = "lblTag44";
-            this.lblTag44.Size = new System.Drawing.Size(41, 16);
+            this.lblTag44.Size = new System.Drawing.Size(50, 20);
             this.lblTag44.TabIndex = 9;
             this.lblTag44.Text = "tag44";
             // 
             // lblTag43
             // 
             this.lblTag43.AutoSize = true;
-            this.lblTag43.Location = new System.Drawing.Point(24, 52);
+            this.lblTag43.Location = new System.Drawing.Point(32, 64);
+            this.lblTag43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag43.Name = "lblTag43";
-            this.lblTag43.Size = new System.Drawing.Size(41, 16);
+            this.lblTag43.Size = new System.Drawing.Size(50, 20);
             this.lblTag43.TabIndex = 9;
             this.lblTag43.Text = "tag43";
             // 
             // lblTag42
             // 
             this.lblTag42.AutoSize = true;
-            this.lblTag42.Location = new System.Drawing.Point(130, 25);
+            this.lblTag42.Location = new System.Drawing.Point(173, 31);
+            this.lblTag42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag42.Name = "lblTag42";
-            this.lblTag42.Size = new System.Drawing.Size(41, 16);
+            this.lblTag42.Size = new System.Drawing.Size(50, 20);
             this.lblTag42.TabIndex = 9;
             this.lblTag42.Text = "tag42";
             // 
             // lblTag41
             // 
             this.lblTag41.AutoSize = true;
-            this.lblTag41.Location = new System.Drawing.Point(24, 25);
+            this.lblTag41.Location = new System.Drawing.Point(32, 31);
+            this.lblTag41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTag41.Name = "lblTag41";
-            this.lblTag41.Size = new System.Drawing.Size(41, 16);
+            this.lblTag41.Size = new System.Drawing.Size(50, 20);
             this.lblTag41.TabIndex = 9;
             this.lblTag41.Text = "tag41";
             // 
             // btnNext
             // 
             this.btnNext.Enabled = false;
-            this.btnNext.Location = new System.Drawing.Point(190, 507);
+            this.btnNext.Location = new System.Drawing.Point(253, 624);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 23);
+            this.btnNext.Size = new System.Drawing.Size(100, 28);
             this.btnNext.TabIndex = 19;
             this.btnNext.Text = "Suivant";
             this.btnNext.UseVisualStyleBackColor = true;
@@ -306,9 +334,10 @@ namespace NotesCook.Forms
             // btnPrevious
             // 
             this.btnPrevious.Enabled = false;
-            this.btnPrevious.Location = new System.Drawing.Point(12, 507);
+            this.btnPrevious.Location = new System.Drawing.Point(16, 624);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(75, 23);
+            this.btnPrevious.Size = new System.Drawing.Size(100, 28);
             this.btnPrevious.TabIndex = 20;
             this.btnPrevious.Text = "Précédent";
             this.btnPrevious.UseVisualStyleBackColor = true;
@@ -316,9 +345,10 @@ namespace NotesCook.Forms
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(190, 94);
+            this.btnSearch.Location = new System.Drawing.Point(253, 116);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(100, 28);
             this.btnSearch.TabIndex = 21;
             this.btnSearch.Text = "Rechercher";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -326,9 +356,9 @@ namespace NotesCook.Forms
             // 
             // frmShowRecipeList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 552);
+            this.ClientSize = new System.Drawing.Size(369, 679);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnNext);
@@ -340,10 +370,11 @@ namespace NotesCook.Forms
             this.Controls.Add(this.pic_logo1);
             this.Controls.Add(this.lbl_title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmShowRecipeList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmShowRecipeList";
+            this.Text = "Liste de recettes";
             this.Load += new System.EventHandler(this.ShowRecipeList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo1)).EndInit();
             this.grpRecipe1.ResumeLayout(false);
