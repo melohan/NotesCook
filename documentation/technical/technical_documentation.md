@@ -1,12 +1,14 @@
 # Technical documentation
 
-## Database design document:
-- [UML]()
+## Database
+- [Schema](/documentation/database/schema.png)
+- [Json example](/documentation/database/recipes.json)
 
 ### Files and directories
 
 | Directories |Information|
 |---|---|
+|`src/App.config`|Configuration file, this is where the database and the main collection is defined.|
 |`src/App`|Main directory|
 |`src/App/Forms`|All the forms of the application are present in this directory organized by operations: `show`, `create`, `search`.|
 |`src/App/Models`|All the models used in this application can be found in this directory.|
