@@ -10,18 +10,9 @@ namespace NotesCook.Database
     {
         private IMongoDatabase mdb;
 
-
         /************************************************
          *            Constructors
          ***********************************************/
-        /**
-         *  This constructor is for simple cases with a single collection.
-         **/
-        public DB(string database)
-        {
-            var client = new MongoClient();
-            this.mdb = client.GetDatabase(database);
-        }
 
         /**
          *  This constructor is for simple cases with a single collection. 
@@ -29,9 +20,22 @@ namespace NotesCook.Database
          *  @param string collection
          *  @throw ArgumentException if collection is not set
          **/
-        public DB(string database, string collection ):this(database)
+        public DB(string database = "", string collection = "" )
         {
+            if (string.IsNullOrEmpty(database))
+            {
+                database = System.Configuration.ConfigurationManager.AppSettings.Get("DatabaseName");
+                if(string.IsNullOrEmpty(database))
+                    throw new ArgumentException("Database is not set.");
+            }
+            if (string.IsNullOrEmpty(collection))
+            {
+                collection = System.Configuration.ConfigurationManager.AppSettings.Get("CollectionName");
+            }
+
             this.Collection = collection;
+            var client = new MongoClient();
+            this.mdb = client.GetDatabase(database);
         }
 
         /************************************************
