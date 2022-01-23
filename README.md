@@ -4,7 +4,7 @@
 
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/melohan/NotesCook/develop?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/melohan/NotesCook?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/melohan/NotesCook?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues-raw/melohan/NotesCook?style=flat-square)
 
 ## Authors
 - [Ohan Mélodie](https://github.com/melohan)
