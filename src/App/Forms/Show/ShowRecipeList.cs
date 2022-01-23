@@ -40,8 +40,10 @@ namespace NotesCook.Forms
             this.grpRecipe4.MouseClick += GrpRecipe4_MouseClick;
         }
 
-        
 
+        /**
+         * Add all used graphic elements in an OrderedDictionary
+         */
         private void ListElements()
         {
             this.groups.Add("grp1",grpRecipe1);
@@ -68,6 +70,9 @@ namespace NotesCook.Forms
 
         }
 
+        /**
+         * Loading element with data
+         */
         private void LoadPage()
         {
             // Hide everything
@@ -129,18 +134,27 @@ namespace NotesCook.Forms
             
         }
 
+        /**
+         * Go to previous page 
+         */
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             this.page--;
             this.LoadPage();
         }
 
+        /*
+         * Go to next page 
+         */
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.page++;
             this.LoadPage();
         }
 
+        /*
+         * Open recipe view with the recipe in group 1 
+         */
         private void GrpRecipe1_MouseClick(Object sender, MouseEventArgs e)
         {
             this.Hide();
@@ -149,6 +163,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /*
+         * Open recipe view with the recipe in group 2 
+         */
         private void GrpRecipe2_MouseClick(Object sender, MouseEventArgs e)
         {
             this.Hide();
@@ -157,6 +174,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /*
+         * Open recipe view with the recipe in group 3
+         */
         private void GrpRecipe3_MouseClick(Object sender, MouseEventArgs e)
         {
             this.Hide();
@@ -165,6 +185,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /*
+         * Open recipe view with the recipe in group 4
+         */
         private void GrpRecipe4_MouseClick(Object sender, MouseEventArgs e)
         {
             this.Hide();
@@ -173,6 +196,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Return to home 
+         */
         private void lbl_title_Click(object sender, EventArgs e)
         {
             frmHome frm = new frmHome();
@@ -181,6 +207,9 @@ namespace NotesCook.Forms
             this.Close();
         }
 
+        /**
+         * Return to home 
+         */
         private void pic_logo1_Click(object sender, EventArgs e)
         {
             frmHome frm = new frmHome();
@@ -188,6 +217,10 @@ namespace NotesCook.Forms
             frm.ShowDialog();
             this.Close();
         }
+
+        /*
+         * Open seach view
+         */
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
