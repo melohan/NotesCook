@@ -21,6 +21,7 @@ namespace NotesCook.Forms
          **/ 
         public frmSearchRecipe()
         {
+            this.lblNoResults = new Label();
             tags  = new List<Tag>();
             InitializeComponent();
         }
@@ -34,6 +35,7 @@ namespace NotesCook.Forms
             lstTag.Items.Add(tagName);
             tags.Add(new Tag(tagName));
             txtTag.Text = "";
+            this.lblNoResults.Text = "";     // Overwrites the value in case it was assigned 
         }
 
         /**
@@ -48,6 +50,7 @@ namespace NotesCook.Forms
                 Tag toRemove = this.tags.Find(x => x.Name == lstTag.SelectedItem.ToString());
                 tags.Remove(toRemove);
                 lstTag.Items.Remove(lstTag.SelectedItem);
+                this.lblNoResults.Text = "";     // Overwrites the value in case it was assigned 
             }
 
         }
@@ -75,6 +78,11 @@ namespace NotesCook.Forms
                 if (results.Count > 0)
                 {
                     this.displayResult(results);
+                }
+                else
+                {
+
+                    this.lblNoResults.Text = "No results correspond to your search. ";     
                 }
             }
         }
