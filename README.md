@@ -2,7 +2,7 @@
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/melohan/NotesCook?style=flat-square)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/melohan/NotesCook/develop?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors/melohan/NotesCook?style=flat-square)
 ![GitHub issues](https://img.shields.io/github/issues/melohan/NotesCook?style=flat-square)
 
@@ -27,7 +27,7 @@ The search will be done through a tag system, making it easy to find and consult
 
 
 ### 1 Technical documentation
-More details about project structure dans files: [technical documentation](documentation/technical/technical_documentation.md).
+More details about project structure om files: [technical documentation](documentation/technical/technical_documentation.md).
 
 ### 2 Build with
 
@@ -52,6 +52,13 @@ You can start the application with example data:
 1) In MongoDB compass, create database `NotesCook` with `recipes` collection. 
 2) Import example file in `/documentation/database/recipes.json`
 
+In NotesCook project, database and collection name are defined in `src/App.config`
+```XML
+	<appSettings>
+		<add key="DatabaseName" value="NotesCook" />
+		<add key="CollectionName" value="recipes" />
+	</appSettings>
+```
 
 ### 5 Environnement Configuration
 
